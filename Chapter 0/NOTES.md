@@ -1,6 +1,5 @@
 # Chapter 0 notes:
-## **SLIDES**
-LINK: https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/00_pytorch_and_deep_learning_fundamentals.pdf
+## [**SLIDES**](https://github.com/mrdbourke/pytorch-deep-learning/blob/main/slides/00_pytorch_and_deep_learning_fundamentals.pdf)
 
 ### 7) what's PyTorch
 - PyTorch can run on GPU/TPU/CUDA (faster processing of info)
