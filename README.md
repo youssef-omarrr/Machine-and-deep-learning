@@ -7,7 +7,7 @@ This roadmap will include resources, projects, and notes that I will be followin
 Here are the sources I am using to learn machine learning:
 
 - **Roadmap video:**  
-  - [How to Learn Machine Learning in 2024 (7 step roadmap) **(conatins links to many resourcs)**](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3)
+  - [How to Learn Machine Learning in 2024 (7 step roadmap) **(conatins links to many resources)**](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3)
 
 - **Courses:**  
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
