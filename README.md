@@ -13,7 +13,7 @@ Here are the sources I am using to learn machine learning:
   - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
   
-    - [Gihub link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
+    - [Github link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
     - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
   
   - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
