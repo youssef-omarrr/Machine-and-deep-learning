@@ -9,7 +9,8 @@ Here are the sources I am using to learn machine learning:
 - **Roadmap video:**  
   - [How to Learn Machine Learning in 2024 (7 step roadmap) **(conatins links to many resources)**](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3)
 
-- **Courses:**  
+- **Courses:** 
+  - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
   
     - [Gihub link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
