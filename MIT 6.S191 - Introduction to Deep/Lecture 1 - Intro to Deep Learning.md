@@ -19,7 +19,7 @@
 	    - Predicting housing prices    
 	    - Fraud detection
 	    
-- 3. Deep Learning (DL):
+- Deep Learning (DL):
 	- **Definition**: DL is a **subset of ML** that uses **neural networks with many layers** (hence “deep”). It is particularly powerful for complex tasks involving images, sound, and text.
 	- **Goal**: To model complex patterns in large amounts of data using layered neural networks.
 	- **Examples**:
