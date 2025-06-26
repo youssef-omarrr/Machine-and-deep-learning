@@ -26,7 +26,11 @@ Here are the sources I am using to learn machine learning:
   - [Browse State-of-the-Art](https://paperswithcode.com/sota)
 
 - **Projects & Practice:**  
-  - tbh
+  - *PyTorch projects:*
+    - Linear Regression Model (found in chapter 1)
+    - (non-linear) Multi-class evaluation model (found in chapter 2)
+    - Fashion MNIST Model (with confusion matrix found in chaoter 3)
+    - MNIST digits Model (found in projects folder)
 
 ## 🛠 Topics Covered
 - [ ] Revision on prerequisites like numpy, pandas, matplotlib and seaborn
