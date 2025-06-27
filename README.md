@@ -31,12 +31,5 @@ Here are the sources I am using to learn machine learning:
     - (non-linear) Multi-class evaluation model (found in chapter 2)
     - Fashion MNIST Model (with confusion matrix found in chaoter 3)
     - MNIST digits Model (found in projects folder)
-
-## 🛠 Topics Covered
-- [ ] Revision on prerequisites like numpy, pandas, matplotlib and seaborn
-- [ ] Introduction to Machine Learning
-- [ ] Full PyTorch course
-- [ ] Supervised Learning
-- [ ] Unsupervised Learning
-- [ ] Deep Learning Basics
-- [ ] Neural Networks & Frameworks
+  - *To do list:*
+    - [ ] real-time number detector with MNIST model
