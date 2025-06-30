@@ -1,0 +1,91 @@
+body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin: -10;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5em;
+    color: #cccccc;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+#drawing-area, #result-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#drawing-area{
+    margin-right: -20rem;
+}
+#result-area{
+    margin-left: -20rem;
+}
+
+#controls {
+    display: flex;
+    gap: 1rem;
+}
+
+canvas {
+    border: 2px solid #444;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    cursor: crosshair;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #4caf50;
+    color: black;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0e3b10;
+    color: white;
+}
+
+#result {
+    color: #00eaff;
+    font-size: 2em;
+    margin-top: 1rem;
+}
+
+#received-input {
+    margin-top: -2rem;
+}
+
+img#preview-img {
+    border: 1px solid #555;
+    border-radius: 6px;
+    background-color: white;
+    width: 100px;
+    height: auto;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep Boop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Draw a Number</h1>
+
+    <div class="grid-container">
+        <div id="drawing-area">
+            <p>Draw a number in<br>the box below:</p>
+            <div id="canvas-container">
+                <canvas id="canvas" width="280" height="280"></canvas>
+            </div>
+        
+            <div id="controls">
+                <button id="clear" onclick="clearCanvas()">Clear</button>
+                <button id="predict" onclick="predict()">Predict</button>
+            </div>
+        </div>
+
+        <div id="result-area">
+            <p id="result"></p>
+            <h3 id="received-input">Received Input:</h3>
+            <img id="preview-img" src="" alt="Input Preview" width="100" style="display: none;">
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
