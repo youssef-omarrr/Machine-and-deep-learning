@@ -122,6 +122,11 @@ transform = transforms.Compose([
 ])
 
 def Preprocessing_input(pil_img):
+    # Ensure 'static' directory exists
+    static_dir = "static"
+    if not os.path.exists(static_dir):
+        os.makedirs(static_dir)
+        
     # Convert to grayscale
     img = pil_img.convert('L')
     
@@ -133,7 +138,7 @@ def Preprocessing_input(pil_img):
     
     # Save as preview
     img.save(os.path.join("static", "received_input.png"))
-    print("Image saved at:", os.path.abspath("static/received_input.png"))
+    print("Image saved at:", os.path.abspath("static\\received_input.png"))
 
     
     tensor_img = transform(img).unsqueeze(0)  # shape: [1, 1, 28, 28]

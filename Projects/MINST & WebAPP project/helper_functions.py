@@ -98,9 +98,9 @@ def train_fn (model:nn.Module,
     accuracy *= 100
     accuracy_function.reset()  
     
-    print(f"Train loss: {losses:.5f} | Train accuracy: {accuracy:.2f}%")
-    
-    
+    print("\n")
+    print("\033[91m======================================================\033[0m")
+    print(f"\033[94mTrain loss: {losses:.5f} | Train accuracy: {accuracy:.2f}%\033[0m")
     
     
 def test_fn (model:nn.Module,
@@ -145,8 +145,9 @@ def test_fn (model:nn.Module,
         accuracy *= 100
         accuracy_function.reset()  
             
-        print(f"Test loss: {losses:.5f} | Test accuracy: {accuracy:.2f}%\n")
-        
+        print(f"\033[92mTest loss: {losses:.5f} | Test accuracy: {accuracy:.2f}%\033[0m")
+        print("\033[91m======================================================\033[0m")
+        print("\n")
         
         
         
@@ -341,5 +342,102 @@ def plot_conffusion_matrix(model, dataloader, class_names, test_data):
         conf_mat=con_mat_tensor.numpy(),  # Convert tensor to numpy array for plotting
         class_names=class_names,          # Use class names for axis labels
         figsize=(10, 7)                   # Set figure size
+    )
+    # The plot will be displayed automatically in Jupyter notebooks
+
+
+
+def train_and_test_model (epochs: int,
+                        model: torch.nn.Module,
+                        loss_fn,
+                        acc_fn,
+                        optim,
+                        train_dataloader,
+                        test_dataloader):
+    """
+    Trains and tests a PyTorch model for a specified number of epochs.
+
+    Args:
+        epochs (int): Number of epochs to train and test the model.
+        model (torch.nn.Module): The model to train and test.
+        loss_fn: Loss function to optimize.
+        acc_fn: Accuracy metric object.
+        optim: Optimizer for model parameters.
+        train_dataloader: DataLoader for training data.
+        test_dataloader: DataLoader for test/validation data.
+
+    Returns:
+        None. Prints training/testing progress and total time taken.
+    """
+    # Record the start time for training
+    start_time_train = timer()
+
+    # Loop over the specified number of epochs
+    for epoch in tqdm(range(epochs)):
+        print(f"\033[96mEpoch: {epoch+1}\n-----------------------------\033[0m")
+        
+        # Training step for this epoch
+        train_fn(model=model,
+                accuracy_function=acc_fn,
+                loss_function=loss_fn,
+                optimizer=optim,
+                dataloader=train_dataloader)
+
+        # Testing step for this epoch
+        test_fn(model=model,
+                accuracy_function=acc_fn,
+                loss_function=loss_fn,
+                dataloader=test_dataloader)
+
+    # Record the end time after training/testing
+    end_time_train = timer()
+    total_train_time = end_time_train - start_time_train
+
+    # Calculate minutes and seconds for display
+    minutes = int(total_train_time // 60)
+    seconds = total_train_time % 60
+    print(f"\033[95mTime taken = {minutes} minutes and {seconds:.2f} seconds\033[0m")
+    
+
+def plot_confusion_matrix_tensor_dataset(model, dataloader, class_names, test_dataset):
+    """
+    Plots a confusion matrix for predictions of a model on a TensorDataset (e.g., from torch TensorDataset).
+
+    Args:
+        model (nn.Module): Trained PyTorch model to evaluate.
+        dataloader (DataLoader): DataLoader for the test dataset.
+        class_names (list): List of class names for the dataset.
+        test_dataset (TensorDataset): The original test dataset (used for true labels).
+
+    Returns:
+        None. Displays the confusion matrix plot.
+    """
+    from torchmetrics import ConfusionMatrix
+    from mlxtend.plotting import plot_confusion_matrix
+    import torch
+
+    # 1. Make predictions with trained model
+    y_preds = []
+    model.eval()
+    with torch.inference_mode():
+        for X, y in tqdm(dataloader, desc="Making predictions"):
+            y_logits = model(X)
+            y_pred = torch.softmax(y_logits, dim=1).argmax(dim=1)
+            y_preds.append(y_pred)
+        y_pred_tensor = torch.cat(y_preds)
+
+    # 2. Get all true labels from the TensorDataset
+    # test_dataset.tensors[1] is the label tensor
+    y_true_tensor = test_dataset.tensors[1]
+
+    # 3. Setup confusion matrix instance and compare predictions to targets
+    con_mat = ConfusionMatrix(num_classes=len(class_names), task="multiclass")
+    con_mat_tensor = con_mat(preds=y_pred_tensor, target=y_true_tensor)
+
+    # 4. Plot the confusion matrix
+    fig, ax = plot_confusion_matrix(
+        conf_mat=con_mat_tensor.numpy(),
+        class_names=class_names,
+        figsize=(10, 7)
     )
     # The plot will be displayed automatically in Jupyter notebooks
