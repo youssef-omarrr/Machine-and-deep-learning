@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beep Boop</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nodes.css') }}">
 </head>
 <body>
     <h1>Draw a Number</h1>
 
     <div class="grid-container">
+
         <div id="drawing-area">
             <p>Draw a number in<br>the box below:</p>
             <div id="canvas-container">
@@ -22,13 +25,17 @@
             </div>
         </div>
 
-        <div id="result-area">
-            <p id="result"></p>
-            <h3 id="received-input">Received Input:</h3>
-            <img id="preview-img" src="" alt="Input Preview" width="100" style="display: none;">
+        <div id="visualization-area">
+            <div id="lines-area"></div>
+            <div id="result-area">
+                <p id="result"></p>
+            </div>
         </div>
+        
     </div>
 
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nodes.js') }}"></script>
 </body>
 </html>
