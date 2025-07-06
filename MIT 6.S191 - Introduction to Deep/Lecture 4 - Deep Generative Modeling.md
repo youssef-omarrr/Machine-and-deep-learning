@@ -93,14 +93,10 @@ In deep learning, latent variables are often used to capture high-level abstract
 - Introduce **latent variables** z to explain observed data x.
     
 - Model joint distribution:
-    $$
-    p(x, z) = p(x \mid z) p(z)
-    $$
+    $$p(x, z) = p(x \mid z) p(z)$$
 
 - Marginal likelihood:
-    $$
-    p(x) = \int p(x \mid z) p(z) \, dz
-    $$
+    $$p(x) = \int p(x \mid z) p(z) \, dz$$
 
 
 ### Benefits:
@@ -121,9 +117,7 @@ It consists of two main parts:
     Reconstructs the input from the latent representation.
 
 The network is trained to minimize the **reconstruction error** between xx and x^\hat{x}, often using a loss like:
-$$
-\mathcal{L}(x, \hat{x}) = \|x - \hat{x}\|^2
-$$
+$$\mathcal{L}(x, \hat{x}) = \|x - \hat{x}\|^2$$
 
 ### Background & Motivation
 
@@ -160,9 +154,7 @@ $$
 
 1. **Encoder (Inference Network):** we want to compute the distribution of z given input x
     
-   $$
-    q_\phi(z \mid x)
-	$$
+   $$q_\phi(z \mid x)$$
     
     Approximates the posterior $p(z \mid x)$, with $\phi$ as weighting.
     
@@ -182,9 +174,7 @@ $$
 We cannot compute the exact marginal likelihood $log p(x)$, so we maximize a lower bound:
 
 
-$$
-\log p(x) \geq \mathbb{E}_{q_\phi(z \mid x)}[\log p_\theta(x \mid z)] - \text{KL}(q_\phi(z \mid x) \| p(z))
-$$
+$$\log p(x) \geq \mathbb{E}_{q_\phi(z \mid x)}[\log p_\theta(x \mid z)] - \text{KL}(q_\phi(z \mid x) \| p(z))$$
 
 - **First term**: Reconstruction accuracy
     
@@ -251,9 +241,7 @@ This **moves the stochasticity to the input** (through ϵ), allowing gradients t
 Min/max game:
 
 
-$$
-\min_G \max_D \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p(z)}[\log(1 - D(G(z)))]
-$$
+$$\min_G \max_D \mathbb{E}_{x \sim p_{\text{data}}}[\log D(x)] + \mathbb{E}_{z \sim p(z)}[\log(1 - D(G(z)))]$$
 
 
 - D: wants to maximize probability of classifying real vs. fake.

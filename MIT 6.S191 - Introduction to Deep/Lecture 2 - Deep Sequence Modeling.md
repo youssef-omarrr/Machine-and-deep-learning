@@ -30,9 +30,7 @@ Each RNN cell takes:
 ### 🔁 Formula:
 ![Alt text](imgs/Pasted%20image%2020250706183649.png)
 
-$$
-h_t = \tanh(W_{hh}*h_{t-1} + W_{xh}*x_t + b)
-$$
+$$h_t = \tanh(W_{hh}*h_{t-1} + W_{xh}*x_t + b)$$
 
 - $h_t$: hidden state at time $t$
     
@@ -268,9 +266,7 @@ Allows each token in a sequence to **attend to all other tokens** — enabling t
 
 #### Self-attention formula:
 
-$$
-\text{Attention}(Q, K, V) = \text{softmax} \left( \frac{QK^T}{\sqrt{d_k}} \right) V
-$$
+$$\text{Attention}(Q, K, V) = \text{softmax} \left( \frac{QK^T}{\sqrt{d_k}} \right) V$$
 
 
 Where:
@@ -297,10 +293,7 @@ Runs multiple self-attention mechanisms in parallel and combines them — allowi
 Since the model has no recurrence or convolution, **positional encodings** are added to inputs to give a sense of order:
 
 
-$$
-\text{PE}_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right) \\
-\text{PE}_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)
-$$
+$$\text{PE}_{(pos, 2i)} = \sin\left(\frac{pos}{10000^{2i/d_{model}}}\right) \\ \text{PE}_{(pos, 2i+1)} = \cos\left(\frac{pos}{10000^{2i/d_{model}}}\right)$$
 
 
 ---
