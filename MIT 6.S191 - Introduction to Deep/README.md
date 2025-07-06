@@ -11,10 +11,10 @@ This repository contains my personal notes, implementations, and assignments fro
 
 ## Progress
 ### Lectures
-- [ ] Lecture 1: Intro to Deep Learning
-- [ ] Lecture 2: Deep Sequence Modeling 
-- [ ] Lecture 3: Deep Computer Vision 
-- [ ] Lecture 4: Deep Generative Modeling 
+- [x] Lecture 1: Intro to Deep Learning
+- [x] Lecture 2: Deep Sequence Modeling 
+- [x] Lecture 3: Deep Computer Vision 
+- [x] Lecture 4: Deep Generative Modeling 
 - [ ] Lecture 5: Deep Reinforcement Learning 
 - [ ] Lecture 6: New Frontiers 
 - [ ] Lecture 7: Large Language Models (I) 
@@ -28,5 +28,5 @@ This repository contains my personal notes, implementations, and assignments fro
 
 ## Topics Covered
 
-![alt text](image.png)
+![alt text](imgs/image.png)
 

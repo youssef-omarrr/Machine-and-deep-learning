@@ -35,3 +35,4 @@ Here are the sources I am using to learn machine learning:
   - *To do list:*
     - [ ] Update the web app to include reinforcement learning and add more nodes
     - [ ] Search for a way to host the flask server
+
