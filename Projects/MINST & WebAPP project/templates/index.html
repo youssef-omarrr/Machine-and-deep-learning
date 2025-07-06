@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beep Boop</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/buttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nodes.css') }}">
+</head>
+<body>
+    <h1>Draw a Number</h1>
+
+    <div class="grid-container">
+
+        <div id="drawing-area">
+            <p>Draw a number in<br>the box below:</p>
+            <div id="canvas-container">
+                <canvas id="canvas" width="280" height="280"></canvas>
+            </div>
+        
+            <div id="controls">
+                <button id="clear" onclick="clearCanvas()">Clear</button>
+                <button id="predict" onclick="predict()">Predict</button>
+            </div>
+        </div>
+
+        <div id="visualization-area">
+            <div id="lines-area"></div>
+            <div id="result-area">
+                <p id="result"></p>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/buttons.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/nodes.js') }}"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@
 # NOTES:
 ## Supervised vs. Unsupervised Learning
 
-![[imgs/Pasted image 20250706211603.png]]
+![Alt text](imgs/Pasted%20image%2020250706211603.png)
 ### Supervised Learning:
 
 - Goal: Learn a mapping from inputs x to outputs y using labeled data.
@@ -46,7 +46,7 @@
 ---
 ## Generative Modeling
 
-![[imgs/Pasted image 20250706211640.png]]
+![Alt text](imgs/Pasted%20image%2020250706211640.png)
 ### What is a Generative Model?
 
 - Learns the **underlying data distribution** $p(x)$.
@@ -82,7 +82,7 @@
 ---
 ## Latent Variable Models
 
-![[imgs/Pasted image 20250706212225.png]]
+![Alt text](imgs/Pasted%20image%2020250706212225.png)
 
 ### Motivation:
 
@@ -133,12 +133,12 @@ $$
     
 - Foundation for more advanced models like **Variational Autoencoders (VAEs)** and **representation learning** techniques.
 
-![[imgs/Pasted image 20250706212457.png]]
+![Alt text](imgs/Pasted%20image%2020250706212457.png)
 
 ---
 ## Variational Autoencoders (VAEs)
 
-![[imgs/Pasted image 20250706212844.png]]
+![Alt text](imgs/Pasted%20image%2020250706212844.png)
 ### Overview:
 
 - VAEs are **latent variable generative models**.
@@ -156,7 +156,7 @@ $$
 
 ### VAE Architecture:
 
-![[imgs/Pasted image 20250706212931.png]]
+![Alt text](imgs/Pasted%20image%2020250706212931.png)
 
 1. **Encoder (Inference Network):** we want to compute the distribution of z given input x
     
@@ -199,17 +199,17 @@ $$
 In Variational Autoencoders (VAEs), we **sample** the latent variable $z∼N(μ,σ2).$  
 However, **sampling is a stochastic operation** (**non-differentiable operation** — meaning gradients can't flow through it, and training with backpropagation breaks.), and **we cannot backpropagate through a stochastic node**, because gradient-based optimization requires **deterministic** operations.
 
-![[imgs/Pasted image 20250706213742.png]]
+![Alt text](imgs/Pasted%20image%2020250706213742.png)
 
 ### Solution: 
 We reparameterize the sampling step to make z a **deterministic function of μ, σ, and a random noise ϵ**:
 $$ z = \mu + \sigma \cdot \epsilon \quad \text{where } \epsilon \sim \mathcal{N}(0, I) $$
 - μ,σ : outputs of the encoder (learned deterministically)
-- ϵ\epsilonϵ: random noise sampled independently
+- ϵ: random noise sampled independently
 
 This **moves the stochasticity to the input** (through ϵ), allowing gradients to flow through μ and σ during backpropagation.
 
-![[imgs/Pasted image 20250706213701.png]]![[imgs/Pasted image 20250706213805.png]]
+![Alt text](imgs/Pasted%20image%2020250706213701.png)![Alt text](imgs/Pasted%20image%2020250706213805.png)
 
 ---
 
@@ -227,7 +227,7 @@ This **moves the stochasticity to the input** (through ϵ), allowing gradients t
         
     - Limited expressiveness in some cases.
         
-	![[imgs/Pasted image 20250706214255.png]]
+	![Alt text](imgs/Pasted%20image%2020250706214255.png)
 	
 **In simpler terms:** **Reparameterizing** means **rewriting the random sampling** in a way that makes it compatible with backpropagation by **pushing randomness to the input** and keeping the rest deterministic.
 
@@ -243,7 +243,7 @@ This **moves the stochasticity to the input** (through ϵ), allowing gradients t
     - **Generator** G(z): maps noise $z∼N(0,I)$ to data space.
         
     - **Discriminator** D(x): distinguishes between real and generated samples.
-	![[imgs/Pasted image 20250706214943.png]]
+	![Alt text](imgs/Pasted%20image%2020250706214943.png)
 ---
 
 ### GAN Objective
@@ -270,7 +270,8 @@ $$
 2. Train G to generate more realistic samples.
     
 3. Repeat until equilibrium is reached.
-    ![[imgs/Pasted image 20250706215108.png]]
+    ![Description](imgs/Pasted%20image%2020250706215108.png)
+
 
 ---
 
@@ -290,14 +291,16 @@ $$
 - **DCGAN**: Deep convolutional GAN
     
 - **Conditional GAN (cGAN)**:
-	![[imgs/Pasted image 20250706215253.png]]
+	![Image](imgs/Pasted%20image%2020250706215253.png)
+
 
     $G(z, y), \quad D(x, y)$
     
     Adds class labels y as conditioning inputs.
     
 - **CycleGAN**: Image-to-image translation without paired data.
-	![[imgs/Pasted image 20250706215323.png]]
+	![Image](imgs/Pasted%20image%2020250706215323.png)
+
     
 - **Wasserstein GAN**: Improves stability using Earth Mover’s distance.
     

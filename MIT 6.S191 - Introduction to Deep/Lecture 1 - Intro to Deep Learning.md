@@ -37,7 +37,7 @@
 	
 	---
 ## The Perceptron: Forward Propagation (one neuron)
-![[imgs/Pasted image 20250706163254.png]]
+![Alt text](imgs/Pasted%20image%2020250706163254.png)
 
 ---
 ## Non-linear (Activation functions):
@@ -46,9 +46,7 @@
 	**PyTorch**: `torch.nn.ReLU()` or `F.relu(x)`
 	
 	- **Formula**:
-	$$
-	f(x) = \max(0, x)
-	$$
+	$$f(x) = \max(0, x)$$
 		
 	- **Use**:  
 		The most widely used activation in hidden layers due to its simplicity and effectiveness. Speeds up convergence and helps avoid vanishing gradients.
@@ -63,12 +61,8 @@
 
 	**PyTorch**: `torch.nn.LeakyReLU(negative_slope=0.01)` or `F.leaky_relu(x)`
 	
-	- **Formula**:$$
-	f(x) = \begin{cases}
-	x & \text{if } x > 0 \\
-	\alpha x & \text{otherwise}
-	\end{cases}
-	$$
+	- **Formula**:
+  	$$f(x) = \begin{cases} x & \text{if } x > 0 \\ \alpha*x & \text {otherwise} \end{cases}$$
 	- **Use**:  
 		Solves the “dying ReLU” problem by allowing a small, non-zero gradient when x<0x < 0.
 		
@@ -80,12 +74,9 @@
 
 	**PyTorch**: `torch.nn.ELU(alpha=1.0)` or `F.elu(x)`
 	
-	- **Formula**:$$
-	f(x) = \begin{cases}
-	x & \text{if } x > 0 \\
-	\alpha (e^x - 1) & \text{otherwise}
-	\end{cases}
-	$$
+	- **Formula**:
+	$$f(x) = \begin{cases}x & \text{if } x > 0 \\\alpha (e^x - 1) &\text{otherwise}\end{cases}$$
+
 	- **Use**:  
 		Helps bring activations closer to zero mean, improving learning speed and robustness.
 		
@@ -98,9 +89,9 @@
 
 	**PyTorch**: `torch.nn.Sigmoid()` or `torch.sigmoid(x)`
 	
-	- **Formula**:$$
-	f(x) = \frac{1}{1 + e^{-x}}
-	$$
+	- **Formula**:
+	$$f(x) = \frac{1}{1 + e^{-x}}$$
+
 	- **Use**:  
 		Often used in binary classification output layers. Maps input to range (0, 1).
 		
@@ -113,9 +104,8 @@
 
 	**PyTorch**: `torch.nn.Tanh()` or `torch.tanh(x)`
 	
-	- **Formula**:$$
-	f(x) = \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}
-	$$
+	- **Formula**:
+  	$$f(x) = \tanh(x) = \frac{e^x - e^{-x}}{e^x + e^{-x}}$$
 	- **Use**:  
 		Like sigmoid, but output range is (-1, 1), which helps with zero-centered data.
 		
@@ -129,9 +119,7 @@
 	**PyTorch**: `torch.nn.Softmax(dim=1)` or `F.softmax(x, dim=1)`
 	
 	- **Formula**:
-	$$
-	f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}
-		$$
+	$$f(x_i) = \frac{e^{x_i}}{\sum_j e^{x_j}}$$
 
 	- **Use**:  
 		Converts logits into probabilities; used in the output layer of multi-class classification.
@@ -146,9 +134,7 @@
 	**PyTorch**: `torch.nn.GELU()` or `F.gelu(x)`
 	
 	- **Formula (approx)**:
-	$$
-	f(x) = 0.5x \left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715x^3)\right)\right)
-	$$
+	$$f(x) = 0.5x \left(1 + \tanh\left(\sqrt{\frac{2}{\pi}}(x + 0.044715x^3)\right)\right)$$
 
 	- **Use**:  
 		Used in Transformer models (like BERT). Smooth and probabilistic interpretation.
@@ -165,9 +151,8 @@
 		return x * torch.sigmoid(x)
 	```
 	
-	- **Formula**:$$
-	f(x) = x \cdot \sigma(x) = x \cdot \frac{1}{1 + e^{-x}}
-	$$
+	- **Formula**:
+  	$$f(x) = x \cdot \sigma(x) = x \cdot \frac{1}{1 + e^{-x}}$$
 	- **Use**:  
 		Proposed by Google, used in EfficientNet. Performs better than ReLU in many deep models.
     
@@ -190,12 +175,12 @@
 ---
 ## Gradient descent
 
-- Gradient from math: is the direction of increasing losses, so we go opposite to this direction (back propagation) ![[imgs/Pasted image 20250706165330.png]]![[imgs/Pasted image 20250706165354.png]]![[imgs/Pasted image 20250706165709.png]]
+- Gradient from math: is the direction of increasing losses, so we go opposite to this direction (back propagation) ![Alt text](imgs/Pasted%20image%2020250706165330.png)![Alt text](imgs/Pasted%20image%2020250706165354.png)![Alt text](imgs/Pasted%20image%2020250706165709.png)
 
 ---
 ## Back Propagation
 - Back propagation is just chain rule
-![[imgs/Pasted image 20250706165557.png]]
+![Alt text](imgs/Pasted%20image%2020250706165557.png)
 
 ---
 ## Optimizer functions
@@ -353,9 +338,7 @@
 
 Weight decay is a regularization technique that modifies the loss function:
 
-$$
-L_{\text{total}} = L_{\text{original}} + \lambda \cdot \frac{1}{2} \|w\|^2
-$$
+$$L_{\text{total}} = L_{\text{original}} + \lambda \cdot \frac{1}{2} \|w\|^2$$
 
 Where:
 
@@ -415,9 +398,7 @@ What is Regularization?
 ### ✅ 1. **L1 Regularization (Lasso)**
 
 - **Penalty Term**:
-    $$
-   \lambda \sum |w|
-    $$
+    $$\lambda \sum |w|$$
 - **Effect**: Drives some weights to **exact zero**, leading to **sparse models**.
     
 - **Use Case**: When feature selection or sparsity is desirable.
@@ -428,9 +409,7 @@ What is Regularization?
 ### ✅ 2. **L2 Regularization (Ridge) / Weight Decay**
 
 - **Penalty Term**:
-    $$
-    \lambda \sum w^2
-    $$
+    $$\lambda \sum w^2$$
 - **Effect**: Penalizes large weights, but keeps all weights non-zero.
     
 - **Use Case**: Most common regularization (used in `weight_decay` in optimizers like `AdamW`).
@@ -439,7 +418,7 @@ What is Regularization?
 ---
 
 ### ✅ 3. **Dropout**
-![[imgs/Pasted image 20250706171301.png]]
+![Image](imgs/Pasted%20image%2020250706171301.png)
 
 - **How it works**: Randomly "drops" (sets to zero) a fraction of neurons during training.
     
@@ -456,7 +435,8 @@ nn.Dropout(p=0.5)
 ---
 
 ### ✅ 4. **Early Stopping**
-![[imgs/Pasted image 20250706171328.png]]
+![Image](imgs/Pasted%20image%2020250706171328.png)
+
 
 - **How it works**: Stop training when validation loss stops improving.
     

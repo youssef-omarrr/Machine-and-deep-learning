@@ -26,7 +26,7 @@
     - **Mid-level**: motifs, textures.
         
     - **High-level**: object parts, full structures.
-	    ![[imgs/Pasted image 20250706215538.png]]
+	    ![Alt text](imgs/Pasted%20image%2020250706215538.png)
         
 
 ---
@@ -40,7 +40,7 @@
 **Solution**: Use the **spatial structure of images** by applying **convolutional layers** instead of dense (fully connected) layers.
 
 This reduces the number of parameters, **preserves local features**, and allows the model to **scale efficiently** to high-dimensional inputs like images.
-![[imgs/Pasted image 20250706215747.png]]
+![Alt text](imgs/Pasted%20image%2020250706215747.png)
 
 ---
 
@@ -60,9 +60,9 @@ This reduces the number of parameters, **preserves local features**, and allows 
 - Slide filter over input, compute element-wise products and sum.
     
 - Generates a **feature map**.
-- Example of mapping features of the letter 'x' to be able to be detected even if rotated.![[imgs/Pasted image 20250706215837.png]]
+- Example of mapping features of the letter 'x' to be able to be detected even if rotated.![Alt text](imgs/Pasted%20image%2020250706215837.png)
     
-- Example of the use of different filters to get different outputs.![[imgs/Pasted image 20250706220012.png]]
+- Example of the use of different filters to get different outputs.![Alt text](imgs/Pasted%20image%2020250706220012.png)
 ---
 
 ##  CNN Architecture Pipeline
@@ -78,7 +78,9 @@ This reduces the number of parameters, **preserves local features**, and allows 
     
 5. **Fully connected** layers & **Softmax** for classification.
 
-![[imgs/Pasted image 20250706220151.png]]![[imgs/Pasted image 20250706220244.png]]
+![Screenshot 1](imgs/Pasted%20image%2020250706220151.png)
+![Screenshot 2](imgs/Pasted%20image%2020250706220244.png)
+
 
 ---
 
@@ -89,6 +91,6 @@ This reduces the number of parameters, **preserves local features**, and allows 
     - **Semantic segmentation**, **object detection**, **image captioning**, **autonomous navigation**, **medical diagnostics**.
         
 - Tools like **FCNs**, **R-CNN**, and **CNN + RNN architectures** are used.
-    ![[imgs/Pasted image 20250706220352.png]]![[imgs/Pasted image 20250706220415.png]]
+    ![Alt text](imgs/Pasted%20image%2020250706220352.png)![Alt text](imgs/Pasted%20image%2020250706220415.png)
 
 ---

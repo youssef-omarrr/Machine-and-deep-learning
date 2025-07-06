@@ -4,12 +4,12 @@
 
 # NOTES:
 ## INTRO:
-- ![[imgs/Pasted image 20250706182621.png]]
-- ![[imgs/Pasted image 20250706182705.png]]
+- ![Alt text](imgs/Pasted%20image%2020250706182621.png)
+- ![Alt text](imgs/Pasted%20image%2020250706182705.png)
 
 ---
 ## Recurrent Neural Networks (RNNs)
-![[imgs/Pasted image 20250706182750.png]]
+![Alt text](imgs/Pasted%20image%2020250706182750.png)
 **RNN (Recurrent Neural Network)** is a type of neural network designed to handle **sequential data** (e.g., time series, text, audio).
 
 > It uses loops in the network to allow **information to persist** across time steps.
@@ -28,7 +28,7 @@ Each RNN cell takes:
     
 
 ### 🔁 Formula:
-![[imgs/Pasted image 20250706183649.png]]
+![Alt text](imgs/Pasted%20image%2020250706183649.png)
 
 $$
 h_t = \tanh(W_{hh}*h_{t-1} + W_{xh}*x_t + b)
@@ -125,9 +125,9 @@ rnn = nn.RNN(input_size=10, hidden_size=20, num_layers=1)
 output, hn = rnn(input_seq, h0)
 ```
 
-- `input_seq`: shape [seq_len,batch,input_size][seq\_len, batch, input\_size]
+- `input_seq`: shape [seq_len, batch, input_size]
     
-- `h0`: initial hidden state [num_layers,batch,hidden_size][num\_layers, batch, hidden\_size]
+- `h0`: initial hidden state [num_layers, batch, hidden_size]
     
 
 ---
@@ -136,7 +136,7 @@ output, hn = rnn(input_seq, h0)
 
 #### Concepts
 - RNN processes sequences step-by-step
-- Hidden state \( h_t \) stores memory of past
+- Hidden state $h_t$ stores memory of past
 - Vanishing gradients → can’t learn long-term dependencies
 - LSTM & GRU solve this with gates
 
@@ -180,7 +180,7 @@ output = embedding(torch.tensor([5]))  # returns the 300D vector for word index 
 ---
 ## Backpropagation Through Time (BPTT)
 
-![[imgs/Pasted image 20250706184143.png]]
+![Alt text](imgs/Pasted%20image%2020250706184143.png)
 
 **Backpropagation Through Time** is the adaptation of standard backpropagation used to train **Recurrent Neural Networks (RNNs)**.
 
@@ -232,9 +232,9 @@ This improves efficiency but may limit the ability to learn long-term dependenci
 
 ### Challenges
 
-- **Vanishing gradients**: Gradients shrink over long sequences → hard to learn long-term dependencies.![[imgs/Pasted image 20250706184359.png]]
+- **Vanishing gradients**: Gradients shrink over long sequences → hard to learn long-term dependencies.![Alt text](imgs/Pasted%20image%2020250706184359.png)
     
-- **Exploding gradients**: Gradients grow rapidly → causes instability. ![[imgs/Pasted image 20250706184345.png]]
+- **Exploding gradients**: Gradients grow rapidly → causes instability. ![Alt text](imgs/Pasted%20image%2020250706184345.png)
     
 - Solutions include:
     
@@ -376,5 +376,5 @@ Each layer is composed of:
 > The **Transformer** eliminates recurrence and uses **self-attention** to model sequence data. This makes it **faster**, more **parallelizable**, and better at capturing **long-range dependencies** than RNNs, leading to significant improvements in NLP tasks.
 
 ---
-- Attention: How close my `Query` $Q$ is to the `Key` $k$ , then we extract the `Value` $v$.![[imgs/Pasted image 20250706185249.png]]
-- This similarity is obtained by dot product![[imgs/Pasted image 20250706185517.png]] ![[imgs/Pasted image 20250706185550.png]] ![[imgs/Pasted image 20250706185705.png]] ![[imgs/Pasted image 20250706185741.png]]
+- Attention: How close my `Query` $Q$ is to the `Key` $k$ , then we extract the `Value` $v$.![Alt text](imgs/Pasted%20image%2020250706185249.png)
+- This similarity is obtained by dot product![Alt text](imgs/Pasted%20image%2020250706185517.png) ![Alt text](imgs/Pasted%20image%2020250706185550.png) ![Alt text](imgs/Pasted%20image%2020250706185705.png) ![Alt text](imgs/Pasted%20image%2020250706185741.png)

@@ -1,0 +1,95 @@
+/* ========== CSS VARIABLES ========== */
+/* Define theme color used across nodes and lines */
+:root {
+    --node-color: #6161dab4;
+}
+
+.node, .line, .probability {
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* ========== IMPORT CUSTOM FONT ========== */
+@import url('https://fonts.cdnfonts.com/css/amoera');
+
+/* ========== ANIMATIONS ========== */
+/* Pulse animation for glowing effect on nodes and lines */
+@-webkit-keyframes pulse {
+    0%   { box-shadow: 0 0 8px var(--node-color), inset 0 0 8px var(--node-color); }
+    50%  { box-shadow: 0 0 16px var(--node-color), inset 0 0 14px var(--node-color); }
+    100% { box-shadow: 0 0 8px var(--node-color), inset 0 0 8px var(--node-color); }
+}
+
+
+/* ========== NODE STYLING ========== */
+/* Container to hold the circle and its label */
+.node-wrapper {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    position: relative;
+
+    /* Prevent shifting by reserving space */
+    min-width: 120px;
+}
+
+/* Main circular node element with glow and animation */
+.node {
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; /* Makes it a perfect circle */
+    box-shadow: 0 0 8px var(--node-color), inset 0 0 8px var(--node-color);
+    -webkit-animation: pulse 2s linear 1s infinite; /* Apply glowing animation */
+    margin: 2px 0;
+    position: relative;
+    z-index: 2;
+    margin-bottom: -0.5rem; /* Adjusts vertical alignment slightly */
+
+    display: flex;               /* Aligns children horizontally */
+    align-items: center;         /* Vertical alignment */
+    justify-content: center;     /* Horizontal alignment inside node */
+}
+
+
+/* Text inside the node (usually a letter or number) */
+.node p {
+    font-family: 'amoera', sans-serif;
+    display: block;
+    text-align: center;
+    line-height: 50px; /* Vertically center text inside 50px node */
+    font-weight: bolder;
+    font-size: 24px;
+    color: var(--node-color);
+    text-shadow: 0 0 4px var(--node-color); /* Adds a glowing effect to the text */
+    margin-bottom: 20px;
+}
+
+/* Probability text positioned to the right */
+.probability {
+    font-family: 'amoera', sans-serif;
+    margin-left: 10px;
+    font-size: 14px;
+    color: var(--node-color);
+    text-shadow: 0 0 2px var(--node-color);
+    white-space: nowrap;
+
+    min-width: 60px;     /* Reserve space for probability text */
+    text-align: left;    /* Optional: aligns text neatly */
+    margin-top: 10px;
+}
+
+
+/* ========== NODE CONNECTING LINES ========== */
+/* Horizontal lines connecting nodes (positioned by JS) */
+.node-line {
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    box-shadow: 0 0 8px var(--node-color), inset 0 0 8px var(--node-color);
+    -webkit-animation: pulse 2s linear 1s infinite;
+    border-radius: 2px;
+    z-index: 1;
+    /* Each line's position (top/left) is dynamically set via JS */
+}
