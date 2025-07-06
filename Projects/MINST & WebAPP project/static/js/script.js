@@ -133,20 +133,23 @@ function predict() {
                         // Normalize the probability between 0.2 and 1
                         let opacity = 1.0;
                         if (maxProb !== minProb) {
-                            opacity = 0.2 + ((prob - minProb) / (maxProb - minProb)) * (1.0 - 0.2);
+                            opacity = 0.3 + ((prob - minProb) / (maxProb - minProb)) * (1.0 - 0.3);
                         }
 
                         // Update probability text
                         if (probEl) {
+                            probEl.classList.add('probability');
                             probEl.textContent = `${(prob * 100).toFixed(2)}%`;
                             probEl.style.opacity = opacity; // Set opacity based on probability
                         }
 
                         if (nodeEl) {
+                            nodeEl.classList.add('node');
                             nodeEl.style.opacity = opacity;
                         }
 
                         if (lineEl) {
+                            lineEl.classList.add('line');
                             lineEl.style.opacity = opacity;
                         }
                     });
