@@ -29,7 +29,7 @@ Here are the sources I am using to learn machine learning:
   - *PyTorch projects:*
     - Linear Regression Model (found in chapter 1)
     - (non-linear) Multi-class evaluation model (found in chapter 2)
-    - Fashion MNIST Model (with confusion matrix found in chaoter 3)
+    - Fashion MNIST Model (with confusion matrix found in chapter 3)
     - MNIST digits Model (found in projects folder)
     - [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
   - *To do list:*
