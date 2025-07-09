@@ -12,7 +12,7 @@
 - [x] 02. PyTorch Neural Network Classification
 - [x] 03. PyTorch Computer Vision
 - [x] 04. PyTorch Custom Datasets
-- [ ] 05. PyTorch Going Modular
+- [x] 05. PyTorch Going Modular
 - [ ] 06. PyTorch Transfer Learning
 - [ ] 07. PyTorch Experiment Tracking
 - [ ] 08. PyTorch Paper Replicating
