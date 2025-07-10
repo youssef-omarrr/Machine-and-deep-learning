@@ -24,6 +24,8 @@ Here are the sources I am using to learn machine learning:
   
 - **Useful websites:**  
   - [Browse State-of-the-Art](https://paperswithcode.com/sota)
+  - [Hugging Face](https://huggingface.co/models)
+  - [`timm` (PyTorch Image Models) library](https://github.com/huggingface/pytorch-image-models)
 
 - **Projects & Practice:**  
   - *PyTorch projects:*
@@ -33,6 +35,6 @@ Here are the sources I am using to learn machine learning:
     - MNIST digits Model (found in projects folder)
     - [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
   - *To do list:*
-    - [ ] Update the web app to include reinforcement learning and add more nodes
+    - [ ] Add more nodes to the web app project
     - [ ] Search for a way to host the flask server
 
