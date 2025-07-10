@@ -1,6 +1,9 @@
 /* ========== IMPORT CUSTOM FONT ========== */
 @import url('https://fonts.cdnfonts.com/css/amoera');
 
+:root {
+    --node-color: #6161dab4;
+}
 
 /* ========== GLOBAL STYLES FOR BODY ========== */
 /* Sets background, font, layout, and text styling */
@@ -179,4 +182,101 @@ canvas {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ========== KEYPAD ========== */
+/* === Keypad Overlay (full-screen background) === */
+.keypad-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'amoera', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === Main Container for Keypad === */
+.keypad-container {
+    position: relative;
+    font-family: 'amoera', sans-serif;
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* === Header Text === */
+.keypad-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* === Input Display (shows user input before sending) === */
+.keypad-display {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #37377c;
+    min-height: 2.5rem;
+}
+
+/* === Keypad Grid Layout (3x4) === */
+.keypad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 0.5rem;
+}
+
+/* === All Keypad Buttons (0–9, Clear, Send) === */
+.keypad-grid button {
+    width: 100%; 
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'amoera', sans-serif;
+    background-color: var(--node-color); /* Default color for digits */
+    color: white;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+/* === Hover Effect for All Buttons === */
+.keypad-grid button:hover {
+    transform: scale(1.05);
+}
+
+/* Close “X” button in top-right of keypad */
+.keypad-close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.keypad-close-btn:hover {
+  color: #f44336; /* red on hover */
 }

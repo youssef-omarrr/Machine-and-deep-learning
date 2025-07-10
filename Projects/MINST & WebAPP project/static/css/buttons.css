@@ -224,3 +224,46 @@
         background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
     }
 }
+
+
+/* ==========   CORRECT AND WRONG BUTTONS ========== */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.preview-btns {
+    width: 75px;
+    height: 35px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.preview-btns:focus {
+    outline: 3px solid #333;
+    outline-offset: 2px;
+}
+
+#wrong_btn {
+    background-color: #d32f2f; /* Red */
+}
+
+#wrong_btn:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+#correct_btn {
+    background-color: #388e3c; /* Green */
+}
+
+#correct_btn:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+}
