@@ -138,6 +138,7 @@ def train(model: torch.nn.Module,
         loss_fn: Loss function (default = CrossEntropyLoss).
         epochs: Total number of epochs to train.
         device: Target computation device.
+        writer: A SummaryWriter() instance to log model results to.
 
     Returns:
         Dictionary containing loss and accuracy history for training and testing.
@@ -195,25 +196,26 @@ def train(model: torch.nn.Module,
         ###########################################################
         ####### ====== New: Experiment tracking  ====== ###########
         ###########################################################
-        # Add loss results to SummaryWriter
-        writer.add_scalars( main_tag = "Loss",
-                            tag_scalar_dict  = {"train_loss": train_loss,
-                                            "test_loss": test_loss},
-                            global_step = epoch)
-        
-        # Add accuracy results to SummaryWriter
-        writer.add_scalars( main_tag = "Accuracy",
-                            tag_scalar_dict  = {"train_acc": train_acc,
-                                                "test_acc": test_acc},
-                            global_step = epoch)
-        
-        # Track the PyTorch model architecture
-        writer.add_graph ( model = model,
-                        # Pass in an example input
-                        input_to_model = torch.rand(32, 3, 224, 224).to(device))
-        
-        # Close writer
-        writer.close()
+        if writer:
+            # Add loss results to SummaryWriter
+            writer.add_scalars( main_tag = "Loss",
+                                tag_scalar_dict  = {"train_loss": train_loss,
+                                                    "test_loss": test_loss},
+                                global_step = epoch)
+            
+            # Add accuracy results to SummaryWriter
+            writer.add_scalars( main_tag = "Accuracy",
+                                tag_scalar_dict  = {"train_acc": train_acc,
+                                                    "test_acc": test_acc},
+                                global_step = epoch)
+            
+            # Track the PyTorch model architecture
+            writer.add_graph ( model = model,
+                            # Pass in an example input
+                            input_to_model = torch.rand(32, 3, 224, 224).to(device))
+            
+            # Close writer
+            writer.close()
         
 
     # Return metrics for analysis/visualization
