@@ -37,4 +37,8 @@ Here are the sources I am using to learn machine learning:
   - *To do list:*
     - [ ] Add more nodes to the web app project
     - [ ] Search for a way to host the flask server
+    - [ ] CartPole (Starter Project)
+    - [ ] Brick Breaker Game (Breakout)
+    - [ ] Lunar Lander
+    - [ ] **Tower Handover RL — Mini (GRAD PROJECT DRAFT)**
 
