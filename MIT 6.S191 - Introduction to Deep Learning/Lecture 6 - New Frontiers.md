@@ -2,130 +2,71 @@
 ### [Video Link](https://www.youtube.com/watch?v=HLKo4fJx_7k&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=7&ab_channel=AlexanderAmini)
 ### [Slides Link](https://introtodeeplearning.com/slides/6S191_MIT_DeepLearning_L6.pdf)
 
-## 1. Autoencoders: Denoising & Undercomplete
+## 1. Power of Neural Networks
 
-- **Autoencoder architecture**:
-    
-    - Encoder: compresses input x into latent code $h = f_\theta(x)$.
-        
-    - Decoder: reconstructs x from h: $\hat{x} = g_\phi(h)$.
-        
-    - Minimize reconstruction loss (e.g., MSE or binary cross-entropy).
-        
-- **Undercomplete AE**: latent dimension < input dimension → forces learning of compressed structure.
-    
-- **Denoising AE**: input is corrupted (e.g., with noise), but the network learns to reconstruct the clean version—learns robust features and manifold structure.
-    
+Neural networks are powerful because they can **learn complex patterns and functions** from data. With enough layers and neurons, they can represent **almost any function**, whether it’s for classification, regression, control, or generation.
+
+### **Universal Approximation Theorem**
+
+The **Universal Approximation Theorem** states:
+
+> A feedforward neural network with **at least one hidden layer** and a **non-linear activation function** (like ReLU or sigmoid) can approximate **any continuous function** on a compact input space **to any desired accuracy**, given **enough neurons**.
+
+---
+## 2. Rethinking generalization
+
+- **Rethinking generalization** in deep learning means questioning traditional ideas about how and why neural networks generalize well to new data, even when they have far more parameters than training samples. 
+- Classic machine learning says models should overfit in such cases, but deep networks often don’t, they perform well despite being over-parameterized. This has led to new theories like the role of implicit regularization, optimization dynamics (like SGD), and the structure of data in helping deep models generalize, even when classical theory can’t fully explain it.
+
+![](imgs/PastedImage.png)
 
 ---
 
-## 2. Variational Autoencoders (VAEs)
+## 3. Neural Networks as function approximators
 
-- **VAE** introduces a probabilistic latent space:
-    
-    - Encoder outputs mean & log-variance of a Gaussian distribution over latent code z.
-        
-    - Use reparameterization trick: z=μ+σ⊙ϵ, ϵ∼N(0,I).
-        
-    - Decoder maps z back to distribution over inputs.
-        
-- The loss = reconstruction loss + KL divergence with prior N(0,I):
-    
-     $$\mathcal{L}(x) = -\mathbb{E}_{q_\phi(z|x)}[\log p_\theta(x|z)] + D_{KL}(q_\phi(z|x)\parallel p(z))$$
+Neural networks can be seen as **universal function approximators**, they learn to map inputs to outputs by adjusting weights to approximate an unknown function. Given enough neurons and layers, a neural network can model highly complex, non-linear relationships between variables, making them ideal for tasks like regression, classification, and reinforcement learning where the true underlying function (like Q(s, a) or π(a|s)) is unknown and must be learned from data.
+
+![](imgs/PastedImage-1.png)
+
+---
+## 4. Neural networks failure modes
+
+- Neural networks have several **failure modes**, one major example being their sensitivity to small **perturbations** in input data. Even tiny, imperceptible changes (called **adversarial examples**) can cause a network to misclassify with high confidence. 
+- This shows that despite *high accuracy*, networks may rely on fragile or non-robust features. Other failure modes include **memorizing noise** (overfitting), **poor generalization** to out-of-distribution inputs, and instability in **training dynamics**, especially in reinforcement learning where feedback loops can amplify small mistakes.
+- **Adversarial attacks** exploit the fact that neural networks often rely on brittle, non-robust patterns in data by introducing **carefully crafted small changes** to inputs that cause the model to make incorrect predictions with high confidence. 
+- These attacks can be white-box (knowing the model’s architecture and weights) or black-box (only observing outputs), and are especially dangerous in safety-critical systems like facial recognition or autonomous driving. Common methods include **FGSM (Fast Gradient Sign Method)** and **PGD (Projected Gradient Descent)**, which use gradients to find input perturbations that *maximize loss*. Their existence raises concerns about model reliability and has led to research in adversarial training and robust optimization.
+ ![](imgs/PastedImage-2.png)![](imgs/PastedImage-3.png)
 
 ---
 
-## 3. Other Unsupervised Models
+## 5.Neural Networks Limitations
+![](imgs/PastedImage-4.png)
 
-- **t-SNE** & **UMAP**: non‑linear dimensionality reduction techniques (for visualization).
-    
-- **Contrastive learning** (e.g., SimCLR, MoCo): learn representations by pulling together augmentations of the same image and pushing apart different images.
-    
+---
+## 6. Diffusion models
+
+- Diffusion models are a class of generative models that learn to create data (like images or audio) by **reversing a gradual noise process**. 
+- During training, they learn how to **add noise step-by-step** to real data (the forward process), and then they learn how to **denoise** that data step-by-step to recover the original (the reverse process). 
+- At inference time, they start from **pure noise** and gradually **denoise** it to generate realistic samples. 
+- Unlike GANs, diffusion models are *more stable* to train and can produce high-quality outputs, which is why they are used in tools like **DALL·E 2** and **Stable Diffusion**.
+
+![](imgs/PastedImage-5.png)![](imgs/PastedImage-6.png)
+
+---
+## 7. Large Language Models
+
+- **Large Language Models** (LLMs) are deep neural networks trained on vast amounts of *text data* to understand and generate human language. 
+	- They use architectures like the **Transformer**, and models like **GPT**, **BERT**, and **LLaMA** fall into this category. 
+	- LLMs learn **statistical patterns** in text and can perform a wide range of tasks, from writing code to answering questions, without task-specific training. 
+	- Their power comes from scale: billions of parameters trained on diverse datasets, enabling them to generalize well, but they also raise challenges around bias, hallucination, and efficiency.
+- **Next token prediction** is the core training objective for models like GPT, where the model learns to predict the **next word or token** in a sequence given all the previous ones. 
+	- During training, the model is fed large text datasets and learns to assign **high probability** to the correct next token using a language modeling loss (usually cross-entropy).
+	- This setup allows the model to learn grammar, facts, reasoning patterns, and even coding logic, and it forms the foundation for generating coherent text, answering questions, or continuing prompts at inference time.
+	![](imgs/PastedImage-8.png)
 
 ---
 
-## 🔍 PyTorch Examples
+## 8. Emergent abilities
+- **Emergent abilities** refer to surprising skills that large language models develop **only after reaching a certain scale** in model size or data, abilities that smaller models simply don’t show. Examples include basic arithmetic, in-context learning, code generation, or following complex instructions. These abilities aren’t directly programmed or seen during training, but they **“emerge”** once the model passes a threshold in capacity, suggesting that **scale unlocks new generalization behavior** that can't be predicted just by studying smaller models.
 
-### A. Simple Autoencoder (for MNIST-like data)
-
-```python
-import torch, torch.nn as nn, torch.optim as optim
-from torch.utils.data import DataLoader
-from torchvision import transforms, datasets
-
-class Autoencoder(nn.Module):
-    def __init__(self, latent_dim=32):
-        super().__init__()
-        self.encoder = nn.Sequential(
-            nn.Flatten(),
-            nn.Linear(28*28, 256), nn.ReLU(),
-            nn.Linear(256, latent_dim)
-        )
-        self.decoder = nn.Sequential(
-            nn.Linear(latent_dim, 256), nn.ReLU(),
-            nn.Linear(256, 28*28),
-            nn.Sigmoid(),
-            nn.Unflatten(1, (1,28,28))
-        )
-    def forward(self, x):
-        return self.decoder(self.encoder(x))
-
-# Training loop
-transform = transforms.ToTensor()
-train_loader = DataLoader(datasets.MNIST('.', train=True, download=True, transform=transform), batch_size=128, shuffle=True)
-model = Autoencoder()
-optimizer = optim.Adam(model.parameters(), lr=1e-3)
-criterion = nn.BCELoss()
-
-for epoch in range(10):
-    epoch_loss = 0
-    for x,_ in train_loader:
-        x_hat = model(x)
-        loss = criterion(x_hat, x)
-        optimizer.zero_grad()
-        loss.backward()
-        optimizer.step()
-        epoch_loss += loss.item()
-    print(f"Epoch {epoch+1}, Loss: {epoch_loss/len(train_loader):.4f}")
-```
-
----
-
-### B. Variational Autoencoder (VAE)
-
-```python
-class VAE(nn.Module):
-    def __init__(self, latent_dim=20):
-        super().__init__()
-        self.fc1 = nn.Linear(28*28, 400)
-        self.fc_mu = nn.Linear(400, latent_dim)
-        self.fc_logvar = nn.Linear(400, latent_dim)
-        self.fc_dec = nn.Linear(latent_dim, 400)
-        self.fc_out = nn.Linear(400, 28*28)
-
-    def encode(self, x):
-        h = torch.relu(self.fc1(x))
-        return self.fc_mu(h), self.fc_logvar(h)
-
-    def reparameterize(self, mu, logvar):
-        std = torch.exp(0.5*logvar)
-        return mu + std * torch.randn_like(std)
-
-    def decode(self, z):
-        h = torch.relu(self.fc_dec(z))
-        return torch.sigmoid(self.fc_out(h))
-
-    def forward(self, x):
-        mu, logvar = self.encode(x.view(-1, 28*28))
-        z = self.reparameterize(mu, logvar)
-        return self.decode(z), mu, logvar
-
-def loss_fn(recon_x, x, mu, logvar):
-    BCE = nn.functional.binary_cross_entropy(recon_x, x.view(-1,28*28), reduction='sum')
-    KLD = -0.5 * torch.sum(1 + logvar - mu.pow(2) - logvar.exp())
-    return BCE + KLD
-
-# Initialize, train with similar loop as above, using loss_fn.
-```
-
----
+![](imgs/PastedImage-9.png)

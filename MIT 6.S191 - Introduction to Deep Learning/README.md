@@ -16,7 +16,7 @@ This repository contains my personal notes, implementations, and assignments fro
 - [x] Lecture 3: Deep Computer Vision 
 - [x] Lecture 4: Deep Generative Modeling 
 - [x] Lecture 5: Deep Reinforcement Learning 
-- [ ] Lecture 6: New Frontiers 
+- [x] Lecture 6: New Frontiers 
 - [ ] Lecture 7: Large Language Models (I) 
 - [ ] Lecture 8: Large Language Models (II) 
 - [ ] Lecture 9: AI in the Wild 
