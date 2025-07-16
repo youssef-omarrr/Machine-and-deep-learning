@@ -32,7 +32,7 @@
 
 - Focus: **Learn a function or mapping**
     
-    - Example: f(x)→yf(x) \rightarrow y
+    - Example: f(x)→y
         
 - Works with **tensors directly** (fixed input-output pairs).
     
