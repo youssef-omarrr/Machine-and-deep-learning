@@ -1,9 +1,9 @@
 # Machine Learning Study Roadmap
 
-## 📌 Overview
+##  Overview
 This roadmap will include resources, projects, and notes that I will be following to develop a strong understanding of machine learning.
 
-## 📚 Resources & Links
+##  Resources & Links
 Here are the sources I am using to learn machine learning:
 
 - **Roadmap video:**  
@@ -29,17 +29,18 @@ Here are the sources I am using to learn machine learning:
 
 - **Projects & Practice:**  
   - *PyTorch projects:*
-    - Linear Regression Model (found in chapter 1)
-    - (non-linear) Multi-class evaluation model (found in chapter 2)
-    - Fashion MNIST Model (with confusion matrix found in chapter 3)
-    - MNIST digits Model (found in projects folder)
+    - [Food MINI model with experiment tracking](https://github.com/youssef-omarrr/Food_MINI_model)
     - [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
+    - Fashion MNIST Model (with confusion matrix found in chapter 3)
+    - (non-linear) Multi-class evaluation model (found in chapter 2)
+    - Linear Regression Model (found in chapter 1)
+
+
   - *To do list:*
-    - [ ] Add more nodes to the web app project
-    - [ ] Search for a way to host the flask server
     - [ ] CartPole (Starter Project)
     - [ ] Brick Breaker Game (Breakout)
     - [ ] Lunar Lander
     - [ ] **Tower Handover RL — Mini (GRAD PROJECT DRAFT)**
+    - [ ] LLM from scratch
 
 

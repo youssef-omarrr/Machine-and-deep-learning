@@ -24,7 +24,7 @@ This repository contains my personal notes, implementations, and assignments fro
 ### Software Labs
 - [x] Software Lab 1: Deep Learning in Python; Music Generation  
 - [x] Software Lab 2: Facial Detection Systems  
-- [ ] Software Lab 3: Fine-Tune an LLM, You Must!  
+- [x] Software Lab 3: Fine-Tune an LLM, You Must!  
 
 ## Topics Covered
 
