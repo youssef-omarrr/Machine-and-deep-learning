@@ -34,6 +34,36 @@
     
 
 ---
+### 4. **Protein Motif Completion**
+
+- **Goal**: Predict the full protein sequence from a **partial input** containing a known **biological motif** (e.g., "RGD---").
+    
+- **Why**: Mimics **biological prompting** as done in EvoDiff, letting you generate or complete biologically meaningful protein sequences.
+    
+- **Libraries**:
+    
+    - `PyTorch` – for building and training the model
+        
+    - `Bio` (from `biopython`) – to parse protein FASTA files
+        
+    - `scikit-learn` or `NumPy` – for splitting and managing data
+        
+    - `tqdm` – for progress bars while training
+        
+    - _(Optional)_ `transformers` – if you want to use pre-trained models like ESM
+        
+- **Techniques**:
+    
+    - **Tokenization** of amino acid sequences (one-hot or integer)
+        
+    - **Masked language modeling** or **sequence-to-sequence learning**
+        
+    - **Transformer Encoder** or **LSTM** as the model backbone
+        
+    - Train on real sequences, randomly mask some residues, and learn to fill them in
+        
+
+---
 
 ##  **Tower Handover RL — Mini To-Do List (GRAD PROJECT DRAFT)**
 

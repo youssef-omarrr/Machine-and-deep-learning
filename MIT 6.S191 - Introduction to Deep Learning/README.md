@@ -19,8 +19,8 @@ This repository contains my personal notes, implementations, and assignments fro
 - [x] Lecture 6: New Frontiers 
 - [x] Lecture 7: Large Language Models (I) 
 - [x] Lecture 8: Large Language Models (II) 
-- [ ] Lecture 9: AI in the Wild 
-- [ ] Lecture 10: AI for Biology 
+- [x] Lecture 9: AI in the Wild 
+- [x] Lecture 10: AI for Biology 
 ### Software Labs
 - [x] Software Lab 1: Deep Learning in Python; Music Generation  
 - [x] Software Lab 2: Facial Detection Systems  
