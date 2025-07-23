@@ -1,0 +1,269 @@
+/* ========== IMPORT FONT ========== */
+@import url('https://fonts.cdnfonts.com/css/amoera');
+
+
+/* ========== GLOBAL BUTTON FONT STYLES ========== */
+/* Shared styles between #predict and #clear */
+#predict, #clear {
+    font-family: 'amoera', sans-serif;
+    letter-spacing: 0.1rem;
+    font-weight: bolder;
+    height: 50px;
+}
+
+
+/* ========== BUTTON CONTAINER ========== */
+/* Flex container holding both buttons side by side */
+#controls {
+    display: flex;
+    gap: 0.5rem;
+    max-width: 280px;
+    margin: auto;
+}
+
+
+/* ==================================== */
+/* ========== PREDICT BUTTON ========== */
+/* ==================================== */
+
+#predict {
+    width: 180px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+#predict:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00,
+                                #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#predict:hover {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+#predict:active {
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    text-shadow: 
+        -1px -1px 0 #000000, 
+         1px -1px 0 #000000, 
+        -1px  1px 0 #000000, 
+         1px  1px 0 #000000;
+}
+
+#predict:active:after {
+    background: transparent;
+}
+
+#predict:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* ========== PREDICT BUTTON ANIMATION ========== */
+@keyframes glowing {
+    0%   { background-position: 0 0; }
+    50%  { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+/* ==================================== */
+/* ========== CLEAR BUTTON ============ */
+/* ==================================== */
+
+#clear {
+    width: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 1rem;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #A62C2C;
+    color: #fff;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    transition: transform ease-in 0.1s, box-shadow ease-in 0.25s;
+    box-shadow: 0 2px 25px rgba(255, 0, 13, 0.408);
+}
+
+#clear:hover {
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+#clear:focus {
+    outline: 0;
+}
+
+#clear:before, 
+#clear:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 140%;
+    height: 100%;
+    left: -20%;
+    z-index: -1000;
+    transition: all ease-in-out 0.5s;
+    background-repeat: no-repeat;
+}
+
+
+/* ========== CLEAR BUTTON BACKGROUND BUBBLES ========== */
+/* Hidden animated bubble background before/after trigger */
+#clear:before {
+    display: none;
+    top: -75%;
+    background-image: 
+        radial-gradient(circle, #A62C2C 20%, transparent 20%), 
+        radial-gradient(circle, transparent 20%, #E83F25 20%, transparent 30%), 
+        radial-gradient(circle, #A62C2C 20%, transparent 20%), 
+        radial-gradient(circle, #EA7300 20%, transparent 20%), 
+        radial-gradient(circle, transparent 10%, #E83F25 15%, transparent 20%), 
+        radial-gradient(circle, #EA7300 20%, transparent 20%), 
+        radial-gradient(circle, #A62C2C 20%, transparent 20%), 
+        radial-gradient(circle, #E83F25 20%, transparent 20%), 
+        radial-gradient(circle, #D3CA79 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+#clear:after {
+    display: none;
+    bottom: -75%;
+    background-image: 
+        radial-gradient(circle, #A62C2C 20%, transparent 20%), 
+        radial-gradient(circle, #EA7300 20%, transparent 20%), 
+        radial-gradient(circle, transparent 10%, #E83F25 15%, transparent 20%), 
+        radial-gradient(circle, #D3CA79 20%, transparent 20%), 
+        radial-gradient(circle, #A62C2C 20%, transparent 20%), 
+        radial-gradient(circle, #E83F25 20%, transparent 20%), 
+        radial-gradient(circle, #EA7300 20%, transparent 20%);
+    background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+
+/* ========== CLEAR BUTTON PRESS EFFECT ========== */
+#clear:active {
+    transform: scale(0.9);
+    background-color: rgb(112, 11, 11);
+    box-shadow: 0 2px 25px rgba(255, 0, 130, 0.2);
+}
+
+
+/* ========== CLEAR BUTTON ANIMATION TRIGGERS ========== */
+#clear.animate:before {
+    display: block;
+    animation: topBubbles ease-in-out 0.75s forwards;
+}
+
+#clear.animate:after {
+    display: block;
+    animation: bottomBubbles ease-in-out 0.75s forwards;
+}
+
+
+/* ========== TOP BUBBLES ANIMATION ========== */
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+/* ========== BOTTOM BUBBLES ANIMATION ========== */
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+/* ==========   CORRECT AND WRONG BUTTONS ========== */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.preview-btns {
+    width: 75px;
+    height: 35px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: white;
+}
+
+.preview-btns:focus {
+    outline: 3px solid #333;
+    outline-offset: 2px;
+}
+
+#wrong_btn {
+    background-color: #d32f2f; /* Red */
+}
+
+#wrong_btn:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05);
+}
+
+#correct_btn {
+    background-color: #388e3c; /* Green */
+}
+
+#correct_btn:hover {
+    background-color: #1b5e20;
+    transform: scale(1.05);
+}

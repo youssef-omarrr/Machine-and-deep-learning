@@ -1,0 +1,282 @@
+/* ========== IMPORT CUSTOM FONT ========== */
+@import url('https://fonts.cdnfonts.com/css/amoera');
+
+:root {
+    --node-color: #6161dab4;
+}
+
+/* ========== GLOBAL STYLES FOR BODY ========== */
+/* Sets background, font, layout, and text styling */
+body {
+    background-image: url("space_background.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;   /* Keeps background fixed during scroll */
+    min-height: 100vh;
+
+    color: #ffffff;
+    font-family: 'amoera', sans-serif;
+    letter-spacing: 0.1rem;
+    padding: 20px;
+    font-weight: bolder;
+}
+
+
+/* ========== PAGE HEADER ========== */
+/* Styles the main title (h1) at the top of the page */
+h1 {
+    text-align: center;
+    margin-top: -0.5rem;
+    margin-bottom: -2rem;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+
+/* ========== MAIN CONTAINER FOR LEFT + RIGHT SECTIONS ========== */
+/* Creates a centered horizontal layout using Flexbox */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;          
+
+    gap: 4rem;
+    width: auto;
+    min-height: 100vh;
+    margin-top: -60px; /* Moves the whole container upward */
+    box-sizing: border-box; /* Ensures padding is included in width/height calculations */
+}
+
+
+/* ========== SHARED LAYOUT FOR LEFT AND RIGHT BOXES ========== */
+/* Used to vertically center and space elements */
+#drawing-area, #result-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+}
+
+
+/* ==================================== */
+/* ========== DRAWING AREA ============ */
+/* ==================================== */
+
+
+/* Styles instructional or labeling text above canvas */
+p {
+    text-align: center;
+    font-size: 1.5em;
+    color: #cccccc;
+    margin-bottom: -1rem;
+}
+
+
+/* Styles the canvas where users draw */
+/* Includes borders, background, and visual effects */
+canvas {
+    border: 2px solid #444;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    cursor: crosshair;  /* Shows a crosshair when hovering */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ==================================== */
+/* ========== OUTPUT AREA ============= */
+/* ==================================== */
+
+
+/* Container for lines or animations overlay */
+#visualization-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+}
+
+
+/* Transparent layer for drawing lines (non-interactive) */
+#lines-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;  /* Allows clicks to pass through */
+    z-index: 1;
+}
+
+
+/* Container for the result output (right side) */
+#result-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    margin-left: 200px;
+    z-index: 2;
+}
+
+
+/* The prediction or result display */
+#result {
+    color: #00eaff;
+    font-size: 2em;
+    margin-top: 1rem;
+}
+
+
+/* Optional display of received input text or label */
+#received-input {
+    margin-top: -2rem;
+}
+
+/* ==================================== */
+/* ======== PREDICTION PREVIEW ======== */
+/* ==================================== */
+
+/* Fixed-positioned preview in bottom right */
+#prediction-preview {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 9999; /* Increase z-index to ensure it's on top */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30, 30, 30, 0.85); /* Add a dark background for contrast */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Preview image */
+.preview-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Label above image */
+.preview-label {
+    margin-top: 18px;
+    font-size: 24px;
+    font-weight: bolder;
+    color: var(--node-color, #00eaff);
+    text-shadow: 0 0 2px var(--node-color, #00eaff);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ========== KEYPAD ========== */
+/* === Keypad Overlay (full-screen background) === */
+.keypad-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'amoera', sans-serif;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* === Main Container for Keypad === */
+.keypad-container {
+    position: relative;
+    font-family: 'amoera', sans-serif;
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    width: 260px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+/* === Header Text === */
+.keypad-heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* === Input Display (shows user input before sending) === */
+.keypad-display {
+    font-size: 2rem;
+    font-weight: bolder;
+    margin-bottom: 1rem;
+    border: 1px solid #000000;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: #f7f7f7;
+    color: #37377c;
+    min-height: 2.5rem;
+}
+
+/* === Keypad Grid Layout (3x4) === */
+.keypad-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 0.5rem;
+}
+
+/* === All Keypad Buttons (0–9, Clear, Send) === */
+.keypad-grid button {
+    width: 100%; 
+    padding: 1rem;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'amoera', sans-serif;
+    background-color: var(--node-color); /* Default color for digits */
+    color: white;
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+/* === Hover Effect for All Buttons === */
+.keypad-grid button:hover {
+    transform: scale(1.05);
+}
+
+/* Close “X” button in top-right of keypad */
+.keypad-close-btn {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+}
+
+.keypad-close-btn:hover {
+  color: #f44336; /* red on hover */
+}
