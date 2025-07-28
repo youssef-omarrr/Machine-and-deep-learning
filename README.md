@@ -4,6 +4,13 @@
 ##  Overview
 This roadmap will include resources, projects, and notes that I will be following to develop a strong understanding of machine learning.
 
+## Contents
+- Prerequisites: a quick revision on numpy, pandas, and matplotlib.
+- MIT 6.S191: Introduction to Deep Learning.
+- Pytorch course.
+- Projects: contains most projects, bigger projects have their own repos linked below.
+- [FUTURE] Reinforced learning projects.
+- [FUTURE] LLM from scratch.
 ##  Resources & Links
 Here are the sources I am using to learn machine learning:
 
@@ -32,7 +39,7 @@ Here are the sources I am using to learn machine learning:
 	- Fashion MNIST Model (with confusion matrix found in chapter 3)
 	- (non-linear) Multi-class evaluation model (found in chapter 2)
 	- Linear Regression Model (found in chapter 1)
-  - More Projects
+  - Bigger Projects
 	- [Food MINI model with experiment tracking](https://github.com/youssef-omarrr/Food_MINI_model)
 	- [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
   - Reinforced learning projects
