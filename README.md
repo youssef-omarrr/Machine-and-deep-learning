@@ -11,6 +11,7 @@ This roadmap will include resources, projects, and notes that I will be followin
 - Projects: contains most projects, bigger projects have their own repos linked below.
 - [FUTURE] Reinforced learning projects.
 - [FUTURE] LLM from scratch.
+
 ##  Resources & Links
 Here are the sources I am using to learn machine learning:
 
