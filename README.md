@@ -1,5 +1,5 @@
 # Machine Learning Study Roadmap
-> Due to `Git lfs` problems, all 67 commits that included the whole repo's history have been deleted (fml...)
+> Due to `Git lfs` problems, all 67 commits that included the whole repo's history have been deleted :(
 
 ##  Overview
 This roadmap will include resources, projects, and notes that I will be following to develop a strong understanding of machine learning.
