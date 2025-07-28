@@ -1,6 +1,48 @@
-# 🎨 **Matplotlib & Seaborn Extended Cheat Sheet**
+#  **Matplotlib & Seaborn Extended Cheat Sheet**
 
-### 📌 **Step 1: Import Libraries**
+## Table of Contents
+- [Step 1: Import Libraries](#step-1-import-libraries)
+- [Matplotlib: Basic & Advanced Visualization](#matplotlib-basic--advanced-visualization)
+  - [1. Line Plot](#1-line-plot)
+  - [2. Scatter Plot](#2-scatter-plot)
+  - [3. Bar Chart](#3-bar-chart)
+  - [4. Histogram](#4-histogram)
+  - [5. Pie Chart](#5-pie-chart)
+  - [6. Advanced Matplotlib Functions](#6-advanced-matplotlib-functions)
+    - [6.1. Subplots and Figure Adjustments](#61-subplots-and-figure-adjustments)
+    - [6.2. Customizing Ticks & Labels](#62-customizing-ticks--labels)
+    - [6.3. Adding Annotations](#63-adding-annotations)
+    - [6.4. Saving Figures](#64-saving-figures)
+    - [6.5. Changing Styles](#65-changing-styles)
+- [Seaborn: Advanced Visualization](#seaborn-advanced-visualization)
+  - [1. Line Plot](#1-line-plot-1)
+  - [2. Scatter Plot with Regression Line](#2-scatter-plot-with-regression-line)
+  - [3. Bar Chart](#3-bar-chart-1)
+  - [4. Histogram (Distribution Plot)](#4-histogram-distribution-plot)
+  - [5. Box Plot (Outliers Detection)](#5-box-plot-outliers-detection)
+  - [6. Heatmap (Correlation Matrix)](#6-heatmap-correlation-matrix)
+  - [7. Additional Seaborn Functions](#7-additional-seaborn-functions)
+    - [7.1. Violin Plot](#71-violin-plot)
+    - [7.2. Pair Plot](#72-pair-plot)
+    - [7.3. Joint Plot](#73-joint-plot)
+    - [7.4. Count Plot](#74-count-plot)
+    - [7.5. Cat Plot](#75-cat-plot)
+    - [7.6. FacetGrid](#76-facetgrid)
+    - [7.7. Customizing Themes & Contexts](#77-customizing-themes--contexts)
+    - [7.8. Regression Plot Variants](#78-regression-plot-variants)
+- [Matplotlib vs. Seaborn: When to Use?](#matplotlib-vs-seaborn-when-to-use)
+- [Integration in Jupyter Notebook](#integration-in-jupyter-notebook)
+  - [1. Set Up Your Notebook](#1-set-up-your-notebook)
+  - [2. Set a Seaborn Style](#2-set-a-seaborn-style)
+  - [3. Create a Figure and Axes with Matplotlib](#3-create-a-figure-and-axes-with-matplotlib)
+  - [4. Plot with Seaborn on Matplotlib Axes](#4-plot-with-seaborn-on-matplotlib-axes)
+  - [5. Mixing Matplotlib and Seaborn Commands](#5-mixing-matplotlib-and-seaborn-commands)
+  - [6. Using FacetGrid for Complex Layouts](#6-using-facetgrid-for-complex-layouts)
+  - [7. Adding Annotations](#7-adding-annotations)
+- [Final Summary](#final-summary)
+
+
+###  **Step 1: Import Libraries**
 ```python
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -12,9 +54,9 @@ import pandas as pd
 
 ---
 
-# 🖼️ **Matplotlib: Basic & Advanced Visualization**
+# ️ **Matplotlib: Basic & Advanced Visualization**
 
-## 🔹 **1. Line Plot**  
+##  **1. Line Plot**  
 ```python
 x = np.linspace(0, 10, 100)
 y = np.sin(x)
@@ -27,7 +69,7 @@ plt.legend()
 plt.grid(True)
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `plt.plot()`: Creates a line plot.  
 - `label`: Adds a label for legend.  
 - `color`: Specifies the line color.  
@@ -39,7 +81,7 @@ plt.show()
 
 ---
 
-## 🔹 **2. Scatter Plot**  
+##  **2. Scatter Plot**  
 ```python
 x = np.random.rand(50)
 y = np.random.rand(50)
@@ -50,7 +92,7 @@ plt.ylabel("Y-axis")
 plt.title("Scatter Plot")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `plt.scatter()`: Creates a scatter plot.  
 - `marker='o'`: Specifies marker shape.  
 - `alpha=0.6`: Adjusts transparency.  
@@ -58,7 +100,7 @@ plt.show()
 
 ---
 
-## 🔹 **3. Bar Chart**  
+##  **3. Bar Chart**  
 ```python
 categories = ['A', 'B', 'C', 'D']
 values = [10, 25, 15, 30]
@@ -69,13 +111,13 @@ plt.ylabel("Values")
 plt.title("Bar Chart")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `plt.bar()`: Creates a bar chart.  
 - `alpha=0.7`: Adjusts transparency.  
 
 ---
 
-## 🔹 **4. Histogram**  
+##  **4. Histogram**  
 ```python
 data = np.random.randn(1000)
 
@@ -85,14 +127,14 @@ plt.ylabel("Frequency")
 plt.title("Histogram")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `plt.hist()`: Creates a histogram.  
 - `bins=30`: Defines number of bins.  
 - `edgecolor='black'`: Adds borders to bars.  
 
 ---
 
-## 🔹 **5. Pie Chart**  
+##  **5. Pie Chart**  
 ```python
 labels = ['Apple', 'Banana', 'Orange', 'Grapes']
 sizes = [20, 30, 25, 25]
@@ -101,13 +143,13 @@ plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['red', 'yellow', 'orang
 plt.title("Fruit Distribution")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `plt.pie()`: Creates a pie chart.  
 - `autopct='%1.1f%%'`: Displays percentage values.  
 
 ---
 
-### 🔹 **6. Advanced Matplotlib Functions**
+###  **6. Advanced Matplotlib Functions**
 
 #### **6.1. Subplots and Figure Adjustments**
 - **Creating Multiple Plots:**
@@ -169,82 +211,82 @@ plt.show()
 
 ---
 
-# 🌟 **Seaborn: Advanced Visualization**  
+#  **Seaborn: Advanced Visualization**  
 
-## 🔹 **1. Line Plot**  
+##  **1. Line Plot**  
 ```python
 tips = sns.load_dataset("tips")
 sns.lineplot(x="size", y="total_bill", data=tips, marker="o")
 plt.title("Line Plot of Bill by Size")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.lineplot()`: Creates a line plot.  
 - `data=tips`: Uses a dataset from Seaborn.  
 
 ---
 
-## 🔹 **2. Scatter Plot with Regression Line**  
+##  **2. Scatter Plot with Regression Line**  
 ```python
 sns.regplot(x="total_bill", y="tip", data=tips, scatter_kws={'alpha':0.5})
 plt.title("Tip vs Total Bill")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.regplot()`: Creates a scatter plot with a regression line.  
 - `scatter_kws={'alpha':0.5}`: Adjusts transparency.  
 
 ---
 
-## 🔹 **3. Bar Chart**  
+##  **3. Bar Chart**  
 ```python
 sns.barplot(x="day", y="total_bill", data=tips, palette="Blues")
 plt.title("Average Bill per Day")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.barplot()`: Creates a bar chart.  
 - `palette="Blues"`: Changes color scheme.  
 
 ---
 
-## 🔹 **4. Histogram (Distribution Plot)**  
+##  **4. Histogram (Distribution Plot)**  
 ```python
 sns.histplot(tips["total_bill"], bins=20, kde=True, color="green")
 plt.title("Distribution of Total Bills")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.histplot()`: Creates a histogram.  
 - `kde=True`: Adds a smooth density curve.  
 
 ---
 
-## 🔹 **5. Box Plot (Outliers Detection)**  
+##  **5. Box Plot (Outliers Detection)**  
 ```python
 sns.boxplot(x="day", y="total_bill", data=tips, palette="Set2")
 plt.title("Box Plot of Total Bill by Day")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.boxplot()`: Creates a box plot for outlier detection.  
 
 ---
 
-## 🔹 **6. Heatmap (Correlation Matrix)**  
+##  **6. Heatmap (Correlation Matrix)**  
 ```python
 corr = tips.corr()
 sns.heatmap(corr, annot=True, cmap="coolwarm", linewidths=0.5)
 plt.title("Correlation Heatmap")
 plt.show()
 ```
-✅ **Key Functions:**  
+ **Key Functions:**  
 - `sns.heatmap()`: Creates a heatmap.  
 - `annot=True`: Displays correlation values.  
 
 ---
 
-### 🔹 **7. Additional Seaborn Functions**
+###  **7. Additional Seaborn Functions**
 
 #### **7.1. Violin Plot**
 - **Visualize the Distribution with Density Estimation:**
@@ -320,15 +362,15 @@ plt.show()
 
 ---
 
-# 🎯 **Matplotlib vs. Seaborn: When to Use?**
+#  **Matplotlib vs. Seaborn: When to Use?**
 
 | **Feature**           | **Matplotlib**           | **Seaborn**                               |
 | --------------------- | ------------------------ | ----------------------------------------- |
-| **Basic Plots**       | ✅ Yes                    | ✅ Yes                                     |
-| **Styling**           | 🔶 Manual customization   | ✅ Automatic with themes                   |
-| **Statistical Plots** | ❌ Requires manual coding | ✅ Built-in functions (box, violin, etc.)  |
-| **Customization**     | ✅ Very High              | 🔶 Somewhat limited (but often enough)     |
-| **Plot Facetting**    | ❌ Requires extra work    | ✅ Seamless with `FacetGrid` and `catplot` |
+| **Basic Plots**       |  Yes                    |  Yes                                     |
+| **Styling**           |  Manual customization   |  Automatic with themes                   |
+| **Statistical Plots** |  Requires manual coding |  Built-in functions (box, violin, etc.)  |
+| **Customization**     |  Very High              |  Somewhat limited (but often enough)     |
+| **Plot Facetting**    |  Requires extra work    |  Seamless with `FacetGrid` and `catplot` |
 
 - **Matplotlib:**  
   - Full control for detailed, custom visualizations.
@@ -338,7 +380,6 @@ plt.show()
   - Fast and beautiful statistical visualizations.
   - Great for exploratory data analysis with minimal code.
 
----
 ---
 
 # Below is a step-by-step guide on how to integrate both Matplotlib and Seaborn in a Jupyter Notebook:
