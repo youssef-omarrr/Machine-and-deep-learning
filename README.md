@@ -13,7 +13,6 @@ Here are the sources I am using to learn machine learning:
 - **Courses:** 
   - [MIT 6.S191: Introduction to Deep Learning (very very reccomended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
-  
     - [Github link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
     - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
   
@@ -29,12 +28,15 @@ Here are the sources I am using to learn machine learning:
   - [`timm` (PyTorch Image Models) library](https://github.com/huggingface/pytorch-image-models)
 
 - **Projects & Practice:**  
-  - *PyTorch projects:*
-    - [Food MINI model with experiment tracking](https://github.com/youssef-omarrr/Food_MINI_model)
-    - [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
-    - Fashion MNIST Model (with confusion matrix found in chapter 3)
-    - (non-linear) Multi-class evaluation model (found in chapter 2)
-    - Linear Regression Model (found in chapter 1)
+  - *PyTorch  course projects:*
+	- Fashion MNIST Model (with confusion matrix found in chapter 3)
+	- (non-linear) Multi-class evaluation model (found in chapter 2)
+	- Linear Regression Model (found in chapter 1)
+  - More Projects
+	- [Food MINI model with experiment tracking](https://github.com/youssef-omarrr/Food_MINI_model)
+	- [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
+  - Reinforced learning projects
+	- TBD
 
 
   - *To do list:*
