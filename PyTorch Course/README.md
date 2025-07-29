@@ -16,7 +16,7 @@
 - [x] 06. PyTorch Transfer Learning
 - [x] 07. PyTorch Experiment Tracking
 - [x] 08. PyTorch Paper Replicating
-- [ ] 09. PyTorch Model Deployment
+- [x] 09. PyTorch Model Deployment
 
 ---
 
