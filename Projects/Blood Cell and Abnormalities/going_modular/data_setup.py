@@ -67,7 +67,7 @@ import torch
 
 def get_x_percent_dataloader(dataset: torch.utils.data.Dataset, 
                             percent: float,
-                            seed:int,
+                            seed:int = 0,
                             batch_size:int =32, 
                             shuffle:bool =True) -> DataLoader:
     """
@@ -92,7 +92,7 @@ def get_x_percent_dataloader(dataset: torch.utils.data.Dataset,
     Returns:
         DataLoader: A PyTorch DataLoader containing the selected subset of the dataset.
     """
-    if seed:
+    if seed != 0:
         random.seed(seed)
 
     # Get true targets and indices from base dataset

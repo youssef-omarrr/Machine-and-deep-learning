@@ -50,7 +50,7 @@ def confusion_matrix_and_plot(model: torch.nn.Module,
                             class_names: List[str],
                             device: torch.device = torch.device("cpu"),
                             normalize: str = None,  # options: 'true', 'pred', 'all', or None
-                            figsize: tuple = (10, 8),
+                            figsize: tuple = (12, 10),
                             cmap = 'Blues'):
     """
     Computes and plots the confusion matrix for a given model and dataset.
@@ -71,24 +71,24 @@ def confusion_matrix_and_plot(model: torch.nn.Module,
     all_labels = []
 
     with torch.inference_mode():
-        for batch in dataloader:
-            inputs, labels = batch
+        for inputs, labels in dataloader:
             inputs, labels = inputs.to(device), labels.to(device)
-
             outputs = model(inputs)
             preds = torch.argmax(outputs, dim=1)
-
             all_preds.extend(preds.cpu().numpy())
             all_labels.extend(labels.cpu().numpy())
 
-    # Create confusion matrix
     cm = confusion_matrix(all_labels, all_preds, normalize=normalize)
-
-    # Plot confusion matrix
-    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_names)
     fig, ax = plt.subplots(figsize=figsize)
-    disp.plot(ax=ax, cmap=cmap, xticks_rotation=45)
+
+    disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=class_names)
+    disp.plot(ax=ax, cmap=cmap, colorbar=True)
+
+    # Rotate x and y labels for better readability
+    ax.set_xticklabels(class_names, rotation=45, ha='right', fontsize=10)
+    ax.set_yticklabels(class_names, fontsize=10)
     plt.title("Confusion Matrix")
+    plt.tight_layout()  # Automatically adjust to fit labels
     plt.show()
 
 
