@@ -1,8 +1,8 @@
 ## White blood cells
-- Basophil (1,653)
-- Eosinophil (7,141)
-- Lymphocyte (8,685)
-- Monocyte (5,046)
+- Basophil 
+- Eosinophil 
+- Lymphocyte 
+- Monocyte 
 - Neutrophil -> General term for **any neutrophil**, including immature and mature forms
 	- Segmented Neutrophil (SNE) -> **Mature** *neutrophil* (segmented nucleus; normal WBC)
 	- Neutrophilic Granulocyte Segmented (NGS) -> same as above just a different name
