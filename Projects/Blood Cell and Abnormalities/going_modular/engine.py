@@ -8,6 +8,7 @@ from torch import nn
 from tqdm.auto import tqdm
 import torchmetrics
 from torchmetrics import Accuracy
+from .utils import save_model
 
 
 # ------------------------ TRAINING STEP ------------------------
@@ -37,7 +38,7 @@ def train_step(model: torch.nn.Module,
     print_every = max(1, len(dataloader) // 10)  # for 10 logs/epoch
     
     # Loop over training batches
-    for batch, (x, y) in tqdm(enumerate(dataloader)):
+    for batch, (x, y) in enumerate(dataloader):
         # Move input and target to the target device
         x, y = x.to(device), y.to(device)
 
@@ -194,6 +195,8 @@ def train(model: torch.nn.Module,
         results["test_loss"].append(test_loss.item() if isinstance(test_loss, torch.Tensor) else test_loss)
         results["test_acc"].append(test_acc.item() if isinstance(test_acc, torch.Tensor) else test_acc)
         
+        # Save the model after every cycle
+        save_model(model= model, target_dir="models/", model_name="My_ViT_16b.pth")
         
         ###########################################################
         ####### ====== New: Experiment tracking  ====== ###########
