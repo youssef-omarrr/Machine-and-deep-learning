@@ -1,12 +1,12 @@
 ---
-title: FoodVision Mini Test
-emoji: 🌖
+title: CelluScan
+emoji: 🧫
 colorFrom: indigo
-colorTo: gray
+colorTo: red
 sdk: gradio
 sdk_version: 5.38.2
 app_file: app.py
-pinned: false
+pinned: true
 license: mit
 ---
 
