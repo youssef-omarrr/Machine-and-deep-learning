@@ -3,6 +3,10 @@ import gradio as gr
 import os
 import torch
 
+import base64
+from io import BytesIO
+from PIL import Image
+
 from vit_model import create_ViT
 from timeit import default_timer as timer
 from typing import Tuple, Dict
@@ -71,26 +75,44 @@ disclaimer = (
     "Always consult a qualified healthcare provider for any medical concerns or decisions."
 )
 
-# Auto-generate labeled examples
-example_dir = "examples/"
+# Auto-generate labeled examples with base64 encoding
+def image_to_base64(image_path):
+    """Convert image to base64 for embedding in HTML"""
+    try:
+        with Image.open(image_path) as img:
+            buffered = BytesIO()
+            img.save(buffered, format="PNG")
+            img_str = base64.b64encode(buffered.getvalue()).decode()
+            return f"data:image/png;base64,{img_str}"
+    except Exception as e:
+        print(f"Error converting {image_path} to base64: {e}")
+        return None
+    
+example_dir = "examples"
 example_list = []
-labeled_examples_md = "### 🧪 Example Images (Ordered by Class)\n<div style='display: flex; flex-wrap: wrap;'>\n"
+labeled_examples_html = "<h2>🧪 Example Images (Ordered by Class)</h2><div style='display: flex; flex-wrap: wrap;'>\n"
 
-for fname in sorted(os.listdir(example_dir)):
-    filepath = os.path.join(example_dir, fname)
-    prefix = fname.split('_')[0].upper()
-    label = prefix_to_label.get(prefix, "Unknown")
-    example_list.append([filepath])
+if os.path.exists(example_dir):
+    for fname in sorted(os.listdir(example_dir)):
+        if fname.lower().endswith(('.png', '.jpg', '.jpeg')):
+            prefix = fname.split('_')[0].upper()
+            label = prefix_to_label.get(prefix, "Unknown")
 
-    # Inline HTML for label above image
-    labeled_examples_md += f"""
-    <div style="margin: 10px; text-align: center;">
-        <div style="font-weight: bold;">{label}</div>
-        <img src="file/{filepath}" alt="{label}" style="width: 120px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px;" />
-    </div>
-    """
+            example_path = os.path.join(example_dir, fname)
+            example_list.append([example_path])
 
-labeled_examples_md += "</div>"
+            # Convert to base64 for HTML display
+            base64_img = image_to_base64(example_path)
+            if base64_img:
+                labeled_examples_html += f"""
+                <div style="margin: 10px; text-align: center;">
+                    <div style="font-weight: bold;">{label}</div>
+                    <img src="{base64_img}" alt="{label}"
+                        style="width: 120px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px;" />
+                </div>
+                """
+
+labeled_examples_html += "</div>"
 
 # ----------------------------- #
 #  Gradio Layout with Blocks
@@ -116,7 +138,7 @@ with gr.Blocks() as demo:
         examples_per_page=14
     )
     
-    gr.Markdown(labeled_examples_md)
+    gr.HTML(labeled_examples_html)
 
     def wrapped_predict(img):
         pred_probs, diagnosis_md, pred_time = predict(img)
@@ -126,5 +148,5 @@ with gr.Blocks() as demo:
 
 
 # Launch the demo!
-demo.launch(static_dir = example_dir)
+demo.launch()
 
