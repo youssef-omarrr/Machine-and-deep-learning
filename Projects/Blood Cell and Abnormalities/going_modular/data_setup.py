@@ -46,6 +46,10 @@ def create_dataloaders(root:Path,
     # Define train and test lengths (80% train, 20% test)
     train_size = int(0.8 * len(dataset))
     test_size = len(dataset) - train_size
+    
+    # Set random seed 
+    torch.manual_seed(42)
+    random.seed(42)
 
     # Random split dataset into train and test datasets
     train_dataset, test_dataset = random_split(dataset, lengths=[train_size, test_size])
