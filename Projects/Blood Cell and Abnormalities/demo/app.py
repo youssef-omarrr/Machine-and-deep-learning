@@ -71,10 +71,10 @@ disclaimer = (
     "Always consult a qualified healthcare provider for any medical concerns or decisions."
 )
 
-# Auto-generate labeled examples as HTML for Gradio Markdown
+# Auto-generate labeled examples
 example_dir = "examples/"
 example_list = []
-labeled_examples_md = "### 🧪 Example Images (Ordered by Class)\n"
+labeled_examples_md = "### 🧪 Example Images (Ordered by Class)\n<div style='display: flex; flex-wrap: wrap;'>\n"
 
 for fname in sorted(os.listdir(example_dir)):
     filepath = os.path.join(example_dir, fname)
@@ -82,13 +82,15 @@ for fname in sorted(os.listdir(example_dir)):
     label = prefix_to_label.get(prefix, "Unknown")
     example_list.append([filepath])
 
-    # Markdown with label on top of each image using inline HTML
+    # Inline HTML for label above image
     labeled_examples_md += f"""
-<div style="display: inline-block; text-align: center; margin: 10px;">
-    <div style="font-weight: bold;">{label}</div>
-    <img src="{filepath}" alt="{label}" style="width: 120px; height: auto; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px;" />
-</div>
-"""
+    <div style="margin: 10px; text-align: center;">
+        <div style="font-weight: bold;">{label}</div>
+        <img src="file/{filepath}" alt="{label}" style="width: 120px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px;" />
+    </div>
+    """
+
+labeled_examples_md += "</div>"
 
 # ----------------------------- #
 #  Gradio Layout with Blocks
@@ -106,9 +108,6 @@ with gr.Blocks() as demo:
             diagnosis_output = gr.Markdown(label="Potential Diagnosis")
             time_output = gr.Number(label="Prediction time (s)")
 
-    gr.Markdown("### Visual Preview of Examples with Labels")
-    gr.Markdown(labeled_examples_md)
-
     gr.Markdown("### Try the Model with Clickable Examples")
     gr.Examples(
         examples=example_list,
@@ -116,6 +115,8 @@ with gr.Blocks() as demo:
         label="Click an Example to Predict",
         examples_per_page=14
     )
+    
+    gr.Markdown(labeled_examples_md)
 
     def wrapped_predict(img):
         pred_probs, diagnosis_md, pred_time = predict(img)
@@ -125,5 +126,5 @@ with gr.Blocks() as demo:
 
 
 # Launch the demo!
-demo.launch()
+demo.launch(static_dir = example_dir)
 
