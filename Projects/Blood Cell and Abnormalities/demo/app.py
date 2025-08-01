@@ -71,17 +71,24 @@ disclaimer = (
     "Always consult a qualified healthcare provider for any medical concerns or decisions."
 )
 
-# Auto-generate labeled examples for Gradio
+# Auto-generate labeled examples as HTML for Gradio Markdown
 example_dir = "examples/"
 example_list = []
-labeled_examples_md = "### 🧪 Example Images\n"
+labeled_examples_md = "### 🧪 Example Images (Ordered by Class)\n"
 
 for fname in sorted(os.listdir(example_dir)):
     filepath = os.path.join(example_dir, fname)
     prefix = fname.split('_')[0].upper()
     label = prefix_to_label.get(prefix, "Unknown")
     example_list.append([filepath])
-    labeled_examples_md += f"- **{label}** — `{fname}`\n  \n  ![]({filepath})\n\n"
+
+    # Markdown with label on top of each image using inline HTML
+    labeled_examples_md += f"""
+<div style="display: inline-block; text-align: center; margin: 10px;">
+    <div style="font-weight: bold;">{label}</div>
+    <img src="{filepath}" alt="{label}" style="width: 120px; height: auto; border: 1px solid #ccc; border-radius: 8px; margin-top: 5px;" />
+</div>
+"""
 
 # ----------------------------- #
 #  Gradio Layout with Blocks
@@ -90,21 +97,24 @@ with gr.Blocks() as demo:
     gr.Markdown(title)
     gr.Markdown(description)
     gr.Markdown(disclaimer)
-    gr.Markdown(labeled_examples_md)
 
     with gr.Row():
         image_input = gr.Image(type="pil", label="Upload a Blood Cell Image")
+        
+        with gr.Column():
+            label_output = gr.Label(num_top_classes=3, label="Predictions")
+            diagnosis_output = gr.Markdown(label="Potential Diagnosis")
+            time_output = gr.Number(label="Prediction time (s)")
 
-    with gr.Row():
-        label_output = gr.Label(num_top_classes=3, label="Predictions")
-        diagnosis_output = gr.Markdown(label="Potential Diagnosis")
-        time_output = gr.Number(label="Prediction time (s)")
+    gr.Markdown("### Visual Preview of Examples with Labels")
+    gr.Markdown(labeled_examples_md)
 
+    gr.Markdown("### Try the Model with Clickable Examples")
     gr.Examples(
         examples=example_list,
         inputs=image_input,
         label="Click an Example to Predict",
-        examples_per_page=10
+        examples_per_page=14
     )
 
     def wrapped_predict(img):
