@@ -55,22 +55,23 @@ def predict(img) -> Tuple[Dict, str, float]:
 
 ### 4. Gradio app ###
 
-# Create title, description and disclaimer strings
-title = "CelluScan 🧫"
+# ----------------------------- #
+# Title, Description, Disclaimer
+# ----------------------------- #
+title = "# 🧫 CelluScan"
 description = (
-    "CelluScan is a deep learning model based on the Vision Transformer (ViT B-16) architecture. "
-    "It was trained on a dataset of approximately 60,000 blood cell images to classify various types of white blood cells "
-    "and detect possible abnormalities. Designed for educational and research purposes, it can assist in exploring AI-based blood analysis."
+    "CelluScan is a deep learning model based on the **Vision Transformer (ViT B-16)** architecture. "
+    "It was trained on a dataset of approximately **60,000 blood cell images** to classify various types of white blood cells "
+    "and detect possible abnormalities.\n\n"
+    "Designed for educational and research purposes, it can assist in exploring AI-based blood analysis."
 )
 disclaimer = (
-    "⚠ DISCLAIMER: This project was developed as part of a student-led academic initiative and is intended solely for educational and research use. "
-    "It is not a substitute for professional medical advice, diagnosis, or treatment. "
+    "⚠️ **DISCLAIMER:** This project was developed as part of a student-led academic initiative and is intended solely for **educational and research** use. "
+    "It is *not* a substitute for professional medical advice, diagnosis, or treatment. "
     "Always consult a qualified healthcare provider for any medical concerns or decisions."
 )
 
 # Auto-generate labeled examples for Gradio
-import os
-
 example_dir = "examples/"
 example_list = []
 labeled_examples_md = "### 🧪 Example Images\n"
@@ -78,29 +79,41 @@ labeled_examples_md = "### 🧪 Example Images\n"
 for fname in sorted(os.listdir(example_dir)):
     filepath = os.path.join(example_dir, fname)
     prefix = fname.split('_')[0].upper()
-
     label = prefix_to_label.get(prefix, "Unknown")
     example_list.append([filepath])
-    
-    labeled_examples_md += f"- **{label}** — `{fname}`  \n  ![]({filepath})\n\n"
+    labeled_examples_md += f"- **{label}** — `{fname}`\n  \n  ![]({filepath})\n\n"
 
-# Display the labeled image markdown
-gr.Markdown(labeled_examples_md)
+# ----------------------------- #
+#  Gradio Layout with Blocks
+# ----------------------------- #
+with gr.Blocks() as demo:
+    gr.Markdown(title)
+    gr.Markdown(description)
+    gr.Markdown(disclaimer)
+    gr.Markdown(labeled_examples_md)
 
-# Create the Gradio demo
-demo = gr.Interface(
-    fn=predict,  # mapping function from input to output
-    inputs=gr.Image(type="pil"),  # what are the inputs?
-    outputs=[
-        gr.Label(num_top_classes=3, label="Predictions"),
-        gr.Textbox(label="Potential Diagnosis", lines=6, max_lines=10, interactive=False, show_copy_button=True),
-        gr.Number(label="Prediction time (s)")
-    ],
-    examples=example_list,
-    title=title,
-    description=description + "\n\n" + disclaimer,
-)
+    with gr.Row():
+        image_input = gr.Image(type="pil", label="Upload a Blood Cell Image")
+
+    with gr.Row():
+        label_output = gr.Label(num_top_classes=3, label="Predictions")
+        diagnosis_output = gr.Markdown(label="Potential Diagnosis")
+        time_output = gr.Number(label="Prediction time (s)")
+
+    gr.Examples(
+        examples=example_list,
+        inputs=image_input,
+        label="Click an Example to Predict",
+        examples_per_page=10
+    )
+
+    def wrapped_predict(img):
+        pred_probs, diagnosis_md, pred_time = predict(img)
+        return pred_probs, diagnosis_md, pred_time
+
+    image_input.change(fn=wrapped_predict, inputs=image_input, outputs=[label_output, diagnosis_output, time_output])
 
 
 # Launch the demo!
 demo.launch()
+
