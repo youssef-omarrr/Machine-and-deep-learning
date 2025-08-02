@@ -36,14 +36,18 @@ Here are the sources I am using to learn machine learning:
   - [`timm` (PyTorch Image Models) library](https://github.com/huggingface/pytorch-image-models)
 
 - **Projects & Practice:**  
+> Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
+
   - *PyTorch  course projects:*
-	- Fashion MNIST Model (with confusion matrix found in chapter 3)
-	- (non-linear) Multi-class evaluation model (found in chapter 2)
-	- Linear Regression Model (found in chapter 1)
-  - Bigger Projects
-	- [Food MINI model with experiment tracking](https://github.com/youssef-omarrr/Food_MINI_model)
-	- [Real-time number detector web app with a model trained on MNIST and custom datasets](https://github.com/youssef-omarrr/MNIST_Web_APP)
-  - Reinforced learning projects
+	- Fashion MNIST Model (with confusion matrix, Chapter 3)
+	- Multi-class evaluation model (Non-linear, Chapter 2)
+	- Linear Regression Model (Chapter 1)
+  - **Bigger Projects:**
+	- LLM from Scratch (*in progress...*)
+	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
+	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
+	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
+  - *Reinforced learning projects:*
 	- TBD
 
 
