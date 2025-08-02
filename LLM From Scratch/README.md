@@ -10,6 +10,8 @@ The goal of this repo is to **learn by doing** — to gain a deeper understandin
 
 While this repo follows the concepts and structure of [rasbt/LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch), it also includes my own experiments, notes, and variations as I try to internalize the ideas and push myself further.
 
+[Sebastian Raschka's playlist on youtube](https://www.youtube.com/playlist?list=PLTKMiZHVd_2IIEsoJrWACkIxLRdfMlw11)
+
 ---
 
 ## Structure
@@ -23,15 +25,22 @@ You can expect to find:
 
 ---
 
-## Credits
+## Useful Links
 
-A huge thank you to **[Sebastian Raschka](https://github.com/rasbt)** for the incredible effort behind [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch). The repo is exceptionally well-structured and accessible, and serves as both an educational resource and a technical reference. This project wouldn’t exist without it.
+* **[LM Arena](https://lmarena.ai/?mode=side-by-side):** 
+  Compare responses from different LLMs side-by-side in an interactive interface.
 
----
+* **[LMSYS](https://lmsys.org/):** 
+  Official site for LMSYS, creators of Chatbot Arena and tools for evaluating LLMs.
 
-## Disclaimer
+* **[Lit-GPT (GitHub)](https://github.com/Lightning-AI/litgpt):** 
+  Lightweight framework from Lightning AI for training and fine-tuning GPT models.
 
-This repository is for **learning and research purposes** only. It is not intended for production use. All credit for original concepts and implementations goes to the upstream author.
+* **[Lightning AI Studio – TinyLLaMA Pretraining](https://lightning.ai/lightning-ai/studios/pretrain-llms-tinyllama-1-1b?section=featured):**
+  End-to-end guide to pretrain TinyLLaMA using Lightning AI Studio.
+
+* **[Tiktokenizer](https://tiktokenizer.vercel.app/):**
+   Online tokenizer tool based on OpenAI’s `tiktoken`, useful for estimating token counts in text.
 
 ---
 
@@ -49,4 +58,14 @@ I'll be updating the repo as I go:
 
 ---
 
+## Credits
 
+A huge thank you to **[Sebastian Raschka](https://github.com/rasbt)** for the incredible effort behind [LLMs-from-scratch](https://github.com/rasbt/LLMs-from-scratch). The repo is exceptionally well-structured and accessible, and serves as both an educational resource and a technical reference. This project wouldn’t exist without it.
+
+---
+
+## Disclaimer
+
+This repository is for **learning and research purposes** only. It is not intended for production use. All credit for original concepts and implementations goes to the upstream author.
+
+---
