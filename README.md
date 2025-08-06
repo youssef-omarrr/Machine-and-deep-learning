@@ -9,8 +9,8 @@ This roadmap will include resources, projects, and notes that I will be followin
 - MIT 6.S191: Introduction to Deep Learning.
 - Pytorch course.
 - Projects: contains most projects, bigger projects have their own repos linked below.
+- LLM from scratch course.
 - [FUTURE] Reinforced learning projects.
-- [FUTURE] LLM from scratch.
 
 ##  Resources & Links
 Here are the sources I am using to learn machine learning:
@@ -23,7 +23,8 @@ Here are the sources I am using to learn machine learning:
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
     - [Github link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
     - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
-  
+    
+  - [LLM from scratch course.](https://github.com/rasbt/LLMs-from-scratch)
   - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
@@ -43,7 +44,6 @@ Here are the sources I am using to learn machine learning:
 	- Multi-class evaluation model (Non-linear, Chapter 2)
 	- Linear Regression Model (Chapter 1)
   - **Bigger Projects:**
-	- LLM from Scratch (*in progress...*)
 	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
 	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
 	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
@@ -56,6 +56,5 @@ Here are the sources I am using to learn machine learning:
     - [ ] Brick Breaker Game (Breakout)
     - [ ] Lunar Lander
     - [ ] **Tower Handover RL — Mini (GRAD PROJECT DRAFT)**
-    - [ ] LLM from scratch
 
 
