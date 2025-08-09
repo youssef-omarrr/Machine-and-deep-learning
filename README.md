@@ -39,16 +39,17 @@ Here are the sources I am using to learn machine learning:
 - **Projects & Practice:**  
 > Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
 
-  - *PyTorch  course projects:*
-	- Fashion MNIST Model (with confusion matrix, Chapter 3)
-	- Multi-class evaluation model (Non-linear, Chapter 2)
-	- Linear Regression Model (Chapter 1)
   - **Bigger Projects:**
-	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
-	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
-	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
+    - [German Tutor: AI-powered German language learning assistant](https://github.com/youssef-omarrr/German-Tutor)
+  	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
+  	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
+  	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
+  - *PyTorch  course projects:*
+  	- Fashion MNIST Model (with confusion matrix, Chapter 3)
+  	- Multi-class evaluation model (Non-linear, Chapter 2)
+  	- Linear Regression Model (Chapter 1)
   - *Reinforced learning projects:*
-	- TBD
+  	- TBD
 
 
   - *To do list:*
