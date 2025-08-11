@@ -168,7 +168,7 @@ class JarvisSTT:
 
         # Detect explicit end phrases (case-insensitive, whole phrase match)
         if self._end_re.search(transcript):
-            # optionally print the detected phrase
+            # Print the detected phrase
             self.console.print(f"[italic red]End phrase detected in: {transcript}[/]")
             # mark session as finished
             self.in_session = False

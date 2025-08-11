@@ -7,7 +7,23 @@
 
 > Example on End Phrases:
 
-![alt text](assets/image_1.png)
+![alt text](assets/image_3.png)
+
+---
+## **Major Update – `german_tutor_V2.py` Performance Boost** 
+
+We’ve supercharged the German Tutor app with a **response time improvement of up to 90%** thanks to several key upgrades:
+
+* **Faster Text-to-Speech** → Switched to the new `my_TTS_2.py` engine for **quicker audio generation** and **improved pronunciation accuracy**.
+* **Smarter Speech-to-Text** → Replaced the old STT with `SST_2.py`, delivering **more stable sessions** and preventing accuracy drop-offs during long conversations.
+* **Cleaner Console Output** → Improved spacing and formatting for **better readability** during interactions. 
+* **Instant Speech Interrupt** → Added a **Shift + C** shortcut to immediately stop the tutor from speaking mid-response. 
+* **Imporved responses** → Added more voice responses from Jarvis and wrote a better prompt for a better experince and more human like answers.
+  
+  ![alt text](assets/image_2.png)
+
+These changes mean you get **faster feedback**, **clearer speech**, and a **more fluid tutoring experience**.
+
 
 ---
 
@@ -15,7 +31,7 @@
 
 - **Wake Word Activation:** Start sessions by saying "Jarvis" (Porcupine hotword detection).
 - **Speech-to-Text (STT):** Transcribes spoken German using Google Speech Recognition.
-- **AI Corrections:** Uses an LLM (OpenAI/HuggingFace) for grammar corrections, explanations, and alternative phrasings.
+- **AI Corrections:** Uses the latest OpenAI model `gpt-oss-120b` api for grammar corrections, explanations, and alternative phrasings.
 - **Text-to-Speech (TTS):** Reads feedback aloud in German using XTTS v2.
 - **Session Flow:** After feedback is spoken, the assistant listens again automatically until an end phrase is detected.
 - **End Phrase Detection:** Recognizes session-ending phrases (e.g., "bye jarvis", "tschüss jarvis").
@@ -48,7 +64,7 @@
 
 ## Limitations
 
-- There is some delay between speaking and hearing feedback.
+- ~~There is some delay between speaking and hearing feedback.~~
 - The project is not fully professional and may have rough edges.
 
 ---
@@ -111,9 +127,9 @@
 
 ## Future Updates / To Do
 
-- [ ] Reduce delay between speaking and feedback.
+- [x] Reduce delay between speaking and feedback.
 - [ ] Add accent recognition to better support different German accents.
-- [ ] Improve UI and error messages.
+- [x] Improve UI and error messages.
 - [ ] Add support for more languages and voices.
 
 ---
