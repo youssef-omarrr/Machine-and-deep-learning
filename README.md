@@ -40,6 +40,7 @@ Here are the sources I am using to learn machine learning:
 > Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
 
   - **Bigger Projects:**
+    - [Brain Tumor Segmentation (not complete)](https://github.com/youssef-omarrr/Brain-Tumor-Segmentation)
     - [German Tutor: AI-powered German language learning assistant](https://github.com/youssef-omarrr/German-Tutor)
   	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
   	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
