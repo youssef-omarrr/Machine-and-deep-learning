@@ -57,6 +57,5 @@ Here are the sources I am using to learn machine learning:
     - [ ] CartPole (Starter Project)
     - [ ] Brick Breaker Game (Breakout)
     - [ ] Lunar Lander
-    - [ ] **Tower Handover RL — Mini (GRAD PROJECT DRAFT)**
 
 
