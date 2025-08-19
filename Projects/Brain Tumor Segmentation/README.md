@@ -12,6 +12,8 @@ Highlights in v3:
 - Modern training utilities: AdamW + OneCycleLR, AMP, and detailed metrics (Dice + Hausdorff).
 - Modular training/validation loops with checkpointing and inference visualization tools.
 
+> **Note on Training Duration:** For optimal performance, this model architecture benefits from extensive training (e.g., 75+ epochs), which is computationally expensive. The current results are based on a 5-epoch training run to demonstrate the model's potential and validate the pipeline. The provided checkpoints and outputs should be considered a proof-of-concept rather than a fully benchmarked result.
+
 <details>
 <summary>History — previous versions (click to expand)</summary>
 
@@ -34,8 +36,15 @@ This repository includes a second version (v2) of the segmentation pipeline. v2 
 
 </details>
 
-### Sample Output
-![alt text](image.png)
+## Sample Output
+### Version one
+![alt text](imgs/image.png)
+### Version three
+![alt text](imgs/output.png)
+![alt text](imgs/image-1.png)
+![alt text](imgs/image_2.png)
+
+> Notice how much greater the model is now after 3 updates.
 
 ## Objective
 
@@ -68,11 +77,14 @@ Main steps (v3-focused):
 6. Evaluation & visualization — thresholded predictions, visual overlays, and per-case metric reporting.
 
 ## Results (placeholders for v3)
-Training for v3 is in progress. Final metrics will be populated here once experiments complete.
+~~Training for v3 is in progress. Final metrics will be populated here once experiments complete.~~
+This version has only been trained on **5 epochs**, but it has the best outcomes compared to the other versions.
 
-- Final Validation Accuracy: TBD (placeholder)
-- Best Dice Coefficient: TBD (placeholder)
-- Notes: v3 focuses on improving Dice overlap and boundary accuracy (Hausdorff). Metrics will be updated after completed runs; until then this section intentionally holds placeholders.
+- Final Train Loss: 0.2161
+- Final Val Loss: 0.0974
+- Final Dice Score: 0.7914
+- Final Hausdorff Distance: 21.0548
+- Notes: v3 focuses on improving Dice overlap and boundary accuracy (Hausdorff).
 
 ## Results from v2 (historical)
 - Final Validation Accuracy: 93.67%
@@ -90,7 +102,7 @@ Training for v3 is in progress. Final metrics will be populated here once experi
 
 This project has demonstrated baseline segmentation approaches. Next steps and ideas:
 
-- [ ] Improve boundary precision (e.g., boundary loss, architectural tweaks).
+- [x] Improve boundary precision (e.g., boundary loss, architectural tweaks).
 - [ ] Deploy the model on Hugging Face or another hosting service.
 - [x] Experiment with other pretrained segmentation models for comparison:
   * DeepLabV3, FCN, LR-ASPP
