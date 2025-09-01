@@ -16,10 +16,13 @@ This roadmap will include resources, projects, and notes that I will be followin
 ##  Resources & Links
 Here are the sources I am using to learn machine learning:
 
-- **Roadmap video:**  
+### **Roadmap video:**  
+
   - [How to Learn Machine Learning in 2024 (7 step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) **(conatins links to many resources)**
 
-- **Courses:** 
+
+### **Courses:** 
+
   - [MIT 6.S191: Introduction to Deep Learning (very very reccomended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
   - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
     - [Github link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
@@ -29,15 +32,20 @@ Here are the sources I am using to learn machine learning:
   - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
-- **Online Tutorials & Blogs:**  
-  - [All Machine Learning algorithms explained in 17 min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)
+
+### **Online Tutorials & Blogs:**  
+
+  - [**All Machine Learning algorithms explained in 17 min**](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)
+  - [**15 Machine Learning Lessons I Wish I Knew Earlier**](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)
   - [**CrackingMachineLearningInterview**](https://github.com/shafaypro/CrackingMachineLearningInterview) A repository to prepare you for your machine learning interview, involving most of the questions asked by all the tech giants and local companies. Do this to Ace your Machine Learning Engineer Interviews
-- **Useful websites:**  
+
+### **Useful websites:**  
+
   - [Browse State-of-the-Art](https://paperswithcode.com/sota)
   - [Hugging Face](https://huggingface.co/models)
   - [`timm` (PyTorch Image Models) library](https://github.com/huggingface/pytorch-image-models)
 
-- **Projects & Practice:**  
+## **Projects & Practice:**  
 > Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
 
   - **Main Projects:**
