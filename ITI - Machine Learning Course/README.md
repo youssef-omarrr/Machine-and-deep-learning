@@ -238,7 +238,6 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 ## Support Vector Machine (SVM) — Classification
 
 ![alt text](imgs/image_4.png)
-![alt text](imgs/image_13.png)
 
 * **What:** Finds the optimal **hyperplane** (multi-dimension) that maximizes the margin between classes; can use **kernels** for nonlinear separation.
 * **When to use:** For binary or multiclass classification with clear margin or non-linear boundaries.
@@ -251,6 +250,8 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 ---
 
 ## Support Vector Regression (SVR)
+
+![alt text](imgs/image_13.png)
 
 * **What:** Extension of SVM for regression that fits a function within a margin of tolerance (`epsilon`) around data points.
 * **When to use:** Regression tasks where robustness to outliers and flexibility of kernels is useful.
