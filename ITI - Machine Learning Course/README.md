@@ -36,20 +36,24 @@ Supervised learning uses labeled data to learn a mapping from features `X` → t
 
 Algorithms covered:
 
-* K-Nearest Neighbors (KNN)
+* Logistic Regression
+* K-Nearest Neighbors (KNN) (Classifier)
 * Decision Tree (Classifier)
 * Random Forest
 * XGBoost (gradient boosting)
-* Logistic Regression
+* Support Vector Machine (SVM) — Classification
+
 
 ### Regression (predict continuous targets)
 
 Algorithms covered:
 
 * Linear Regression
+* K-Nearest Neighbors (KNN) (Regressor)
 * Decision Tree (Regressor)
 * Random Forest (Regressor)
 * XGBoost (Regressor)
+* Support Vector Regression (SVR)
 
 ### Common supervised workflow:
 
@@ -145,6 +149,8 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 
 ## K-Nearest Neighbors (KNN)
 
+![alt text](imgs/image_11.png)
+
 * **What:** Instance-based classifier/regressor using distances to neighbors.
 * **When to use:** Small datasets, low dimensionality, simple baseline.
 * **Key hyperparams:** `n_neighbors (k)`, distance metric (`p`), weighting (`uniform`/`distance`).
@@ -229,6 +235,38 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 
 ---
 
+## Support Vector Machine (SVM) — Classification
+
+![alt text](imgs/image_4.png)
+
+* **What:** Finds the optimal hyperplane that maximizes the margin between classes; can use kernels for nonlinear separation.
+* **When to use:** For binary or multiclass classification with clear margin or non-linear boundaries.
+* **Key hyperparams:** `C` (regularization), `kernel` (`linear`, `rbf`, `poly`), `gamma` (kernel width), `degree` (for poly).
+* **Strengths:** Effective in high-dimensional spaces; robust to overfitting with proper tuning; flexible with kernels.
+* **Weaknesses:** Not scalable to very large datasets; sensitive to parameter tuning; less interpretable.
+* **Preprocessing:** Requires feature scaling (standardization).
+* **Quick sklearn:** `SVC(kernel='rbf', C=1.0, gamma='scale')`
+
+---
+
+## Support Vector Regression (SVR)
+
+* **What:** Extension of SVM for regression that fits a function within a margin of tolerance (`epsilon`) around data points.
+* **When to use:** Regression tasks where robustness to outliers and flexibility of kernels is useful.
+* **Key hyperparams:** `C` (regularization), `epsilon` (margin tolerance), `kernel`, `gamma`.
+* **Strengths:** Can model nonlinear relationships; robust to outliers due to `epsilon`-insensitive loss.
+* **Weaknesses:** Computationally expensive on large datasets; requires careful tuning of `C`, `epsilon`, and `gamma`.
+* **Preprocessing:** Requires feature scaling.
+* **Quick sklearn:** `SVR(kernel='rbf', C=1.0, epsilon=0.1, gamma='scale')`
+
+---
+
+## SVC vs SVR
+- **Support Vector Classification (SVC)**: finds a **decision boundary** that maximizes the margin between classes, making it suitable for categorical targets.
+- **Support Vector Regression (SVR)**: instead fits a function within a **tolerance band** (epsilon) around the data, making it suitable for continuous targets.
+
+---
+
 ## DBSCAN (Density-based spatial clustering)
 
 ![alt text](imgs/image_2.png)
@@ -244,6 +282,8 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 ---
 
 ## K-means
+
+![alt text](imgs/image_12.png)
 
 * **What:** Partition data into `k` clusters by minimizing within-cluster variance (distance between samples and centroids).
 * **When to use:** When clusters are spherical-ish and of similar size. Good for large datasets.
