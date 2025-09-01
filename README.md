@@ -10,6 +10,7 @@ This roadmap will include resources, projects, and notes that I will be followin
 - Pytorch course.
 - Projects: contains most projects, bigger projects have their own repos linked below.
 - LLM from scratch course.
+- ITI: Machine Learning (supervised and unsupervised) Course
 - [FUTURE] Reinforced learning projects.
 
 ##  Resources & Links
@@ -25,6 +26,7 @@ Here are the sources I am using to learn machine learning:
     - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
     
   - [LLM from scratch course.](https://github.com/rasbt/LLMs-from-scratch)
+  - ITI - Machine Learning Course
   - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
@@ -39,23 +41,19 @@ Here are the sources I am using to learn machine learning:
 - **Projects & Practice:**  
 > Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
 
-  - **Bigger Projects:**
+  - **Main Projects:**
     - [Brain Tumor Segmentation (not complete)](https://github.com/youssef-omarrr/Brain-Tumor-Segmentation)
     - [German Tutor: AI-powered German language learning assistant](https://github.com/youssef-omarrr/German-Tutor)
   	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
   	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
   	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
-  - *PyTorch  course projects:*
+  - *PyTorch  course Tasks:*
   	- Fashion MNIST Model (with confusion matrix, Chapter 3)
   	- Multi-class evaluation model (Non-linear, Chapter 2)
   	- Linear Regression Model (Chapter 1)
-  - *Reinforced learning projects:*
-  	- TBD
 
 
   - *To do list:*
-    - [ ] CartPole (Starter Project)
-    - [ ] Brick Breaker Game (Breakout)
-    - [ ] Lunar Lander
+    - [ ] Reinforcement learning
 
 
