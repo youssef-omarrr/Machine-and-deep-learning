@@ -27,6 +27,7 @@ Practical tips:
 * Use scikit-learn pipelines (`Pipeline`) to bundle preprocessing + model to avoid leakage during cross-validation.
 
 ### **Cheat-table for data visualization (EDA - Exploratory Data Analysis)**:
+> [Data Visualization for Exploratory Data Analysis (EDA)](https://medium.com/@gozdemadendere/data-visualization-for-exploratory-data-analysis-eda-ddf850539575)
 
 | Visualization                     | Best use case                                                                              |
 | --------------------------------- | ------------------------------------------------------------------------------------------ |
