@@ -17,7 +17,7 @@ This roadmap will include resources, projects, and notes that I will be followin
 Here are the sources I am using to learn machine learning:
 
 - **Roadmap video:**  
-  - [How to Learn Machine Learning in 2024 (7 step roadmap) **(conatins links to many resources)**](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3)
+  - [How to Learn Machine Learning in 2024 (7 step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) **(conatins links to many resources)**
 
 - **Courses:** 
   - [MIT 6.S191: Introduction to Deep Learning (very very reccomended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
@@ -26,13 +26,12 @@ Here are the sources I am using to learn machine learning:
     - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
     
   - [LLM from scratch course.](https://github.com/rasbt/LLMs-from-scratch)
-  - ITI - Machine Learning Course
   - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
   - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
 
 - **Online Tutorials & Blogs:**  
   - [All Machine Learning algorithms explained in 17 min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)
-  
+  - [**CrackingMachineLearningInterview**](https://github.com/shafaypro/CrackingMachineLearningInterview) A repository to prepare you for your machine learning interview, involving most of the questions asked by all the tech giants and local companies. Do this to Ace your Machine Learning Engineer Interviews
 - **Useful websites:**  
   - [Browse State-of-the-Art](https://paperswithcode.com/sota)
   - [Hugging Face](https://huggingface.co/models)
