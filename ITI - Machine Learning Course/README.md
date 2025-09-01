@@ -26,6 +26,19 @@ Practical tips:
 * Use `pandas` for data ingest and initial cleaning; convert to NumPy arrays for heavy numeric work when needed.
 * Use scikit-learn pipelines (`Pipeline`) to bundle preprocessing + model to avoid leakage during cross-validation.
 
+### **Cheat-table for data visualization (EDA - Exploratory Data Analysis)**:
+
+| Visualization                     | Best use case                                                                              |
+| --------------------------------- | ------------------------------------------------------------------------------------------ |
+| **Histogram / Distribution plot** | Explore the **shape** of a variable’s distribution, detect **skewness** or unusual peaks.  |
+| **Boxplot**                       | Compare **spread** across groups and detect **outliers** quickly.                          |
+| **Scatter plot**                  | Reveal **relationships, trends, clusters, or anomalies** between two variables.            |
+| **Heatmap (correlation matrix)**  | Identify **correlated features**, redundancy, or multicollinearity in datasets.            |
+| **Pairplot**                      | Explore **multiple feature interactions** at once, good for small-to-medium feature sets.  |
+| **Line plot**                     | Track **trends and seasonality** in time-series or ordered data.                           |
+| **Bar plot**                      | Compare **frequencies or averages** across categorical groups to check for **imbalances**. |
+
+
 ---
 
 ## 1. Supervised learning
