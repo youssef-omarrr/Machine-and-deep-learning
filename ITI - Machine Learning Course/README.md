@@ -238,8 +238,9 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 ## Support Vector Machine (SVM) — Classification
 
 ![alt text](imgs/image_4.png)
+![alt text](imgs/image_13.png)
 
-* **What:** Finds the optimal hyperplane that maximizes the margin between classes; can use kernels for nonlinear separation.
+* **What:** Finds the optimal **hyperplane** (multi-dimension) that maximizes the margin between classes; can use **kernels** for nonlinear separation.
 * **When to use:** For binary or multiclass classification with clear margin or non-linear boundaries.
 * **Key hyperparams:** `C` (regularization), `kernel` (`linear`, `rbf`, `poly`), `gamma` (kernel width), `degree` (for poly).
 * **Strengths:** Effective in high-dimensional spaces; robust to overfitting with proper tuning; flexible with kernels.
