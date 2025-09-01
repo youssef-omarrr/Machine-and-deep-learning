@@ -269,20 +269,6 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 
 ---
 
-## DBSCAN (Density-based spatial clustering)
-
-![alt text](imgs/image_2.png)
-
-* **What:** Clusters **dense** regions and marks sparse points as noise.
-* **When to use:** When clusters have irregular shapes or noise/outliers are present.
-* **Key hyperparams:** `eps` (neighborhood radius), `min_samples`.
-* **Strengths:** Detects arbitrary cluster shapes, noise handling, no need to set `k`.
-* **Weaknesses:** Sensitive to scale and `eps` choice; struggles with varying density.
-* **Preprocessing:** Standardize features. Use domain knowledge for `eps`.
-* **Quick sklearn:** `DBSCAN(eps=0.5, min_samples=5)`
-
----
-
 ## K-means
 
 ![alt text](imgs/image_12.png)
@@ -309,6 +295,20 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 * **Weaknesses:** Computationally expensive for large datasets; sensitive to noise and distance metric.
 * **Preprocessing:** Scale features. Consider subsampling for large data.
 * **Quick sklearn:** `AgglomerativeClustering(n_clusters=3, linkage='ward')`
+
+---
+
+## DBSCAN (Density-based spatial clustering)
+
+![alt text](imgs/image_2.png)
+
+* **What:** Clusters **dense** regions and marks sparse points as noise.
+* **When to use:** When clusters have irregular shapes or noise/outliers are present.
+* **Key hyperparams:** `eps` (neighborhood radius), `min_samples`.
+* **Strengths:** Detects arbitrary cluster shapes, noise handling, no need to set `k`.
+* **Weaknesses:** Sensitive to scale and `eps` choice; struggles with varying density.
+* **Preprocessing:** Standardize features. Use domain knowledge for `eps`.
+* **Quick sklearn:** `DBSCAN(eps=0.5, min_samples=5)`
 
 ---
 
