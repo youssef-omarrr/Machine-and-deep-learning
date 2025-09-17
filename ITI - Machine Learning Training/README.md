@@ -1,6 +1,6 @@
-# ITI — Machine Learning (Summer Course)
+# ITI — Machine Learning Summer Training
 
-**Course:** ITI — Machine Learning (summer)
+**Course:** ITI — Machine Learning Training\
 **Scope:** Introductory-to-intermediate coverage of supervised and unsupervised ML with practical Python tooling and common algorithms.
 
 ---
