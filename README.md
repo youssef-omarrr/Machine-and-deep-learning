@@ -1,66 +1,57 @@
 # Machine Learning Study Roadmap
-> Due to `Git lfs` problems, all 67 commits that included the whole repo's history have been deleted :(
+> Due to `Git LFS` problems, all 67 commits that included the repo's history had to be deleted :(
 
-##  Overview
-This roadmap will include resources, projects, and notes that I will be following to develop a strong understanding of machine learning.
+## Overview
+This roadmap includes resources, projects, and notes that I am following to build a strong foundation in machine and deep learning.
 
 ## Contents
-- Prerequisites: a quick revision on numpy, pandas, and matplotlib.
-- MIT 6.S191: Introduction to Deep Learning.
-- Pytorch course.
-- Projects: contains most projects, bigger projects have their own repos linked below.
-- LLM from scratch course.
-- ITI: Machine Learning (supervised and unsupervised) Course
-- [FUTURE] Reinforced learning projects.
+- **Prerequisites:** Quick revision on `NumPy`, `Pandas`, and `Matplotlib`.  
+- **MIT 6.S191:** Introduction to Deep Learning.  
+- **PyTorch Course**  
+- **Projects:** Contains most course projects; larger projects have their own repos linked below.  
+- **LLM from Scratch Course**  
+- **ITI Summer Training:** Machine Learning (supervised and unsupervised).  
+- **Graduation Project Notes:** Research notes from my Bachelor’s degree project on Parkinson’s disease (not the actual project, but concepts explored and ML-related notes for future reference).  
 
-##  Resources & Links
-Here are the sources I am using to learn machine learning:
+## Resources & Links
 
-### **Roadmap video:**  
+### **Roadmap Video:**  
+- [How to Learn Machine Learning in 2024 (7-step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) *(contains links to many resources)*  
 
-  - [How to Learn Machine Learning in 2024 (7 step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) **(conatins links to many resources)**
-
-
-### **Courses:** 
-
-  - [MIT 6.S191: Introduction to Deep Learning (very very reccomended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)
-  - [Full PyTorch course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)
-    - [Github link](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)
-    - [Book page](https://www.learnpytorch.io/00_pytorch_fundamentals/)
-    
-  - [LLM from scratch course.](https://github.com/rasbt/LLMs-from-scratch)
-  - [Stanford University free Introduction to Machine Learning online course](https://www.udacity.com/enrollment/ud120) 
-  - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)
-
+### **Courses:**  
+- [MIT 6.S191: Introduction to Deep Learning (highly recommended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)  
+- [Full PyTorch Course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)  
+  - [GitHub Repo](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)  
+  - [Book Page](https://www.learnpytorch.io/00_pytorch_fundamentals/)  
+- [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)  
+- [Stanford Introduction to Machine Learning (free on Udacity)](https://www.udacity.com/enrollment/ud120)  
+- [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)  
 
 ### **Online Tutorials & Blogs:**  
+- [All Machine Learning Algorithms Explained in 17 Min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)  
+- [15 Machine Learning Lessons I Wish I Knew Earlier](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)  
+- [Cracking Machine Learning Interview:](https://github.com/shafaypro/CrackingMachineLearningInterview) Repository to prepare for ML interviews, covering common questions asked by top companies.  
 
-  - [**All Machine Learning algorithms explained in 17 min**](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)
-  - [**15 Machine Learning Lessons I Wish I Knew Earlier**](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)
-  - [**CrackingMachineLearningInterview**](https://github.com/shafaypro/CrackingMachineLearningInterview) A repository to prepare you for your machine learning interview, involving most of the questions asked by all the tech giants and local companies. Do this to Ace your Machine Learning Engineer Interviews
+### **Useful Websites:**  
+- [Browse State-of-the-Art](https://paperswithcode.com/sota)  
+- [Hugging Face Models](https://huggingface.co/models)  
+- [`timm` (PyTorch Image Models) Library](https://github.com/huggingface/pytorch-image-models)  
 
-### **Useful websites:**  
+## Projects & Practice
+> - **Older projects** in this repo are mostly drafts and unpolished experiments.  
+> - **More recent projects** were developed in their own dedicated repositories (including experiments and failed attempts), with only the key files mirrored here for a quick overview.  
+> - For complete projects, please check the linked repositories.  
 
-  - [Browse State-of-the-Art](https://paperswithcode.com/sota)
-  - [Hugging Face](https://huggingface.co/models)
-  - [`timm` (PyTorch Image Models) library](https://github.com/huggingface/pytorch-image-models)
+### **Main Projects**
+- [**Project Mozart:**](https://github.com/youssef-omarrr/Project-Mozart) Custom Transformer-based music generation.  
+- [**Brain Tumor Segmentation:**](https://github.com/youssef-omarrr/Brain-Tumor-Segmentation) Deep learning model for semantic segmentation of brain tumors from MRI scans.  
+- [**German Tutor:**](https://github.com/youssef-omarrr/German-Tutor) AI-powered German language learning assistant.  
+- [**CelluScan:**](https://github.com/youssef-omarrr/CelluScan) Automated blood cell classification with Vision Transformer.  
+- [**Real-Time Number Detector Web App:**](https://github.com/youssef-omarrr/MNIST_Web_APP) Trained on MNIST + custom data.  
 
-## **Projects & Practice:**  
-> Most projects here are drafts, in-course exercises, or unpolished versions. For more polished final versions, please refer to the linked repositories.
-
-  - **Main Projects:**
-    - [Brain Tumor Segmentation (not complete)](https://github.com/youssef-omarrr/Brain-Tumor-Segmentation)
-    - [German Tutor: AI-powered German language learning assistant](https://github.com/youssef-omarrr/German-Tutor)
-  	- [CelluScan: Automated Blood Cell Classification with Vision Transformer](https://github.com/youssef-omarrr/CelluScan)
-  	- [Food MINI Model with Experiment Tracking](https://github.com/youssef-omarrr/Food_MINI_model)
-  	- [Real-Time Number Detector Web App (Trained on MNIST + Custom Data)](https://github.com/youssef-omarrr/MNIST_Web_APP)
-  - *PyTorch  course Tasks:*
-  	- Fashion MNIST Model (with confusion matrix, Chapter 3)
-  	- Multi-class evaluation model (Non-linear, Chapter 2)
-  	- Linear Regression Model (Chapter 1)
-
-
-  - *To do list:*
-    - [ ] Reinforcement learning
-
-
+### **PyTorch Course Tasks**
+- Fashion MNIST Model (with confusion matrix, Chapter 3)  
+- Multi-class Evaluation Model (Non-linear, Chapter 2)  
+- Linear Regression Model (Chapter 1)  
+- **Final Project:**  
+  - [**Food MINI Model:**](https://github.com/youssef-omarrr/Food_MINI_model) Experiment tracking and model deployment.  
