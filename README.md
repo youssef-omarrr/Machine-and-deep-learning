@@ -39,7 +39,7 @@ This roadmap includes resources, projects, and notes that I am following to buil
 
 ## Projects & Practice
 > - **Older projects** in this repo are mostly drafts and unpolished experiments.  
-> - **More recent projects** were developed in their own dedicated repositories (including experiments and failed attempts), with only the key files mirrored here for a quick overview.  
+> - **More recent projects** were developed in their own dedicated repositories (including experiments and failed attempts), and are no longer included in this repo.
 > - For complete projects, please check the linked repositories.  
 
 ### **Main Projects**
