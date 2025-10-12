@@ -1,8 +1,8 @@
-# Machine Learning Study Roadmap
+# Machine and Deep Learning Study Roadmap
 > Due to `Git LFS` problems, all 67 commits that included the repo's history had to be deleted :(
 
 ## Overview
-This roadmap includes resources, projects, and notes that I am following to build a strong foundation in machine and deep learning.
+This roadmap includes resources, courses and their projects, and notes that I am following to build a strong foundation in machine and deep learning.
 
 ## Contents
 - **Prerequisites:** Quick revision on `NumPy`, `Pandas`, and `Matplotlib`.  
@@ -55,3 +55,152 @@ This roadmap includes resources, projects, and notes that I am following to buil
 - Linear Regression Model (Chapter 1)  
 - **Final Project:**  
   - [**Food MINI Model:**](https://github.com/youssef-omarrr/Food_MINI_model) Experiment tracking and model deployment.  
+
+---
+### **Machine Learning & Deep Learning Mastery Checklist**
+#### 1. Mathematical Foundations (from college)
+
+- [x] Linear Algebra (vectors, matrices, eigenvalues, SVD)
+- [x] Calculus (gradients, Jacobians, chain rule)
+- [x] Probability & Statistics (distributions, expectation, Bayes)
+- [ ] Optimization (gradient descent, Adam, RMSprop, etc.)
+
+#### 2. Classical Machine Learning
+
+- [x] Linear Regression
+- [x] Logistic Regression
+- [x] Decision Trees / Random Forests
+- [x] Support Vector Machines (SVM)
+- [x] K-Nearest Neighbors (KNN)
+- [ ] Naive Bayes
+- [x] Gradient Boosting / XGBoost
+- [x] K-Means & other clustering methods
+- [x] Dimensionality Reduction (PCA)
+- [x] Overfitting / Regularization
+- [ ] Bias–Variance Tradeoff
+- [x] Cross-validation
+- [ ] Evaluation Metrics (Accuracy, Precision, Recall, F1, AUC) (need more revision)
+- [ ] Feature Engineering / Normalization
+
+#### 3. Core Deep Learning
+
+- [x] Perceptron, Feedforward Networks
+- [x] Activation Functions (ReLU, Sigmoid, Tanh, GELU, etc.)
+- [x] Backpropagation
+- [x] Weight Initialization (Xavier, Kaiming)
+- [x] Dropout / BatchNorm / LayerNorm
+- [x] Loss Functions (MSE, Cross-Entropy, BCE, etc.)
+- [x] Learning Rate Schedules
+- [x] Early Stopping
+- [x] Gradient Clipping
+- [x] Data Augmentation
+- [x] Mixed Precision Training
+
+#### 4. Convolutional Neural Networks (CNNs)
+
+- [x] Convolution / Pooling / Padding
+- [ ] LeNet
+- [ ] AlexNet
+- [x] VGG
+- [x] ResNet
+- [x] EfficientNet
+- [x] Transfer Learning
+- [x] Object Detection (U-Net)
+- [x] Segmentation (U-Net, Mask R-CNN)
+
+#### 5. Recurrent and Sequential Models
+
+- [x] RNNs
+- [ ] LSTMs
+- [ ] GRUs
+- [x] Sequence-to-Sequence Models
+- [x] Attention Mechanisms
+- [x] Encoder–Decoder Architectures
+
+#### 6. Transformers and Attention Models
+
+- [x] Self-Attention & Multi-Head Attention
+- [x] Transformer Architecture (Encoder, Decoder)
+- [x] Vision Transformer (ViT)
+- [x] BERT & GPT-style models (encoder vs decoder-only)
+- [x] Positional Encoding
+- [x] Fine-tuning large models
+- [x] Top-k, Top-p (nucleus) sampling
+
+#### 7. Generative Models
+
+- [x] Autoencoders (AE)
+- [x] Variational Autoencoders (VAE)
+- [x] Generative Adversarial Networks (GANs)
+- [ ] Diffusion Models (DDPM, Stable Diffusion, ControlNet)
+- [ ] Flow-based Models (RealNVP, Glow)
+
+#### 8. Self-Supervised / Representation Learning
+
+- [ ] Contrastive Learning (SimCLR, MoCo)
+- [ ] Masked Autoencoders (MAE, BEiT)
+- [ ] DINO / CLIP (cross-modal self-supervision)
+
+#### 9. Reinforcement Learning (RL)
+
+- [ ] Markov Decision Processes (MDPs)
+- [ ] Policy Evaluation / Improvement
+- [ ] Value Iteration / Policy Iteration
+- [ ] Temporal Difference Learning
+- [ ] Monte Carlo Methods
+- [ ] Deep Q-Network (DQN)
+- [ ] Double / Dueling DQN
+- [ ] Policy Gradient Methods
+- [ ] Actor–Critic
+- [ ] PPO (Proximal Policy Optimization)
+- [ ] DDPG / TD3 / SAC (continuous control)
+- [ ] Model-Based RL (Dreamer, MuZero)
+- [ ] Multi-Agent RL (MADDPG, QMIX)
+- [ ] Offline RL / Imitation Learning
+- [ ] RLHF (Reinforcement Learning from Human Feedback)
+
+#### 10. AI Agents & Autonomous Systems
+
+- [ ] ReAct (Reason + Act) architecture
+- [ ] AutoGPT / BabyAGI
+- [ ] LangChain or LlamaIndex for tool-using agents
+- [ ] Vector DB Memory (FAISS, Chroma, Milvus)
+- [ ] Planning + Reflection loops
+- [ ] Integrating RL / feedback into agents
+- [ ] Multi-agent coordination and communication
+
+#### 11. Deployment & MLOps
+
+- [x] Hugging Face deployment
+- [ ] TorchScript / ONNX model export
+- [x] FastAPI or Flask inference servers
+- [x] Dockerization for reproducible deployment
+- [x] GPU inference optimization (mixed precision, batching)
+- [x] Model quantization / pruning
+- [ ] Distributed training (PyTorch DDP / DeepSpeed)
+- [x] CI/CD for models (GitHub Actions + versioning)
+- [x] Monitoring / logging in production (W&B, Mlflow, TensorBoard)
+
+#### 12. Advanced / Research-Level Topics
+
+- [ ] Meta-learning (MAML, Reptile)
+- [ ] Neural Architecture Search (NAS)
+- [ ] Graph Neural Networks (GNNs)
+- [ ] Diffusion Models in depth (DDPM, SDEs)
+- [ ] Multimodal learning (text + image, e.g., CLIP, Flamingo)
+- [ ] Continual / Lifelong Learning
+- [ ] Causal Inference for ML
+- [ ] Energy-based Models
+
+#### 13. Practical / Projects
+
+- [x] Build and train models from scratch
+- [x] Reproduce architectures (ViT, Transformer, etc.)
+- [x] Train a symbolic music generation Transformer
+- [x] Visualize training metrics (TensorBoard, W&B)
+- [x] Use pretrained models (Hugging Face)
+- [x] Handle datasets and dataloaders efficiently
+- [ ] Implement an RL environment and agent
+- [ ] Build a tool-using AI agent with memory
+
+
