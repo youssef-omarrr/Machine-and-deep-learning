@@ -87,10 +87,10 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Perceptron, Feedforward Networks
 - [x] Activation Functions (ReLU, Sigmoid, Tanh, GELU, etc.)
 - [x] Backpropagation
-- [x] Weight Initialization (Xavier, Kaiming)
+- [ ] Weight Initialization (Xavier, Kaiming)
 - [x] Dropout / BatchNorm / LayerNorm
 - [x] Loss Functions (MSE, Cross-Entropy, BCE, etc.)
-- [x] Learning Rate Schedules
+- [ ] Learning Rate Schedules
 - [x] Early Stopping
 - [x] Gradient Clipping
 - [x] Data Augmentation
@@ -105,7 +105,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] ResNet
 - [x] EfficientNet
 - [x] Transfer Learning
-- [x] Object Detection (U-Net)
+- [ ] Object Detection (YOLO)
 - [x] Segmentation (U-Net, Mask R-CNN)
 
 #### 5. Recurrent and Sequential Models
