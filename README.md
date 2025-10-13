@@ -70,17 +70,20 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Linear Regression
 - [x] Logistic Regression
 - [x] Decision Trees / Random Forests
+- [x] Boosting and Bagging
 - [x] Support Vector Machines (SVM)
 - [x] K-Nearest Neighbors (KNN)
 - [ ] Naive Bayes
 - [x] Gradient Boosting / XGBoost
-- [x] K-Means & other clustering methods
+- [x] K-Means & other clustering methods (Hierarchical clustering, DBSCAN)
+- [x] Gaussian Mixture Models (GMM)
 - [x] Dimensionality Reduction (PCA)
 - [x] Overfitting / Regularization
 - [ ] Bias–Variance Tradeoff
 - [x] Cross-validation
+- [ ] Regularization (Ridge (L2) and Lasso (L1)) 
 - [ ] Evaluation Metrics (Accuracy, Precision, Recall, F1, AUC) (need more revision)
-- [ ] Feature Engineering / Normalization
+- [x] Feature Engineering / Normalization
 
 #### 3. Core Deep Learning
 

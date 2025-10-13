@@ -1,6 +1,7 @@
-# ITI — Machine Learning Summer Training
+# ITI: Machine Learning Summer Training
 
-**Course:** ITI — Machine Learning Training\
+**Course:** ITI: Machine Learning Training
+
 **Scope:** Introductory-to-intermediate coverage of supervised and unsupervised ML with practical Python tooling and common algorithms.
 
 ---
@@ -15,18 +16,18 @@ This course covers the core concepts, workflow, and commonly used algorithms in 
 
 Short overview of the essential Python packages used throughout the course:
 
-* **NumPy** — numerical arrays, vectorized operations, linear algebra foundations.
-* **Pandas** — tabular data structures (`DataFrame`, `Series`), I/O, data cleaning and manipulation.
-* **Matplotlib** — base plotting library for figures, histograms, scatter plots.
-* **Seaborn** — higher-level statistical plotting (pairplots, heatmaps) built on top of Matplotlib.
-* **scikit-learn** (`sklearn`) — consistent APIs for preprocessing, models (classification/regression/clustering), model selection and evaluation.
+* **NumPy**: numerical arrays, vectorized operations, linear algebra foundations.
+* **Pandas**: tabular data structures (`DataFrame`, `Series`), I/O, data cleaning and manipulation.
+* **Matplotlib**: base plotting library for figures, histograms, scatter plots.
+* **Seaborn**: higher-level statistical plotting (pairplots, heatmaps) built on top of Matplotlib.
+* **scikit-learn** (`sklearn`): consistent APIs for preprocessing, models (classification/regression/clustering), model selection and evaluation.
 
 Practical tips:
 
 * Use `pandas` for data ingest and initial cleaning; convert to NumPy arrays for heavy numeric work when needed.
 * Use scikit-learn pipelines (`Pipeline`) to bundle preprocessing + model to avoid leakage during cross-validation.
 
-### **Cheat-table for data visualization (EDA - Exploratory Data Analysis)**:
+### **Cheat-table for data visualization (EDA - Exploratory Data Analysis):**
 > [Data Visualization for Exploratory Data Analysis (EDA)](https://medium.com/@gozdemadendere/data-visualization-for-exploratory-data-analysis-eda-ddf850539575)
 
 | Visualization                     | Best use case                                                                              |
@@ -55,7 +56,7 @@ Algorithms covered:
 * Decision Tree (Classifier)
 * Random Forest
 * XGBoost (gradient boosting)
-* Support Vector Machine (SVM) — Classification
+* Support Vector Machine (SVM): Classification
 
 
 ### Regression (predict continuous targets)
@@ -249,7 +250,7 @@ Unsupervised learning finds structure in unlabeled data. Topics covered:
 
 ---
 
-## Support Vector Machine (SVM) — Classification
+## Support Vector Machine (SVM): Classification
 
 ![alt text](imgs/image_4.png)
 
