@@ -184,18 +184,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] CI/CD for models (GitHub Actions + versioning)
 - [x] Monitoring / logging in production (W&B, Mlflow, TensorBoard)
 
-#### 12. Advanced / Research-Level Topics
-
-- [ ] Meta-learning (MAML, Reptile)
-- [ ] Neural Architecture Search (NAS)
-- [ ] Graph Neural Networks (GNNs)
-- [ ] Diffusion Models in depth (DDPM, SDEs)
-- [ ] Multimodal learning (text + image, e.g., CLIP, Flamingo)
-- [ ] Continual / Lifelong Learning
-- [ ] Causal Inference for ML
-- [ ] Energy-based Models
-
-#### 13. Practical / Projects
+#### 12. Practical / Projects
 
 - [x] Build and train models from scratch
 - [x] Reproduce architectures (ViT, Transformer, etc.)
