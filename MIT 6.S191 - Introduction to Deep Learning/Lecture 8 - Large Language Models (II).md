@@ -3,7 +3,7 @@
 ### [Video Link](https://www.youtube.com/watch?v=_HfdncCbMOE&list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI&index=8&ab_channel=AlexanderAmini)
 
 ## 1. Post-training
-![](imgs/PastedImage-10.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-10.png)
 - Post-training refers to any training phase **after the base pretraining** of the language model. It adjusts the model to align more with **human preferences, instructions, or safety constraints**. Common post-training phases include **Supervised Fine-Tuning (SFT)** and **Reinforcement Learning from Human Feedback (RLHF)**.
     
 - This stage helps move from a raw language model (which completes text generically) to a more **useful assistant-like model**. For example, GPT-3.5 to ChatGPT involved post-training steps that trained the model to follow instructions and respond helpfully.
@@ -11,7 +11,7 @@
 - In practice, post-training drastically improves behavior and safety by aligning the model to desired outputs using curated datasets and feedback mechanisms.
 ---
 ## 2. Fine-tuning
-![](imgs/PastedImage-11.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-11.png)
 - Fine-tuning means training a **pretrained model** further on a **specific dataset** for a **specific task**, such as medical Q&A, legal document summarization, or chat-based interactions.
     
 - It updates some or all model weights to specialize in new behaviors. It can be full fine-tuning (entire model) or **parameter-efficient tuning** (e.g., LoRA, adapters).
@@ -26,13 +26,13 @@
     
 - **Task-specific** or **domain-specific** datasets are *focused* (e.g., biomedical, legal, or customer support). They are used in fine-tuning or post-training to give the model **expertise** in certain tasks.
 
-![](imgs/PastedImage-12.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-12.png)
 ### **Data Formats: Instruction Data vs Preference Data**
 
 - **Instruction data** teaches the model how to respond to tasks by showing pairs of prompts and desired outputs (e.g., "Translate this → Response"). It supports Supervised Fine-Tuning (SFT).
     
 - **Preference data** includes multiple model outputs **ranked by quality**, enabling Reinforcement Learning from Human Feedback (RLHF) where the model learns to prefer more helpful/humane responses.
- ![](imgs/PastedImage-13.png)
+ ![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-13.png)
 
 ### **SFT Example: Instruction Following**
 
@@ -79,7 +79,7 @@
 ---
 ### Supervised Fine-Tuning (SFT) techniques**
 
-![](imgs/PastedImage-14.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-14.png)
 
 #### 1. **Full Fine-Tuning** – _16-bit precision (FP16)_
 
@@ -141,7 +141,7 @@
 ---
 ### **Proximal Policy Optimization (PPO)** and **Direct Preference Optimization (DPO)**.
 
-![](imgs/PastedImage-15.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-15.png)
 
 #### **Proximal Policy Optimization (PPO)** – _used in RLHF_
 
@@ -249,7 +249,7 @@
     
 - Especially helpful in **low-confidence** situations (e.g., coding tasks or math).
 
-![](imgs/PastedImage-16.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-16.png)
 
 ---
 
@@ -259,7 +259,7 @@
     
 - Improves quality without changing training, though it increases inference cost.
 
-![](imgs/PastedImage-17.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-17.png)
 
 ---
 
@@ -269,7 +269,7 @@
     
 - Produces higher-quality outputs but can be **less diverse** and more repetitive than sampling-based methods.
 
-![](imgs/PastedImage-18.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-18.png)
 
 ---
 
@@ -281,4 +281,4 @@
     
 - Future progress is likely to come from **smarter inference techniques**, **better training data**, **modular model designs**, and **automated alignment tools** like Judge LLMs.
 
-![](PastedImage-19.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-19.png)

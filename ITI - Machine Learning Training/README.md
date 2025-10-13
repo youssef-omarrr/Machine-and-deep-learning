@@ -83,6 +83,19 @@ Algorithms covered:
 * Classification: accuracy, precision, recall, F1, ROC AUC, confusion matrix.
 * Regression: MSE / RMSE, MAE, R², residual plots.
 
+### Feature Engineering
+- **Normalization:** Scales all data values to a fixed range, typically between 0 and 1.  
+    $$
+    x' = \frac{x - x_{\min}}{x_{\max} - x_{\min}}  
+    $$
+    _Use case:_ Commonly used in algorithms that rely on **distance** metrics (e.g., KNN, neural networks).
+- **Standardization:** Transforms the dataset so that it has a mean of 0 and a standard deviation of 1.  
+    $$
+    x' = \frac{x - \mu}{\sigma}  
+	$$
+	_Use case:_ Typically used in models that assume **normally distributed** data (e.g., linear regression, PCA, logistic regression), and there are a lot of **outliers**.
+	
+> Scaling in general is required when we use any ML algorithm that requires **gradient calculation**.
 ### Boosting vs Bagging
 
 ![alt text](imgs/image.png)

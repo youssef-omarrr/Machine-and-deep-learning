@@ -31,6 +31,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [All Machine Learning Algorithms Explained in 17 Min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)  
 - [15 Machine Learning Lessons I Wish I Knew Earlier](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)  
 - [Cracking Machine Learning Interview:](https://github.com/shafaypro/CrackingMachineLearningInterview) Repository to prepare for ML interviews, covering common questions asked by top companies.  
+- [Great ML/DL YT channel (StatQuest with Josh Starmer)](https://www.youtube.com/@statquest)
 
 ### **Useful Websites:**  
 - [Browse State-of-the-Art](https://paperswithcode.com/sota)  
@@ -73,16 +74,15 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Boosting and Bagging
 - [x] Support Vector Machines (SVM)
 - [x] K-Nearest Neighbors (KNN)
-- [ ] Naive Bayes
+- [x] Naive Bayes (Multinomial, Gaussian)
 - [x] Gradient Boosting / XGBoost
 - [x] K-Means & other clustering methods (Hierarchical clustering, DBSCAN)
 - [x] Gaussian Mixture Models (GMM)
 - [x] Dimensionality Reduction (PCA)
-- [x] Overfitting / Regularization
-- [ ] Bias–Variance Tradeoff
+- [x] Bias–Variance Tradeoff
 - [x] Cross-validation
-- [ ] Regularization (Ridge (L2) and Lasso (L1)) 
-- [ ] Evaluation Metrics (Accuracy, Precision, Recall, F1, AUC) (need more revision)
+- [x] Regularization (Ridge (L2) and Lasso (L1)) 
+- [x] Evaluation Metrics (Accuracy, Precision, Recall, F1, ROC, AUC)
 - [x] Feature Engineering / Normalization
 
 #### 3. Core Deep Learning

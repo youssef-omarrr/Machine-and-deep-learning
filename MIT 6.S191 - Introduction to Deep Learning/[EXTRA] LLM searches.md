@@ -112,9 +112,9 @@ tokenizer.save_pretrained("./fine_tuned_gpt2")
 
 ---
 
-![](imgs/PastedImage-20.png)
-![](imgs/PastedImage-21.png)
-![](imgs/PastedImage-22.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-20.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-21.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-22.png)
 ![](imgs/PastedImage-27.png)
 ![](imgs/PastedImage-23.png)![](imgs/PastedImage-24.png)
 ![](imgs/PastedImage-25.png)![](imgs/PastedImage-26.png)

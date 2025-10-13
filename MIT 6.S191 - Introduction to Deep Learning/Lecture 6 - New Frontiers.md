@@ -18,7 +18,7 @@ The **Universal Approximation Theorem** states:
 - **Rethinking generalization** in deep learning means questioning traditional ideas about how and why neural networks generalize well to new data, even when they have far more parameters than training samples. 
 - Classic machine learning says models should overfit in such cases, but deep networks often don’t, they perform well despite being over-parameterized. This has led to new theories like the role of implicit regularization, optimization dynamics (like SGD), and the structure of data in helping deep models generalize, even when classical theory can’t fully explain it.
 
-![](imgs/PastedImage.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage.png)
 
 ---
 
@@ -26,7 +26,7 @@ The **Universal Approximation Theorem** states:
 
 Neural networks can be seen as **universal function approximators**, they learn to map inputs to outputs by adjusting weights to approximate an unknown function. Given enough neurons and layers, a neural network can model highly complex, non-linear relationships between variables, making them ideal for tasks like regression, classification, and reinforcement learning where the true underlying function (like Q(s, a) or π(a|s)) is unknown and must be learned from data.
 
-![](imgs/PastedImage-1.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-1.png)
 
 ---
 ## 4. Neural networks failure modes
@@ -35,12 +35,12 @@ Neural networks can be seen as **universal function approximators**, they learn 
 - This shows that despite *high accuracy*, networks may rely on fragile or non-robust features. Other failure modes include **memorizing noise** (overfitting), **poor generalization** to out-of-distribution inputs, and instability in **training dynamics**, especially in reinforcement learning where feedback loops can amplify small mistakes.
 - **Adversarial attacks** exploit the fact that neural networks often rely on brittle, non-robust patterns in data by introducing **carefully crafted small changes** to inputs that cause the model to make incorrect predictions with high confidence. 
 - These attacks can be white-box (knowing the model’s architecture and weights) or black-box (only observing outputs), and are especially dangerous in safety-critical systems like facial recognition or autonomous driving. Common methods include **FGSM (Fast Gradient Sign Method)** and **PGD (Projected Gradient Descent)**, which use gradients to find input perturbations that *maximize loss*. Their existence raises concerns about model reliability and has led to research in adversarial training and robust optimization.
- ![](imgs/PastedImage-2.png)![](imgs/PastedImage-3.png)
+ ![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-2.png)![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-3.png)
 
 ---
 
 ## 5.Neural Networks Limitations
-![](imgs/PastedImage-4.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-4.png)
 
 ---
 ## 6. Diffusion models
@@ -50,7 +50,7 @@ Neural networks can be seen as **universal function approximators**, they learn 
 - At inference time, they start from **pure noise** and gradually **denoise** it to generate realistic samples. 
 - Unlike GANs, diffusion models are *more stable* to train and can produce high-quality outputs, which is why they are used in tools like **DALL·E 2** and **Stable Diffusion**.
 
-![](imgs/PastedImage-5.png)![](imgs/PastedImage-6.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-5.png)![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-6.png)
 
 ---
 ## 7. Large Language Models
@@ -62,11 +62,11 @@ Neural networks can be seen as **universal function approximators**, they learn 
 - **Next token prediction** is the core training objective for models like GPT, where the model learns to predict the **next word or token** in a sequence given all the previous ones. 
 	- During training, the model is fed large text datasets and learns to assign **high probability** to the correct next token using a language modeling loss (usually cross-entropy).
 	- This setup allows the model to learn grammar, facts, reasoning patterns, and even coding logic, and it forms the foundation for generating coherent text, answering questions, or continuing prompts at inference time.
-	![](imgs/PastedImage-8.png)
+	![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-8.png)
 
 ---
 
 ## 8. Emergent abilities
 - **Emergent abilities** refer to surprising skills that large language models develop **only after reaching a certain scale** in model size or data, abilities that smaller models simply don’t show. Examples include basic arithmetic, in-context learning, code generation, or following complex instructions. These abilities aren’t directly programmed or seen during training, but they **“emerge”** once the model passes a threshold in capacity, suggesting that **scale unlocks new generalization behavior** that can't be predicted just by studying smaller models.
 
-![](imgs/PastedImage-9.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-9.png)
