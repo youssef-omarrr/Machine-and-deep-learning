@@ -64,7 +64,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Linear Algebra (vectors, matrices, eigenvalues, SVD)
 - [x] Calculus (gradients, Jacobians, chain rule)
 - [x] Probability & Statistics (distributions, expectation, Bayes)
-- [ ] Optimization (gradient descent, Adam, RMSprop, etc.)
+- [ ] Optimization (gradient descent, Adam, RMSprop, etc.) (next term)
 
 #### 2. Classical Machine Learning
 
