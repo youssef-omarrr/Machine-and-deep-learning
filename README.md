@@ -90,7 +90,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Perceptron, Feedforward Networks
 - [x] Activation Functions (ReLU, Sigmoid, Tanh, GELU, etc.)
 - [x] Backpropagation
-- [ ] Weight Initialization (Xavier, Kaiming)
+- [x] Weight Initialization (Xavier, Kaiming)
 - [x] Dropout / BatchNorm / LayerNorm
 - [x] Loss Functions (MSE, Cross-Entropy, BCE, etc.)
 - [ ] Learning Rate Schedules
