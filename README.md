@@ -102,8 +102,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 #### 4. Convolutional Neural Networks (CNNs)
 
 - [x] Convolution / Pooling / Padding
-- [ ] LeNet
-- [ ] AlexNet
+- [x] LeNet
+- [x] AlexNet
 - [x] VGG
 - [x] ResNet
 - [x] EfficientNet
