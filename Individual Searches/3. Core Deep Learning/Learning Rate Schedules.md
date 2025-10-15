@@ -17,7 +17,7 @@ A **learning rate schedule** *changes* the LR over time to improve training stab
   $$
   \eta_t = \eta_0 \times \gamma^{\lfloor t / s \rfloor}
   $$
-  where ( s ) = step size, ( \gamma ) = decay factor.
+  where ( s ) = step size, ( $\gamma$ ) = decay factor.
 * **Example:** Reduce LR by 0.1 every 30 epochs.
 * **In PyTorch:**
   `torch.optim.lr_scheduler.StepLR(optimizer, step_size=30, gamma=0.1)`
@@ -81,10 +81,10 @@ A **learning rate schedule** *changes* the LR over time to improve training stab
 
 ### **Quick Summary Table**
 
-| Schedule Type         | LR Pattern                 | Best For                | Key Intuition                       |
-| --------------------- | -------------------------- | ----------------------- | ----------------------------------- |
-| **Step Decay**        | Drops in steps             | Simple CNN/MLP training | Sudden drops after milestones       |
-| **Exponential Decay** | Smooth continuous decrease | Long training runs      | Gradual slowdown                    |
-| **Cosine Annealing**  | Cosine-shaped decrease     | Modern deep nets        | Smooth cooldown                     |
-| **Cyclical LR**       | Oscillates between bounds  | Escaping local minima   | Periodic exploration                |
-| **One Cycle Policy**  | Rise → peak → fall         | Fast training           | Quick exploration, fine convergence |
+| Schedule Type         | LR Pattern                | Behavior                       | Best For                 | Key Intuition                              |
+| --------------------- | ------------------------- | ------------------------------ | ------------------------ | ------------------------------------------ |
+| **Step Decay**        | Stepwise decrease         | **Drops only**                 | Simple CNN/MLP training  | Sudden drops after milestones              |
+| **Exponential Decay** | Smooth exponential curve  | **Drops only**                 | Long training runs       | Gradual slowdown for fine-tuning           |
+| **Cosine Annealing**  | Cosine-shaped decay       | **Drops only**                 | Modern deep nets         | Smooth cooldown instead of sudden drops    |
+| **Cyclical LR (CLR)** | Triangle or cosine cycles | **Rises and drops repeatedly** | Escaping local minima    | Periodic exploration–exploitation          |
+| **One Cycle Policy**  | Rise → peak → fall        | **Rises once then drops**      | Fast and robust training | Encourages fast convergence to good minima |

@@ -93,7 +93,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Weight Initialization (Xavier, Kaiming)
 - [x] Dropout / BatchNorm / LayerNorm
 - [x] Loss Functions (MSE, Cross-Entropy, BCE, etc.)
-- [ ] Learning Rate Schedules
+- [x] Learning Rate Schedules
 - [x] Early Stopping
 - [x] Gradient Clipping
 - [x] Data Augmentation
