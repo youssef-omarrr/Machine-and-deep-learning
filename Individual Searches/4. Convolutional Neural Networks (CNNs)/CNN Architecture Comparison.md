@@ -1,5 +1,6 @@
 ## Sources
 - [ResNet (actually) explained in under 10 minutes](https://www.youtube.com/watch?v=o_3mboe1jYI)
+- [The moment we stopped understanding AI [AlexNet]](https://www.youtube.com/watch?v=UZDiGooFs54&list=WL&index=1)
 
 ## **CNN Architecture Comparison**
 
