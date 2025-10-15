@@ -5,7 +5,7 @@
 
 - This lecture presents the idea of how to **link** generative AI and deep neural networks to biology, to be able to create new things like a new protein.
 - To represent these biological languages into something the NN can understand we can do something like the following:
-![](imgs/PastedImage-35.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-35.png)
 
 - What they are trying to do is to build a generative model that can understand these **protein sequence data**, to be able to generate new proteins, and prompt what they want this new protein's functions to be.
 ---
@@ -29,7 +29,7 @@
 - Synthetic biology
 - Understanding protein evolution
 
-![](imgs/PastedImage-36.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-36.png)
 
 ---
 ## Discrete Diffusion
@@ -40,13 +40,13 @@
 - Noise = replacing tokens with random ones.
 - Reverse process = predicting the correct token from a corrupted input.
 
-![](imgs/PastedImage-37.png)
-![](imgs/PastedImage-40.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-37.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-40.png)
 
 ---
 ### Different **Discrete Diffusion** approaches
 
-![](imgs/PastedImage-39.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-39.png)
 
 #### Next-Token Autoregressive (Left):
 
@@ -79,7 +79,7 @@ So, discrete diffusion combines the **flexibility of BERT** (any position) with 
 
 ---
 
-![](imgs/PastedImage-41.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-41.png)
 
 ---
 ## Biological "Prompting" in EvoDiff

@@ -108,14 +108,14 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] ResNet
 - [x] EfficientNet
 - [x] Transfer Learning
-- [ ] Object Detection (YOLO)
+- [x] Object Detection (YOLO)
 - [x] Segmentation (U-Net, Mask R-CNN)
 
 #### 5. Recurrent and Sequential Models
 
 - [x] RNNs
-- [ ] LSTMs
-- [ ] GRUs
+- [x] LSTMs
+- [x] GRUs
 - [x] Sequence-to-Sequence Models
 - [x] Attention Mechanisms
 - [x] Encoder–Decoder Architectures

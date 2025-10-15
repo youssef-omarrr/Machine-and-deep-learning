@@ -7,4 +7,4 @@ This lecture mainly talks about the **ethical side** of AI and deep learning, he
 - **Biasing** in the models are a problem that sill has no definitive solution.
 - LLM **hallucination** is a dumb way to describe it, because it implies that it's **sometimes** inaccurate, when in reality it's always hallucinating, it only generate things **YOU** want to see, may not be always accurate or even true.
 - *You* can have a **Hippocratic oath** but *your AI* can't (your AI, your responsibility).
-![](imgs/PastedImage-34.png)
+![](MIT%206.S191%20-%20Introduction%20to%20Deep%20Learning/imgs/PastedImage-34.png)
