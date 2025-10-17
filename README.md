@@ -166,6 +166,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 
 - [ ] ReAct (Reason + Act) architecture
 - [ ] AutoGPT / BabyAGI
+- [ ] Retrieval-Augmented Generation (RAG)
 - [ ] LangChain or LlamaIndex for tool-using agents
 - [ ] Vector DB Memory (FAISS, Chroma, Milvus)
 - [ ] Planning + Reflection loops
