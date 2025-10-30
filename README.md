@@ -17,16 +17,19 @@ This roadmap includes resources, courses and their projects, and notes that I am
 
 ### **Roadmap Video:**  
 - [How to Learn Machine Learning in 2024 (7-step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) *(contains links to many resources)*  
-
 ### **Courses:**  
 - [MIT 6.S191: Introduction to Deep Learning (highly recommended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)  
 - [Full PyTorch Course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)  
   - [GitHub Repo](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)  
   - [Book Page](https://www.learnpytorch.io/00_pytorch_fundamentals/)  
 - [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)  
-- [Stanford Introduction to Machine Learning (free on Udacity)](https://www.udacity.com/enrollment/ud120)  
 - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)  
-
+- Stanford Courses:
+	- [Stanford CS229: Machine Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy)
+	- [Stanford CS230: Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
+	- [Stanford CS336: Language Modeling from Scratch](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
+	- [Stanford CS236: Deep Generative Models](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
+	- [Stanford CS234: Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
 ### **Online Tutorials & Blogs:**  
 - [All Machine Learning Algorithms Explained in 17 Min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)  
 - [15 Machine Learning Lessons I Wish I Knew Earlier](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)  
@@ -37,6 +40,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [Browse State-of-the-Art](https://paperswithcode.com/sota)  
 - [Hugging Face Models](https://huggingface.co/models)  
 - [`timm` (PyTorch Image Models) Library](https://github.com/huggingface/pytorch-image-models)  
+- [Google dataset search](https://datasetsearch.research.google.com/)
 
 ## Projects & Practice
 > - **Older projects** in this repo are mostly drafts and unpolished experiments.  
