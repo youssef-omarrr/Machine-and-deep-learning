@@ -22,6 +22,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [Full PyTorch Course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)  
   - [GitHub Repo](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)  
   - [Book Page](https://www.learnpytorch.io/00_pytorch_fundamentals/)  
+- [Dive into Deep Learning: Interactive deep learning book with code, math, and discussions](https://d2l.ai/)
 - [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)  
 - [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)  
 - Stanford Courses:
