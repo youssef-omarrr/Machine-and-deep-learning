@@ -2,8 +2,9 @@ This is a collection of the most important Stanford's college courses, along wit
 
 ## 1. Stanford CS229: Machine Learning
 ### [Course link](https://www.youtube.com/playlist?list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy)
-- [ ] Lecture 1: Introduction  
-- [ ] Lecture 2: Supervised learning setup, LMS  
+- [Materials](https://docs.google.com/spreadsheets/d/1OEsqqhihH-n2OPHsT8jSA8BkLdqUMWY-GiWHgkBs3Z8/edit?gid=0#gid=0)
+- [x] Lecture 1: Introduction  
+- [x] Lecture 2: Supervised learning setup, LMS  
 - [ ] Lecture 3: Weighted Least Squares, Logistic regression, Newton's Method  
 - [ ] Lecture 4: Exponential family, Generalized Linear Models  
 - [ ] Lecture 5: Gaussian discriminant analysis, Naive Bayes  
@@ -56,7 +57,7 @@ This is a collection of the most important Stanford's college courses, along wit
 ---
 
 ## 4. Stanford CS236: Deep Generative Models 
-### [Course link](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
+### [Course link](https://www.youtube.com/playlist?list=PLoROMvodv4rPOWA-omMM6STXaWW4FvJT8)
 - [ ] Lecture 1: Introduction
 - [ ] Lecture 2: Background
 - [ ] Lecture 3: Autoregressive Models
