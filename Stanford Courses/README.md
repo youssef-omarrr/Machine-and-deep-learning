@@ -5,8 +5,8 @@ This is a collection of the most important Stanford's college courses, along wit
 - [Materials](https://docs.google.com/spreadsheets/d/1OEsqqhihH-n2OPHsT8jSA8BkLdqUMWY-GiWHgkBs3Z8/edit?gid=0#gid=0)
 - [x] Lecture 1: Introduction  
 - [x] Lecture 2: Supervised learning setup, LMS  
-- [ ] Lecture 3: Weighted Least Squares, Logistic regression, Newton's Method  
-- [ ] Lecture 4: Exponential family, Generalized Linear Models  
+- [x] Lecture 3: Weighted Least Squares, Logistic regression, Newton's Method  
+- [x] Lecture 4: Exponential family, Generalized Linear Models  
 - [ ] Lecture 5: Gaussian discriminant analysis, Naive Bayes  
 - [ ] Lecture 6: Naive Bayes, Laplace Smoothing  
 - [ ] Lecture 7: Kernels  
