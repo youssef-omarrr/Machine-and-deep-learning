@@ -40,6 +40,13 @@ $$p(y \mid x) = \frac{p(x \mid y) p(y)}{\sum_{y'} p(x \mid y') p(y')}$$
 ### Why?
 
 * First model how **each class generates x**.
+* To **model $x$ means:
+
+> **You assume a *probability distribution* for how the input data $x$ is generated, usually separately for each class.**
+
+In other words, you try to answer the question:
+
+> _“If I know the class label $y$, what does a typical $x$ that class look like?”_
 * Then use **Bayes’ rule** for classification.
 
 ---
@@ -115,6 +122,8 @@ We estimate:
 ### In one sentence
 - **Discriminative models:** learn the *boundary* between classes.
 - **Generative models:** learn how each class *produces* data, then classify with Bayes’ rule.
+- **Modeling $x$** = learning the *distribution* of the data itself.
+- **Modeling $y|x$** = learning only how to *classify* the data.
 - **Maximum likelihood (ML)** in generative models finds parameters that make the **entire data ((x,y))** most probable under the *joint* distribution (p(x,y)).  
 - **Conditional maximum likelihood** in discriminative models finds parameters that make the **labels (y)** most probable **given the inputs (x)** under the *conditional* distribution (p(y|x)), without modeling how (x) is generated.
 ---

@@ -132,3 +132,56 @@ $$
 
 **Key Idea:**
 Accuracy alone can be misleading, use **precision, recall, F1, and AUC** together to get a full picture of your model’s performance.
+
+---
+## 3. **($R^2$) (R-squared)** 
+
+It is a metric used mostly in **regression** to measure **how well a model's predictions explain the *variance* in the target variable**.
+
+In simple terms:
+> **R-squared tells you what fraction of the *variation* in (y) your model can explain.**
+
+---
+
+### Formal Definition
+
+$$
+R^2 = 1 - \frac{\text{SSE}}{\text{SST}}
+$$
+
+Where:
+
+* **SSE** (sum of squared errors):
+  $$ \text{SSE} = \sum_i (y^{(i)} - \hat{y}^{(i)})^2 $$
+  The *error* your model makes.
+
+* **SST** (total sum of squares):
+  $$ \text{SST} = \sum_i (y^{(i)} - \bar{y})^2 $$
+  How much the data *varies* around the mean.
+
+---
+
+### Intuition (simple)
+
+* If your model predicts perfectly → **SSE = 0** →
+  $$ R^2 = 1 $$
+  (100% of variance explained)
+
+* If your model is as bad as predicting just the mean →
+  $$ R^2 = 0 $$
+  (explains nothing more than the mean)
+
+* If your model is worse than predicting the mean →
+  $$ R^2 < 0 $$
+  (yes, this can happen)
+
+---
+
+### Short explanation
+
+* **High (R^2)** → model fits data well.
+* **Low (R^2)** → model fits poorly.
+* **Used only for regression**, not classification.
+
+---
+
