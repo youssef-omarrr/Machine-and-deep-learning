@@ -1,6 +1,7 @@
 ## Sources
 - [Precision, Recall, F1 score, True Positive|Deep Learning Tutorial 19](https://www.youtube.com/watch?v=2osIZ-dSPGE)
 - [ROC and AUC, Clearly Explained!](https://www.youtube.com/watch?v=4jRBRDbJemM)
+- [R-squared, Clearly Explained!!!](https://www.youtube.com/watch?v=bMccdk8EdGo)
 ## 1. Accuracy, Precision, Recall, F1-Score
 
 ### Overview
@@ -139,7 +140,9 @@ Accuracy alone can be misleading, use **precision, recall, F1, and AUC** togethe
 It is a metric used mostly in **regression** to measure **how well a model's predictions explain the *variance* in the target variable**.
 
 In simple terms:
-> **R-squared tells you what fraction of the *variation* in (y) your model can explain.**
+> **R-squared tells you what fraction of the *variation* in (y) your model can explain (when compared to the variation around the *mean*).**
+
+> **Regular 'R':** is the correlation, if 2 variables' *R is -1 or 1*, they are **strongly related**, if *R is 0* then they are **independent**.
 
 ---
 
@@ -157,7 +160,7 @@ Where:
 
 * **SST** (total sum of squares):
   $$ \text{SST} = \sum_i (y^{(i)} - \bar{y})^2 $$
-  How much the data *varies* around the mean.
+  How much the data *varies* around the *mean*.
 
 ---
 
