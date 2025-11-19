@@ -158,20 +158,20 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [ ] Monte Carlo Methods
 - [ ] Deep Q-Network (DQN)
 - [ ] Double / Dueling DQN
-- [ ] Policy Gradient Methods
+- [x] Policy Gradient Methods
 - [ ] Actor–Critic
 - [ ] PPO (Proximal Policy Optimization)
 - [ ] DDPG / TD3 / SAC (continuous control)
 - [ ] Model-Based RL (Dreamer, MuZero)
 - [ ] Multi-Agent RL (MADDPG, QMIX)
 - [ ] Offline RL / Imitation Learning
-- [ ] RLHF (Reinforcement Learning from Human Feedback)
+- [x] RLHF (Reinforcement Learning from Human Feedback)
 
 #### 10. AI Agents & Autonomous Systems
 
 - [ ] ReAct (Reason + Act) architecture
 - [ ] AutoGPT / BabyAGI
-- [ ] Retrieval-Augmented Generation (RAG)
+- [x] Retrieval-Augmented Generation (RAG)
 - [ ] LangChain or LlamaIndex for tool-using agents
 - [ ] Vector DB Memory (FAISS, Chroma, Milvus)
 - [ ] Planning + Reflection loops
