@@ -2,7 +2,7 @@
 - [ControlNet with Diffusion Models | Explanation and PyTorch Implementation](https://www.youtube.com/watch?v=n6CwImm_WDI&t=15s)
 ---
 
-# **ControlNet
+# **ControlNet**
 
 ## **1. What ControlNet Is**
 
