@@ -1,10 +1,5 @@
 # Diffusion Models
 
-## Sources:
-- [ControlNet with Diffusion Models | Explanation and PyTorch Implementation](https://www.youtube.com/watch?v=n6CwImm_WDI&t=15s)
-
----
-
 Diffusion Models are a class of **generative models** that learn to create new data (like images or audio) by simulating a physical process of diffusing and then reversing it. They currently produce some of the most realistic synthetic images.
 
 ---
