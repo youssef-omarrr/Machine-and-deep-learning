@@ -140,7 +140,10 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Autoencoders (AE)
 - [x] Variational Autoencoders (VAE)
 - [x] Generative Adversarial Networks (GANs)
-- [x] Diffusion Models (DDPM, Stable Diffusion, ControlNet)
+- [x] Diffusion Models 
+    - [x] DDPM 
+    - [x] Stable Diffusion 
+    - [x] ControlNet
 - [ ] Flow-based Models (RealNVP, Glow)
 
 #### 8. Self-Supervised / Representation Learning
