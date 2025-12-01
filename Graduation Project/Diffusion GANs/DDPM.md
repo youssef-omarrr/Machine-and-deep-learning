@@ -13,14 +13,14 @@ This approach is conceptually similar to *Variational Autoencoders* (VAEs), whic
 
 The forward process, $q(\mathbf{x}_t | \mathbf{x}_0)$, is a **Stochastic Markov Process** (Stochastic: random, Markov: future state depends on present state) that gradually adds a small amount of **Gaussian noise** ($\mathbf{\epsilon}$) over $T$ time steps until the image $\mathbf{x}_0$ is transformed into a sample from a *simple normal distribution*.
 
-![](../../Reinforcement%20Learning/imgs/DDPM.mp4)
+![](../imgs/DDPM.mp4)
 #### **Markov Transition**
 Each step $t$ depends only on the previous step $t-1$:
 $$q(\mathbf{x}_t | \mathbf{x}_{t-1}) = \mathcal{N}(\mathbf{x}_t; \sqrt{\alpha_t} \mathbf{x}_{t-1}, \beta_t \mathbf{I})$$
 Where $\alpha_t = 1 - \beta_t$ and $\beta_t$ is a small, time-dependent variance (often following a linear schedule).
 
 #### **One-Step Sampling**
-A key mathematical property allows sampling $\mathbf{x}_t$ from the original image $\mathbf{x}_0$ in a single, non-iterative step, which is crucial for training efficiency:
+A key mathematical property allows sampling $\mathbf{x}_t$ from the original image $\mathbf{x}_0$ in a single, **non-iterative** step, which is crucial for training *efficiency*:
 $$\mathbf{x}_t = \sqrt{\bar{\alpha}_t} \mathbf{x}_0 + \sqrt{1-\bar{\alpha}_t} \mathbf{\epsilon}$$
 where $\mathbf{\epsilon} \sim \mathcal{N}(\mathbf{0}, \mathbf{I})$ and $\bar{\alpha}_t = \prod_{i=1}^t \alpha_i$ (the cumulative product).
 
@@ -46,6 +46,10 @@ where:
 ***
 
 ### 3. The Training Objective
+
+![](../imgs/PastedImage-51.png)
+
+![](../imgs/PastedImage-52.png)
 
 Instead of directly training the network to predict the mean $\mu_\theta$ or the less noisy image $\mathbf{x}_{t-1}$, the DDPM model is trained to predict the **noise** $\mathbf{\epsilon}$ that was added in the forward step. The network $\mathbf{\epsilon}_\theta$ is typically a **U-Net architecture**.
 

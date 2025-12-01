@@ -25,7 +25,7 @@ ControlNet solves this by preserving the original model’s weights entirely.
 ---
 
 ## **3. Key Ideas Behind ControlNet**
-![](../../Reinforcement%20Learning/imgs/PastedImage.png)
+![](../imgs/PastedImage.png)
 ### **A. Freeze the Original UNet**
 
 * The base diffusion model (e.g., Stable Diffusion’s UNet) is **completely frozen**.
@@ -55,9 +55,9 @@ ControlNet solves this by preserving the original model’s weights entirely.
 ---
 
 ## **4. How ControlNet Integrates Into Stable Diffusion**
-![](../../Reinforcement%20Learning/imgs/PastedImage-48.png)
+![](../imgs/PastedImage-48.png)
 
-![](../../Reinforcement%20Learning/imgs/PastedImage-49.png)
+![](../imgs/PastedImage-49.png)
 ### **A. Stable Diffusion’s UNet Structure**
 
 * **Down blocks (encoder)**
@@ -126,7 +126,7 @@ This demonstrates how quickly the model learns spatial control because the base 
 ---
 
 ## **7. Additional Practical Notes**
-![](../../Reinforcement%20Learning/imgs/PastedImage-50.png)
+![](../imgs/PastedImage-50.png)
 ### **A. ControlNet Does Not Replace the Base Model**
 
 It **adds** capability, it does not modify or weaken the original generator.
