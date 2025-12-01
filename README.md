@@ -151,32 +151,79 @@ This roadmap includes resources, courses and their projects, and notes that I am
 
 #### 9. Reinforcement Learning (RL)
 
+##### **Foundations**
+
 - [ ] Markov Decision Processes (MDPs)
-- [ ] Policy Evaluation / Improvement
+- [ ] Bellman Equations (Value / Q-function / Advantage function)
+- [ ] Exploration vs. Exploitation (ε-greedy, softmax policies)
+- [ ] Policy Evaluation & Policy Improvement
 - [ ] Value Iteration / Policy Iteration
-- [ ] Temporal Difference Learning
-- [ ] Monte Carlo Methods
+
+##### **Core RL Algorithms**
+
+- [ ] Monte Carlo Methods (First-visit / Every-visit)
+- [ ] Temporal Difference Learning (TD(0), TD(λ))
+- [ ] SARSA / Q-Learning
 - [ ] Deep Q-Network (DQN)
-- [ ] Double / Dueling DQN
-- [x] Policy Gradient Methods
-- [ ] Actor–Critic
+- [ ] Improvements: Double DQN, Dueling DQN, Prioritized Replay
+
+##### **Policy Gradient & Actor–Critic Methods**
+
+- [ ] Policy Gradient (REINFORCE)
+- [ ] Actor–Critic (A2C, A3C)
 - [ ] PPO (Proximal Policy Optimization)
-- [ ] DDPG / TD3 / SAC (continuous control)
-- [ ] Model-Based RL (Dreamer, MuZero)
+- [ ] TRPO (Trust Region Policy Optimization)
+
+##### **Continuous Control Algorithms**
+
+- [ ] DDPG (Deep Deterministic Policy Gradient)
+- [ ] TD3 (Twin-Delayed DDPG)
+- [ ] SAC (Soft Actor–Critic)
+
+##### **Model-Based & Advanced RL**
+
+- [ ] Planning (Dyna-Q)
+- [ ] Model-Based RL (Dreamer, MuZero-style)
+- [ ] Hierarchical RL (Options Framework)
+- [ ] Meta-RL (MAML, RL²)
 - [ ] Multi-Agent RL (MADDPG, QMIX)
-- [ ] Offline RL / Imitation Learning
+- [ ] Offline RL (CQL, Conservative Q-Learning)
+- [ ] Imitation Learning (BC, GAIL)
 - [x] RLHF (Reinforcement Learning from Human Feedback)
+
+##### **Practical Skills**
+
+- [x] Learn OpenAI Gym / Gymnasium environments (spaces, wrappers, vector envs)
+- [ ] Implement RL algorithms from scratch in PyTorch:
+  - [ ] Q-learning (tabular)
+  - [ ] DQN (with replay + target network)
+  - [ ] REINFORCE
+  - [ ] Actor–Critic (A2C)
+  - [ ] PPO (full implementation)
+  - [ ] DDPG / TD3 / SAC
+- [x] Learn stable-baselines3 usage and comparison
+- [x] Logging RL experiments (TensorBoard, Weights & Biases)
 
 #### 10. AI Agents & Autonomous Systems
 
-- [ ] ReAct (Reason + Act) architecture
-- [ ] AutoGPT / BabyAGI
-- [x] Retrieval-Augmented Generation (RAG)
-- [ ] LangChain or LlamaIndex for tool-using agents
-- [ ] Vector DB Memory (FAISS, Chroma, Milvus)
+##### **Agent Architectures**
+
+- [ ] ReAct (Reason + Act)
+- [ ] AutoGPT / BabyAGI-style loop
 - [ ] Planning + Reflection loops
-- [ ] Integrating RL / feedback into agents
-- [ ] Multi-agent coordination and communication
+- [ ] Tool-using agent frameworks (LangChain / LlamaIndex)
+
+##### **Memory & Retrieval**
+
+- [ ] Retrieval-Augmented Generation (RAG)
+- [ ] Vector Databases (FAISS, Chroma, Milvus)
+- [ ] Long-term memory strategies (episodic, semantic)
+
+##### **Integrating RL with Agents**
+
+- [ ] RL-driven tool selection
+- [ ] Feedback loops for improving agent behavior
+- [ ] Multi-agent coordination & communication
 
 #### 11. Deployment & MLOps
 
