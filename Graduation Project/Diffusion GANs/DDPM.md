@@ -1,5 +1,7 @@
 ### Soucres:
 - [Denoising Diffusion Probabilistic Models | DDPM Explained](http://www.youtube.com/watch?v=H45lF4sUgiE)
+- [Denoising Diffusion Probabilistic Models Code | DDPM Pytorch Implementation](https://www.youtube.com/watch?v=vu6eKteJWew&list=PL8VDJoEXIjpo2S7X-1YKZnbHyLGyESDCe&index=2)
+- [REPO: Denoising Diffusion Probabilistic Models Implementation in Pytorch](https://github.com/explainingai-code/DDPM-Pytorch)
 
 ***
 
