@@ -47,8 +47,8 @@
 
 - [x] Learn OpenAI Gym / Gymnasium environments (spaces, wrappers, vector envs)
 - [ ] Implement RL algorithms from scratch in PyTorch:
-  - [ ] Q-learning (tabular)
-  - [ ] DQN (with replay + target network)
+  - [x] Q-learning (tabular)
+  - [x] DQN (with replay + target network)
   - [ ] REINFORCE
   - [ ] Actor–Critic (A2C)
   - [ ] PPO (full implementation)
