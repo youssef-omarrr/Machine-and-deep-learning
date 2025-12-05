@@ -18,6 +18,8 @@ RL is about an agent interacting with an environment to maximize **cumulative re
 
 The agent **does not learn how the world works**. It only learns which actions are good based on *trial and error*.
 
+![](../../imgs/brave_YjWNJt2xhV.png)
+
 ---
 
 ## A. Value-Based Methods

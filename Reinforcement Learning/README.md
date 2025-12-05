@@ -49,8 +49,8 @@
 - [ ] Implement RL algorithms from scratch in PyTorch:
   - [x] Q-learning (tabular)
   - [x] DQN (with replay + target network)
-  - [ ] REINFORCE
-  - [ ] Actor–Critic (A2C)
+  - [x] REINFORCE
+  - [x] Actor–Critic (A2C)
   - [ ] PPO (full implementation)
   - [ ] DDPG / TD3 / SAC
 - [x] Learn stable-baselines3 usage and comparison
