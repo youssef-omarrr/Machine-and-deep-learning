@@ -144,6 +144,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
     - [x] DDPM 
     - [x] Stable Diffusion 
     - [x] ControlNet
+- [x] Transformers
 - [ ] Flow-based Models (RealNVP, Glow)
 
 #### 8. Self-Supervised / Representation Learning
@@ -156,32 +157,32 @@ This roadmap includes resources, courses and their projects, and notes that I am
 
 ##### **Foundations**
 
-- [ ] Markov Decision Processes (MDPs)
-- [ ] Bellman Equations (Value / Q-function / Advantage function)
-- [ ] Exploration vs. Exploitation (ε-greedy, softmax policies)
-- [ ] Policy Evaluation & Policy Improvement
-- [ ] Value Iteration / Policy Iteration
+- [x] Markov Decision Processes (MDPs)
+- [x] Bellman Equations (Value / Q-function / Advantage function)
+- [x] Exploration vs. Exploitation (ε-greedy, softmax policies)
+- [x] Policy Evaluation & Policy Improvement
+- [x] Value Iteration / Policy Iteration
 
 ##### **Core RL Algorithms**
 
-- [ ] Monte Carlo Methods (First-visit / Every-visit)
-- [ ] Temporal Difference Learning (TD(0), TD(λ))
-- [ ] SARSA / Q-Learning
-- [ ] Deep Q-Network (DQN)
-- [ ] Improvements: Double DQN, Dueling DQN, Prioritized Replay
+- [x] Monte Carlo Methods (First-visit / Every-visit)
+- [x] Temporal Difference Learning (TD(0), TD(λ))
+- [x] SARSA / Q-Learning
+- [x] Deep Q-Network (DQN)
+- [x] Improvements: Double DQN, Dueling DQN, Prioritized Replay
 
 ##### **Policy Gradient & Actor–Critic Methods**
 
-- [ ] Policy Gradient (REINFORCE)
-- [ ] Actor–Critic (A2C, A3C)
-- [ ] PPO (Proximal Policy Optimization)
-- [ ] TRPO (Trust Region Policy Optimization)
+- [x] Policy Gradient (REINFORCE)
+- [x] Actor–Critic (A2C, A3C)
+- [x] PPO (Proximal Policy Optimization)
+- [x] TRPO (Trust Region Policy Optimization)
 
 ##### **Continuous Control Algorithms**
 
-- [ ] DDPG (Deep Deterministic Policy Gradient)
-- [ ] TD3 (Twin-Delayed DDPG)
-- [ ] SAC (Soft Actor–Critic)
+- [x] DDPG (Deep Deterministic Policy Gradient)
+- [x] TD3 (Twin-Delayed DDPG)
+- [x] SAC (Soft Actor–Critic)
 
 ##### **Model-Based & Advanced RL**
 
@@ -197,13 +198,13 @@ This roadmap includes resources, courses and their projects, and notes that I am
 ##### **Practical Skills**
 
 - [x] Learn OpenAI Gym / Gymnasium environments (spaces, wrappers, vector envs)
-- [ ] Implement RL algorithms from scratch in PyTorch:
-  - [ ] Q-learning (tabular)
-  - [ ] DQN (with replay + target network)
-  - [ ] REINFORCE
-  - [ ] Actor–Critic (A2C)
-  - [ ] PPO (full implementation)
-  - [ ] DDPG / TD3 / SAC
+- [x] Implement RL algorithms from scratch in PyTorch:
+  - [x] Q-learning (tabular)
+  - [x] DQN (with Q + target network)
+  - [x] REINFORCE
+  - [x] Actor–Critic (A2C)
+  - [x] PPO & GRPO (only implemented PPO but studied GRPO)
+  - [x] DDPG / TD3 / SAC (SAC only)
 - [x] Learn stable-baselines3 usage and comparison
 - [x] Logging RL experiments (TensorBoard, Weights & Biases)
 

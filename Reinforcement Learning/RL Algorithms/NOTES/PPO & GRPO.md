@@ -2,17 +2,8 @@
 - [Proximal Policy Optimization | ChatGPT uses this](https://www.youtube.com/watch?v=MVXdncpCbYE)
 - [Proximal Policy Optimization (PPO) for LLMs Explained Intuitively](https://www.youtube.com/watch?v=8jtAzxUwDj0&t=81s)
 - [DeepSeek's GRPO (Group Relative Policy Optimization) | Reinforcement Learning for LLMs](https://www.youtube.com/watch?v=xT4jxQUl0X8)
-- [Proximal Policy Optimization & Group Relative Policy Optimization | Paper Explained](https://www.youtube.com/watch?v=5ChE_UPNN78) -watch this to revise!
+- [Proximal Policy Optimization & Group Relative Policy Optimization | Paper Explained](https://www.youtube.com/watch?v=5ChE_UPNN78) -> watch this to revise!
 # Proximal  (PPO) & Group relative (GRPO) Policy Optimization
-
-- RLHF -PPO -DPO
-- RLVR (verifiable rewards) -PPO / GRPO (reasoning)
-- When calculating advantage: GRPO -uses the last reward only (not the return) and one baseline for all states
-- Intermediate rewards were probably wrong anyways so this approach is way faster and doesn't lose a lot of accuracy
-- The group relative in GRPO is because we take the average reward (baseline) from a group to get the advantage
-- GRPO with process supervision: another reward model that measuers the intermediate rewards
-- GRPO uses PPO loss minus 2 reference policies (the reference here is different from PPO where pi ref is before we started finetuning)
-
 ## 1. Proximal Policy Optimization (PPO)
 
 **Concept:** PPO is an **Advantage Actor-Critic (A2C)** method. Its primary goal is **stability**. In standard Policy Gradient methods, if you update the neural network too aggressively based on a specific batch of data, the policy might change so much that it enters a "*collapse mode*" (outputting garbage), and it *can never recover* because the data it generates next will also be garbage. PPO prevents this by forcing updates to stay within a "**Trust Region**."

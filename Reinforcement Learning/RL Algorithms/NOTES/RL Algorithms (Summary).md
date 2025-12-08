@@ -12,6 +12,8 @@ RL is about an agent interacting with an environment to maximize **cumulative re
 
 ![alt text](../../imgs/image.png)
 
+![](../../imgs/PastedImage-66.png)\
+
 ---
 
 # 1. Model-Free RL (The “Habit Learner”)
