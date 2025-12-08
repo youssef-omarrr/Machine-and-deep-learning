@@ -246,10 +246,11 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Build and train models from scratch
 - [x] Reproduce architectures (ViT, Transformer, etc.)
 - [x] Train a symbolic music generation Transformer
+- [x] Generate synthetic dataset using generative models.
 - [x] Visualize training metrics (TensorBoard, W&B)
 - [x] Use pretrained models (Hugging Face)
 - [x] Handle datasets and dataloaders efficiently
-- [ ] Implement an RL environment and agent
+- [x] Implement an RL environment and agent
 - [ ] Build a tool-using AI agent with memory
 
 
