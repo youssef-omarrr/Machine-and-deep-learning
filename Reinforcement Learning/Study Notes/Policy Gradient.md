@@ -1,4 +1,6 @@
-A **policy gradient** is a type of reinforcement learning method that **directly optimizes the policy** instead of learning a value function first. Let’s break it down as simply and clearly as possible.
+# Policy Gradient
+
+A **policy gradient** is a type of reinforcement learning method that **directly optimizes the policy** instead of learning a value function first.
 
 ---
 
@@ -43,15 +45,15 @@ $$
 
 * **Stochastic Policy:** Policy must be **probabilistic** to allow differentiation through sampling.
 * **Baseline / Advantage Function:**
-
+* 
   * Direct use of ($G_t$) has high variance.
   * Subtract a baseline (like $V(s_t)$) to reduce variance:
 $$
 \nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\big[ \nabla_\theta \log \pi_\theta(a_t|s_t)\, (G_t - b(s_t)) \big]
 $$
   * Common choice: \($b(s_t) = V^\pi(s_t)$\).
+  
 * **Actor-Critic Methods:**
-
   * **Actor** = policy network ($\pi_\theta$)
   * **Critic** = value network ($V_\phi(s)$ ) used as baseline.
   * Reduces variance and stabilizes learning (used in A2C, PPO, SAC).
@@ -69,7 +71,7 @@ $$
 
 ---
 
-### 5. Quick Intuition
+## 5. Quick Intuition
 
 1. Imagine the policy as a “probability knob” for each action.
 2. When an action leads to high reward, **turn the knob up** for that action in that state.
@@ -78,16 +80,16 @@ $$
 
 ---
 **policy gradient methods are generally model-free algorithms**, not model-based. 
-## 1. Model-Free vs Model-Based RL
+## 6. Model-Free vs Model-Based RL
 
-| Type            | What it Does                                                                                                                                      | Example Methods                                                |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
-| **Model-Free**  | Learns **directly from interaction with the environment**, without trying to model the transition dynamics ($P(s' \mid s,a)$ or rewards $R(s,a)$. | Q-Learning, DQN, SARSA, Policy Gradients (REINFORCE, PPO, SAC) |
-| **Model-Based** | Learns or uses a **model of the environment** (transition & reward functions) and plans ahead using this model.                                   | Dyna-Q, MuZero, MBPO, MPC (Model Predictive Control)           |
+| Type            | What it Does                                                                                                                                          | Example Methods                                                |
+| --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Model-Free**  | Learns **directly from interaction with the environment**, *without* trying to model the *transition dynamics* ($P(s' \mid s,a)$ or rewards $R(s,a)$. | Q-Learning, DQN, SARSA, Policy Gradients (REINFORCE, PPO, SAC) |
+| **Model-Based** | Learns or uses a **model of the environment** (transition & reward functions) and plans ahead using this model.                                       | Dyna-Q, MuZero, MBPO, MPC (Model Predictive Control)           |
 
 ---
 
-## 2. Why Policy Gradient is Model-Free
+## 7. Why Policy Gradient is Model-Free
 
 * Policy gradients **do not need to know ($P(s'|s,a)$)**.
 * They learn **a mapping from states to actions** by **sampling trajectories from the environment** and **estimating returns**.

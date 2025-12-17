@@ -1,10 +1,10 @@
 ## 1. Monte Carlo Methods
 
-**Monte Carlo (MC) methods** estimate value functions by **sampling complete episodes** from the environment.
+**Monte Carlo (MC) methods** estimate value functions by **sampling complete episodes** from the environment (wait until the end of the entire episode to return the total reward).
 
 ### Key Ideas:
 
-* Use **actual returns** ($G_t$) instead of bootstrapping.
+* Use **actual returns** ($G_t$) instead of bootstrapping (**estimated** rewards after just one or a few steps).
 * Only works for **episodic tasks** (where episodes terminate).
 * Two types:
 
@@ -18,7 +18,7 @@
 2. **Every-visit MC:**
 
    * Updates **every occurrence** of the state in the episode.
-   * Same update rule; just averages over all visits.
+   * Same update rule; just *averages* over all visits.
 
 **Pros:** Simple, unbiased for episodic tasks.
 **Cons:** Requires **full episode**, high variance, slow for long episodes.
@@ -35,7 +35,7 @@
   $$V(s_t) \gets V(s_t) + \alpha \bigl[r_{t+1} + \gamma V(s_{t+1}) - V(s_t)\bigr]$$
 * Bootstraps: uses $V(s_{t+1})$ instead of the full return \($G_t$\).
 
-### TD(\lambda) (Eligibility Traces):
+### TD($\lambda$) (Eligibility Traces):
 
 * Introduces **λ parameter** to mix n-step returns:
   $$V(s) \gets V(s) + \alpha \,\delta_t\, e(s)$$
@@ -93,7 +93,7 @@
 ### 5.1 Double DQN
 
 * Addresses **Q-value overestimation** in DQN.
-* Use online network to select action, target network to evaluate:
+* Use online network to select *action*, target network to *evaluate*:
   $$y = r + \gamma\, Q'\bigl(s',\,\arg\max_a Q(s',a;\theta),\,\theta^- \bigr)$$
 
 ### 5.2 Dueling DQN
@@ -111,17 +111,17 @@
 
 ### Summary Table
 
-| Method             | Type       | Update Rule                                       | Key Feature                       | Notes                                    |
-| ------------------ | ---------- | ------------------------------------------------- | --------------------------------- | ---------------------------------------- |
-| Monte Carlo        | On-policy  | $V(s) \gets V(s) + \alpha\,($G_t$ - V(s))$            | Uses full episode returns         | High variance, episodic only             |
-| TD(0)              | On-policy  | $V(s) \gets V(s) + \alpha\,[r+\gamma V(s')-V(s)]$   | Bootstraps, step-wise updates     | Online learning                          |
-| TD(\lambda)        | On-policy  | Eligibility traces                                | Mix of MC & TD                    | Bias-variance trade-off                  |
+| Method             | Type       | Update Rule                                                      | Key Feature                       | Notes                                    |
+| ------------------ | ---------- | ---------------------------------------------------------------- | --------------------------------- | ---------------------------------------- |
+| Monte Carlo        | On-policy  | $V(s) \gets V(s) + \alpha\,($G_t$ - V(s))$                       | Uses full episode returns         | High variance, episodic only             |
+| TD(0)              | On-policy  | $V(s) \gets V(s) + \alpha\,[r+\gamma V(s')-V(s)]$                | Bootstraps, step-wise updates     | Online learning                          |
+| TD($\lambda$)      | On-policy  | Eligibility traces                                               | Mix of MC & TD                    | Bias-variance trade-off                  |
 | SARSA              | On-policy  | $Q(s,a) \gets Q(s,a) + \alpha\,[r+\gamma Q(s',a')-Q(s,a)]$       | Follows current policy            | Safer, considers exploration             |
 | Q-Learning         | Off-policy | $Q(s,a) \gets Q(s,a) + \alpha\,[r+\gamma \max_a Q(s',a)-Q(s,a)]$ | Targets optimal policy            | Aggressive, faster convergence           |
-| DQN                | Off-policy | NN approximates Q                                 | Replay buffer + target network    | Works with high-dimensional states       |
-| Double DQN         | Off-policy | Reduce overestimation                             | Separate selection & evaluation   | Improves stability                       |
-| Dueling DQN        | Off-policy | Split V and A                                     | Learn state importance            | Useful when actions have similar effects |
-| Prioritized Replay | Off-policy | Weighted sampling                                 | Focus learning on key transitions | Speeds up convergence                    |
+| DQN                | Off-policy | NN approximates Q                                                | Replay buffer + target network    | Works with high-dimensional states       |
+| Double DQN         | Off-policy | Reduce overestimation                                            | Separate selection & evaluation   | Improves stability                       |
+| Dueling DQN        | Off-policy | Split V and A                                                    | Learn state importance            | Useful when actions have similar effects |
+| Prioritized Replay | Off-policy | Weighted sampling                                                | Focus learning on key transitions | Speeds up convergence                    |
 
 ---
 
