@@ -4,7 +4,7 @@
 
 ### Key Ideas:
 
-* Use **actual returns** (G_t) instead of bootstrapping.
+* Use **actual returns** ($G_t$) instead of bootstrapping.
 * Only works for **episodic tasks** (where episodes terminate).
 * Two types:
 
@@ -12,8 +12,8 @@
 
    * Only updates the value of a state the **first time it appears** in an episode.
    * Formula:
-     $$V(s) \gets V(s) + \alpha (G_t - V(s))$$
-     Where (G_t) is the cumulative reward after first visit.
+     $$V(s) \gets V(s) + \alpha \bigl(G_t - V(s)\bigr)$$
+     Where \($G_t$\) is the cumulative reward after first visit.
 
 2. **Every-visit MC:**
 
@@ -32,14 +32,14 @@
 ### TD(0):
 
 * Updates value function **after each step**, using **next state value**:
-  $$V(s_t) \gets V(s_t) + \alpha [r_{t+1} + \gamma V(s_{t+1}) - V(s_t)]$$
-* Bootstraps: uses (V(s_{t+1})) instead of full return (G_t).
+  $$V(s_t) \gets V(s_t) + \alpha \bigl[r_{t+1} + \gamma V(s_{t+1}) - V(s_t)\bigr]$$
+* Bootstraps: uses $V(s_{t+1})$ instead of the full return \($G_t$\).
 
-### TD(λ) (Eligibility Traces):
+### TD(\lambda) (Eligibility Traces):
 
 * Introduces **λ parameter** to mix n-step returns:
-  $$V(s) \gets V(s) + \alpha \delta_t e(s)$$
-* (e(s)) = **eligibility trace**, decays over time.
+  $$V(s) \gets V(s) + \alpha \,\delta_t\, e(s)$$
+* $e(s)$ = **eligibility trace**, decays over time.
 * λ = 0 → TD(0), λ = 1 → Monte Carlo.
 * Provides **bias-variance trade-off** between TD and MC.
 
@@ -73,9 +73,9 @@
 
 ### Key Ideas:
 
-* **Q-network** approximates Q-values: (Q(s,a;\theta)).
+* **Q-network** approximates Q-values: $Q(s,a;\theta)$.
 * **Replay Buffer:** stores past transitions to **break correlations** and enable off-policy learning.
-* **Target Network:** separate network (Q') to compute target values:
+* **Target Network:** separate network \(Q'\) to compute target values:
   $$y = r + \gamma \max_a Q'(s',a';\theta^-)$$
 
 **Training:**
@@ -94,11 +94,11 @@
 
 * Addresses **Q-value overestimation** in DQN.
 * Use online network to select action, target network to evaluate:
-  $$y = r + \gamma Q'(s', \arg\max_a Q(s',a;\theta); \theta^-)$$
+  $$y = r + \gamma\, Q'\bigl(s',\,\arg\max_a Q(s',a;\theta),\,\theta^- \bigr)$$
 
 ### 5.2 Dueling DQN
 
-* Splits Q-function into **state value** (V(s)) and **advantage** (A(s,a)):
+* Splits Q-function into **state value** $V(s)$ and **advantage** $A(s,a)$:
   $$Q(s,a) = V(s) + \Big(A(s,a) - \frac{1}{|\mathcal{A}|} \sum_{a'} A(s,a') \Big)$$
 * Helps network learn **which states are valuable** even when action choice is not critical.
 
@@ -113,11 +113,11 @@
 
 | Method             | Type       | Update Rule                                       | Key Feature                       | Notes                                    |
 | ------------------ | ---------- | ------------------------------------------------- | --------------------------------- | ---------------------------------------- |
-| Monte Carlo        | On-policy  | (V(s) \gets V(s) + \alpha(G_t - V(s)))            | Uses full episode returns         | High variance, episodic only             |
-| TD(0)              | On-policy  | (V(s) \gets V(s) + \alpha[r+\gamma V(s')-V(s)])   | Bootstraps, step-wise updates     | Online learning                          |
-| TD(λ)              | On-policy  | Eligibility traces                                | Mix of MC & TD                    | Bias-variance trade-off                  |
-| SARSA              | On-policy  | (Q(s,a)\gets Q+\alpha[r+\gamma Q(s',a')-Q])       | Follows current policy            | Safer, considers exploration             |
-| Q-Learning         | Off-policy | (Q(s,a)\gets Q+\alpha[r+\gamma \max_a Q(s',a)-Q]) | Targets optimal policy            | Aggressive, faster convergence           |
+| Monte Carlo        | On-policy  | $V(s) \gets V(s) + \alpha\,($G_t$ - V(s))$            | Uses full episode returns         | High variance, episodic only             |
+| TD(0)              | On-policy  | $V(s) \gets V(s) + \alpha\,[r+\gamma V(s')-V(s)]$   | Bootstraps, step-wise updates     | Online learning                          |
+| TD(\lambda)        | On-policy  | Eligibility traces                                | Mix of MC & TD                    | Bias-variance trade-off                  |
+| SARSA              | On-policy  | $Q(s,a) \gets Q(s,a) + \alpha\,[r+\gamma Q(s',a')-Q(s,a)]$       | Follows current policy            | Safer, considers exploration             |
+| Q-Learning         | Off-policy | $Q(s,a) \gets Q(s,a) + \alpha\,[r+\gamma \max_a Q(s',a)-Q(s,a)]$ | Targets optimal policy            | Aggressive, faster convergence           |
 | DQN                | Off-policy | NN approximates Q                                 | Replay buffer + target network    | Works with high-dimensional states       |
 | Double DQN         | Off-policy | Reduce overestimation                             | Separate selection & evaluation   | Improves stability                       |
 | Dueling DQN        | Off-policy | Split V and A                                     | Learn state importance            | Useful when actions have similar effects |

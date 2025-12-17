@@ -4,34 +4,38 @@ A **policy gradient** is a type of reinforcement learning method that **directly
 
 ## 1. Core Idea
 
-* Traditional methods (like Q-learning) focus on **learning a value function** (Q(s,a)) and then deriving a policy (e.g., greedy).
-* **Policy gradient methods** instead **parameterize the policy** (\pi_\theta(a|s)) directly with parameters (\theta) (usually a neural network).
+* Traditional methods (like Q-learning) focus on **learning a value function** $Q(s,a)$ and then deriving a policy (e.g., greedy).
+* **Policy gradient methods** instead **parameterize the policy** $\pi_\theta(a|s)$ directly with parameters $\theta$ (usually a neural network).
 * The goal is to **maximize expected cumulative reward**:
 
 $$
-J(\theta) = \mathbb{E}*{\tau \sim \pi*\theta} \Big[ \sum_{t=0}^{T} \gamma^t r_t \Big]
+J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\Big[ \sum_{t=0}^{T} \gamma^t r_t \Big]
 $$
 
-Where (\tau) is a trajectory (sequence of states and actions) sampled from the policy.
+Where \( $\tau$ \) is a trajectory (sequence of states and actions) sampled from the policy.
 
 ---
 
 ## 2. How It Works
 
-1. **Define a parameterized policy** (\pi_\theta(a|s))
+1. **Define a parameterized policy** \( $\pi_\theta(a|s$) \)
 
    * Continuous or discrete actions.
    * Could output probabilities (discrete) or distribution parameters (continuous, e.g., mean/std).
 
 2. **Compute gradient of expected reward** with respect to policy parameters:
-   $$\nabla_\theta J(\theta) = \mathbb{E}*{\tau \sim \pi*\theta} \Big[ \sum_{t=0}^T \nabla_\theta \log \pi_\theta(a_t|s_t) G_t \Big]$$
+$$
+\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\Big[ \sum_{t=0}^T \nabla_\theta \log \pi_\theta(a_t|s_t)\, G_t \Big]
+$$
 
    * This is called the **REINFORCE rule** (Williams, 1992).
-   * (G_t) = cumulative reward from time (t).
+   * $G_t$ = cumulative reward from time $t$.
    * Intuition: increase probability of actions that lead to high rewards.
 
 3. **Update parameters using gradient ascent:**
-   $$\theta \gets \theta + \alpha \nabla_\theta J(\theta)$$
+$$
+\theta \gets \theta + \alpha \nabla_\theta J(\theta)
+$$
 
 ---
 
@@ -40,14 +44,16 @@ Where (\tau) is a trajectory (sequence of states and actions) sampled from the p
 * **Stochastic Policy:** Policy must be **probabilistic** to allow differentiation through sampling.
 * **Baseline / Advantage Function:**
 
-  * Direct use of (G_t) has high variance.
-  * Subtract a baseline (like (V(s_t))) to reduce variance:
-    $$\nabla_\theta J(\theta) = \mathbb{E}[\nabla_\theta \log \pi_\theta(a_t|s_t) (G_t - b(s_t))]$$
-  * Common choice: (b(s_t) = V^\pi(s_t)).
+  * Direct use of ($G_t$) has high variance.
+  * Subtract a baseline (like $V(s_t)$) to reduce variance:
+$$
+\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\big[ \nabla_\theta \log \pi_\theta(a_t|s_t)\, (G_t - b(s_t)) \big]
+$$
+  * Common choice: \($b(s_t) = V^\pi(s_t)$\).
 * **Actor-Critic Methods:**
 
-  * **Actor** = policy network ((\pi_\theta))
-  * **Critic** = value network ((V_\phi(s))) used as baseline.
+  * **Actor** = policy network ($\pi_\theta$)
+  * **Critic** = value network ($V_\phi(s)$ ) used as baseline.
   * Reduces variance and stabilizes learning (used in A2C, PPO, SAC).
 
 ---
@@ -74,24 +80,26 @@ Where (\tau) is a trajectory (sequence of states and actions) sampled from the p
 **policy gradient methods are generally model-free algorithms**, not model-based. 
 ## 1. Model-Free vs Model-Based RL
 
-| Type            | What it Does                                                                                                     | Example Methods                                      |                                                                |
-| --------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------- | -------------------------------------------------------------- |
-| **Model-Free**  | Learns **directly from interaction with the environment**, without trying to model the transition dynamics (P(s' | s,a)) or rewards (R(s,a)).                           | Q-Learning, DQN, SARSA, Policy Gradients (REINFORCE, PPO, SAC) |
-| **Model-Based** | Learns or uses a **model of the environment** (transition & reward functions) and plans ahead using this model.  | Dyna-Q, MuZero, MBPO, MPC (Model Predictive Control) |                                                                |
+| Type            | What it Does                                                                                                                                      | Example Methods                                                |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------- |
+| **Model-Free**  | Learns **directly from interaction with the environment**, without trying to model the transition dynamics ($P(s' \mid s,a)$ or rewards $R(s,a)$. | Q-Learning, DQN, SARSA, Policy Gradients (REINFORCE, PPO, SAC) |
+| **Model-Based** | Learns or uses a **model of the environment** (transition & reward functions) and plans ahead using this model.                                   | Dyna-Q, MuZero, MBPO, MPC (Model Predictive Control)           |
 
 ---
 
 ## 2. Why Policy Gradient is Model-Free
 
-* Policy gradients **do not need to know (P(s'|s,a))**.
+* Policy gradients **do not need to know ($P(s'|s,a)$)**.
 * They learn **a mapping from states to actions** by **sampling trajectories from the environment** and **estimating returns**.
 * Updates are based on **observed rewards**, not on predicted next states.
 
 ### Example:
 
 * REINFORCE updates:
-  $$\nabla_\theta J(\theta) = \mathbb{E}*{\tau \sim \pi*\theta} \Big[ \sum_{t=0}^{T} \nabla_\theta \log \pi_\theta(a_t|s_t) G_t \Big]$$
-* Here, (\tau) comes from **actual interaction** with the environment, no model of (P) is required.
+$$
+\nabla_\theta J(\theta) = \mathbb{E}_{\tau \sim \pi_\theta}\Big[ \sum_{t=0}^{T} \nabla_\theta \log \pi_\theta(a_t|s_t)\, G_t \Big]
+$$
+* Here, \( $\tau$ \) comes from **actual interaction** with the environment, no model of $P$ is required.
 
 ---
 
