@@ -31,6 +31,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 	- [Stanford CS336: Language Modeling from Scratch](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
 	- [Stanford CS236: Deep Generative Models](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
 	- [Stanford CS234: Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
+	- [Stanford CS224R Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
 ### **Online Tutorials & Blogs:**  
 - [All Machine Learning Algorithms Explained in 17 Min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)  
 - [15 Machine Learning Lessons I Wish I Knew Earlier](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)  
@@ -186,13 +187,13 @@ This roadmap includes resources, courses and their projects, and notes that I am
 
 ##### **Model-Based & Advanced RL**
 
-- [ ] Planning (Dyna-Q)
-- [ ] Model-Based RL (Dreamer, MuZero-style)
-- [ ] Hierarchical RL (Options Framework)
-- [ ] Meta-RL (MAML, RL²)
-- [ ] Multi-Agent RL (MADDPG, QMIX)
-- [ ] Offline RL (CQL, Conservative Q-Learning)
-- [ ] Imitation Learning (BC, GAIL)
+- [x] Planning (Dyna-Q)
+- [x] Model-Based RL (Dreamer, MuZero-style)
+- [x] Hierarchical RL (Options Framework)
+- [x] Meta-RL (MAML, RL²)
+- [x] Multi-Agent RL (MADDPG, QMIX)
+- [x] Offline RL (CQL, Conservative Q-Learning)
+- [x] Imitation Learning (BC, GAIL)
 - [x] RLHF (Reinforcement Learning from Human Feedback)
 
 ##### **Practical Skills**

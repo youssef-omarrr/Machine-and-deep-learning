@@ -34,13 +34,13 @@
 
 ##### **Model-Based & Advanced RL**
 
-- [ ] Planning (Dyna-Q)
-- [ ] Model-Based RL (Dreamer, MuZero-style)
-- [ ] Hierarchical RL (Options Framework)
-- [ ] Meta-RL (MAML, RL²)
-- [ ] Multi-Agent RL (MADDPG, QMIX)
-- [ ] Offline RL (CQL, Conservative Q-Learning)
-- [ ] Imitation Learning (BC, GAIL)
+- [x] Planning (Dyna-Q)
+- [x] Model-Based RL (Dreamer, MuZero-style)
+- [x] Hierarchical RL (Options Framework)
+- [x] Meta-RL (MAML, RL²)
+- [x] Multi-Agent RL (MADDPG, QMIX)
+- [x] Offline RL (CQL, Conservative Q-Learning)
+- [x] Imitation Learning (BC, GAIL)
 - [x] RLHF (Reinforcement Learning from Human Feedback)
 
 ##### **Practical Skills**
@@ -101,6 +101,8 @@
 
 - [ ] [**Stanford CS234 | Reinforcement Learning | Spring 2024 | Emma Brunskill**](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX). 
     - A comprehensive, university-level course on the mathematical and algorithmic foundations of modern RL.
+- [ ] [Stanford CS224R Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+	- This course is complementary to CS234, which is not a prerequisite for the other. In comparison to CS234, this course will have a more applied and deep learning focus and an emphasis on use cases in robotics and language modeling.
 - [ ] [**DeepMind x UCL | Deep Learning Lecture Series 2021 | Intro to RL**](https://www.youtube.com/playlist?list=PLqYmG7hTraZDVH599EItlEWsUOsJbAodm). 
     - Foundational lectures from DeepMind researchers on core concepts of Deep Reinforcement Learning.
 
