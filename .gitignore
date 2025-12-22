@@ -1,0 +1,31 @@
+# VSCode and Obsidian config folders
+.vscode/
+.obsidian/
+
+# Python cache folders
+__pycache__/
+
+# Data and run folders in any subdir
+data/
+runs/*
+models/*
+.gradio/
+
+# Python virtual environments
+.venv/
+
+# Misc
+*.ini
+*.ico
+.prompt.md
+
+# Models
+*.pth
+*.pt
+
+# Others
+coco-pose/
+Datasets/
+Slides/
+Books/
+*.pdf
