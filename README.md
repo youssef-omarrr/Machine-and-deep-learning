@@ -1,42 +1,53 @@
 # Machine and Deep Learning Study Roadmap
-> Due to `Git LFS` problems, all 67 commits that included the repo's history had to be deleted :(
 
 ## Overview
-This roadmap includes resources, courses and their projects, and notes that I am following to build a strong foundation in machine and deep learning.
+This repo includes roadmaps, resources, courses and their projects, and notes that I am following to build a strong foundation in machine and deep learning.
 
+---
 ## Contents
 - **Prerequisites:** Quick revision on `NumPy`, `Pandas`, and `Matplotlib`.  
 - **MIT 6.S191:** Introduction to Deep Learning.  
-- **PyTorch Course**  
+- **PyTorch Course:** Zero to Mastery Learn PyTorch for Deep Learning.
 - **Projects:** Contains most course projects; larger projects have their own repos linked below.  
 - **LLM from Scratch Course**  
 - **ITI Summer Training:** Machine Learning (supervised and unsupervised).  
 - **Graduation Project Notes:** Research notes from my Bachelor’s degree project on Parkinson’s disease (not the actual project, but concepts explored and ML-related notes for future reference).  
+- **Individual Searches:** Contains study notes on individual topics studied/revised.
+- **Reinforcement Learning:** Contains all the reinforcement learning courses, resources, and notes.
+- **Stanford Courses:** Contains checklist and notes on each Stanford course I studied (minus reinforcement learning).
 
+---
 ## Resources & Links
 
-### **Roadmap Video:**  
-- [How to Learn Machine Learning in 2024 (7-step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3) *(contains links to many resources)*  
+### **Roadmaps:**  
+- [How to Learn Machine Learning in 2024 (7-step roadmap)](https://www.youtube.com/watch?v=jwTaBztqTZ0&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=3)
+- [Machine-Learning-Roadmap](https://github.com/shanmukh05/Machine-Learning-Roadmap)
+- [advanced-machine-learning-engineer-roadmap-2024](https://github.com/farukalamai/advanced-machine-learning-engineer-roadmap-2024) 
+- [AI-ML-Roadmap-from-scratch](https://github.com/aadi1011/AI-ML-Roadmap-from-scratch)
 ### **Courses:**  
 - [MIT 6.S191: Introduction to Deep Learning (highly recommended)](https://www.youtube.com/playlist?list=PLtBw6njQRU-rwp5__7C0oIVt26ZgjG9NI)  
-- [Full PyTorch Course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)  
+- [ PyTorch for Deep Learning & Machine Learning – Full Course](https://www.youtube.com/watch?v=V_xro1bcAuA&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB)  
   - [GitHub Repo](https://github.com/mrdbourke/pytorch-deep-learning?tab=readme-ov-file#course-materialsoutline)  
   - [Book Page](https://www.learnpytorch.io/00_pytorch_fundamentals/)  
 - [Dive into Deep Learning: Interactive deep learning book with code, math, and discussions](https://d2l.ai/)
 - [LLMs from Scratch](https://github.com/rasbt/LLMs-from-scratch)  
-- [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)  
-- Stanford Courses:
+- [Stanford Courses:](https://www.youtube.com/@stanfordonline)
 	- [Stanford CS229: Machine Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rNyWOpJg_Yh4NSqI4Z4vOYy)
 	- [Stanford CS230: Deep Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
 	- [Stanford CS336: Language Modeling from Scratch](https://www.youtube.com/playlist?list=PLoROMvodv4rOY23Y0BoGoBGgQ1zmU_MT_)
 	- [Stanford CS236: Deep Generative Models](https://www.youtube.com/playlist?list=PLoROMvodv4rNRRGdS0rBbXOUGA0wjdh1X)
 	- [Stanford CS234: Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
 	- [Stanford CS224R Deep Reinforcement Learning](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
+	- [Statistical Learning with Python](https://www.youtube.com/playlist?list=PLoROMvodv4rPP6braWoRt5UCXYZ71GZIQ)  
 ### **Online Tutorials & Blogs:**  
+#### Quick revision:
 - [All Machine Learning Algorithms Explained in 17 Min](https://www.youtube.com/watch?v=E0Hmnixke2g&list=PLZzRSwjUKZxnidL9CayMD8_UqTaPTWtcB&index=2)  
 - [15 Machine Learning Lessons I Wish I Knew Earlier](https://www.youtube.com/watch?v=espQDESe07w&ab_channel=InfiniteCodes)  
-- [Cracking Machine Learning Interview:](https://github.com/shafaypro/CrackingMachineLearningInterview) Repository to prepare for ML interviews, covering common questions asked by top companies.  
 - [Great ML/DL YT channel (StatQuest with Josh Starmer)](https://www.youtube.com/@statquest)
+#### Interview questions:
+- [Cracking Machine Learning Interview:](https://github.com/shafaypro/CrackingMachineLearningInterview) A repository to prepare you for your machine learning interview, involving most of the questions asked by all the tech giants and local companies. Do this to Ace your Machine Learning Engineer Interviews.
+- [Data Science Interview Resources: ](https://github.com/rbhatia46/Data-Science-Interview-Resources) A repository listing out the potential sources which will help you in preparing for a Data Science/Machine Learning interview. New resources added frequently.
+- [machine learning interview questions: ](https://github.com/Sroy20/machine-learning-interview-questions) This repository is to prepare for Machine Learning interviews.
 
 ### **Useful Websites:**  
 - [Browse State-of-the-Art](https://paperswithcode.com/sota)  
@@ -44,6 +55,7 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [`timm` (PyTorch Image Models) Library](https://github.com/huggingface/pytorch-image-models)  
 - [Google dataset search](https://datasetsearch.research.google.com/)
 
+---
 ## Projects & Practice
 > - **Older projects** in this repo are mostly drafts and unpolished experiments.  
 > - **More recent projects** were developed in their own dedicated repositories (including experiments and failed attempts), and are no longer included in this repo.
@@ -64,15 +76,19 @@ This roadmap includes resources, courses and their projects, and notes that I am
   - [**Food MINI Model:**](https://github.com/youssef-omarrr/Food_MINI_model) Experiment tracking and model deployment.  
 
 ---
-### **Machine Learning & Deep Learning Mastery Checklist**
-#### 1. Mathematical Foundations (from college)
+## **Machine Learning & Deep Learning Mastery Checklist**
+This is a personal checklist of the most important topics I want to learn in Machine Learning and Deep Learning. I use it to keep track of what I’ve already studied, what I’m currently working on, and what I still need to learn.
+
+The list is always growing as I go deeper into the field and discover new concepts, tools, and techniques. It helps me stay organized and maintain a clear learning path instead of studying topics randomly.
+### 1. Mathematical Foundations (from college)
 
 - [x] Linear Algebra (vectors, matrices, eigenvalues, SVD)
 - [x] Calculus (gradients, Jacobians, chain rule)
 - [x] Probability & Statistics (distributions, expectation, Bayes)
 - [ ] Optimization (gradient descent, Adam, RMSprop, etc.) (next term)
 
-#### 2. Classical Machine Learning
+---
+### 2. Classical Machine Learning
 
 - [x] Linear Regression
 - [x] Logistic Regression
@@ -91,7 +107,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Evaluation Metrics (Accuracy, Precision, Recall, F1, ROC, AUC)
 - [x] Feature Engineering / Normalization
 
-#### 3. Core Deep Learning
+---
+### 3. Core Deep Learning
 
 - [x] Perceptron, Feedforward Networks
 - [x] Activation Functions (ReLU, Sigmoid, Tanh, GELU, etc.)
@@ -105,7 +122,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Data Augmentation
 - [x] Mixed Precision Training
 
-#### 4. Convolutional Neural Networks (CNNs)
+---
+### 4. Convolutional Neural Networks (CNNs)
 
 - [x] Convolution / Pooling / Padding
 - [x] LeNet
@@ -117,7 +135,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Object Detection (YOLO)
 - [x] Segmentation (U-Net, Mask R-CNN)
 
-#### 5. Recurrent and Sequential Models
+---
+### 5. Recurrent and Sequential Models
 
 - [x] RNNs
 - [x] LSTMs
@@ -126,7 +145,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Attention Mechanisms
 - [x] Encoder–Decoder Architectures
 
-#### 6. Transformers and Attention Models
+---
+### 6. Transformers and Attention Models
 
 - [x] Self-Attention & Multi-Head Attention
 - [x] Transformer Architecture (Encoder, Decoder)
@@ -136,7 +156,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Fine-tuning large models
 - [x] Top-k, Top-p (nucleus) sampling
 
-#### 7. Generative Models
+---
+### 7. Generative Models
 
 - [x] Autoencoders (AE)
 - [x] Variational Autoencoders (VAE)
@@ -148,13 +169,15 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Transformers
 - [ ] Flow-based Models (RealNVP, Glow)
 
-#### 8. Self-Supervised / Representation Learning
+---
+### 8. Self-Supervised / Representation Learning
 
 - [ ] Contrastive Learning (SimCLR, MoCo)
 - [ ] Masked Autoencoders (MAE, BEiT)
 - [ ] DINO / CLIP (cross-modal self-supervision)
 
-#### 9. Reinforcement Learning (RL)
+---
+### 9. Reinforcement Learning (RL)
 
 ##### **Foundations**
 
@@ -209,7 +232,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] Learn stable-baselines3 usage and comparison
 - [x] Logging RL experiments (TensorBoard, Weights & Biases)
 
-#### 10. AI Agents & Autonomous Systems
+---
+### 10. AI Agents & Autonomous Systems
 
 ##### **Agent Architectures**
 
@@ -230,7 +254,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [ ] Feedback loops for improving agent behavior
 - [ ] Multi-agent coordination & communication
 
-#### 11. Deployment & MLOps
+---
+### 11. Deployment & MLOps
 
 - [x] Hugging Face deployment
 - [ ] TorchScript / ONNX model export
@@ -242,7 +267,8 @@ This roadmap includes resources, courses and their projects, and notes that I am
 - [x] CI/CD for models (GitHub Actions + versioning)
 - [x] Monitoring / logging in production (W&B, Mlflow, TensorBoard)
 
-#### 12. Practical / Projects
+---
+### 12. Practical / Projects
 
 - [x] Build and train models from scratch
 - [x] Reproduce architectures (ViT, Transformer, etc.)
