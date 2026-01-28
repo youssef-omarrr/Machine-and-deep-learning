@@ -79,21 +79,3 @@ This is a collection of the most important Stanford's college courses, along wit
 
 ---
 
-## 5. Stanford CS234: Reinforcement Learning 
-### [Course link](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
-- [ ] Lecture 1: Introduction to Reinforcement Learning
-- [ ] Lecture 2: Tabular MDP Planning
-- [ ] Lecture 3: Policy Evaluation
-- [ ] Lecture 4: Q learning and Function Approximation
-- [ ] Lecture 5: Policy Search 1
-- [ ] Lecture 6: Policy Search 2
-- [ ] Lecture 7: Policy Search 3
-- [ ] Lecture 8: Offline RL 1
-- [ ] Lecture 9: DPO
-- [ ] Lecture 10: Offline RL 3
-- [ ] Lecture 11: Exploration 1
-- [ ] Lecture 12: Exploration 2
-- [ ] Lecture 13: Exploration 3
-- [ ] Lecture 14: Multi-Agent Game Playing
-- [ ] Lecture 15: Emma Brunskill & Dan Webber
-- [ ] Lecture 16: Value Alignment
