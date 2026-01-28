@@ -1,8 +1,10 @@
 
 ## 1. Stanford CS234: Reinforcement Learning 
 ### [Course link](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX)
-- [ ] Lecture 1: Introduction to Reinforcement Learning
-- [ ] Lecture 2: Tabular MDP Planning
+### [Course Materials](https://web.stanford.edu/class/cs234/modules.html)
+
+- [x] Lecture 1: Introduction to Reinforcement Learning
+- [x] Lecture 2: Tabular MDP Planning
 - [ ] Lecture 3: Policy Evaluation
 - [ ] Lecture 4: Q learning and Function Approximation
 - [ ] Lecture 5: Policy Search 1
