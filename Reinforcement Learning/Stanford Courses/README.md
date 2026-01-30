@@ -5,8 +5,8 @@
 
 - [x] Lecture 1: Introduction to Reinforcement Learning
 - [x] Lecture 2: Tabular MDP Planning
-- [ ] Lecture 3: Policy Evaluation
-- [ ] Lecture 4: Q learning and Function Approximation
+- [x] Lecture 3: Policy Evaluation
+- [x] Lecture 4: Q learning and Function Approximation
 - [ ] Lecture 5: Policy Search 1
 - [ ] Lecture 6: Policy Search 2
 - [ ] Lecture 7: Policy Search 3
