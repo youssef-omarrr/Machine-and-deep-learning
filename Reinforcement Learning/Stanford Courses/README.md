@@ -7,8 +7,8 @@
 - [x] Lecture 2: Tabular MDP Planning
 - [x] Lecture 3: Policy Evaluation
 - [x] Lecture 4: Q learning and Function Approximation
-- [ ] Lecture 5: Policy Search 1
-- [ ] Lecture 6: Policy Search 2
+- [x] Lecture 5: Policy Search 1
+- [x] Lecture 6: Policy Search 2
 - [ ] Lecture 7: Policy Search 3
 - [ ] Lecture 8: Offline RL 1
 - [ ] Lecture 9: DPO
