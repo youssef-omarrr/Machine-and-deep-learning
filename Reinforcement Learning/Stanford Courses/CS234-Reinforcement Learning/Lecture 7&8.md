@@ -130,4 +130,113 @@
   * The learned $w$ defines a reward under which expert behavior is optimal.
 
 # Lecture 8
-- 
+
+* Max entropy inverse RL algorithm → can we recover $R$?
+
+  * Inverse RL asks: given expert demonstrations, can we recover a reward function $R$ under which the expert policy is optimal?
+  * The problem is ill-posed: many rewards induce the same optimal policy.
+  * Maximum Entropy IRL resolves ambiguity by choosing the distribution over trajectories that:
+
+    * Matches expert feature expectations
+    * Has maximum entropy (least additional assumptions)
+  * The principle ensures the most unbiased explanation consistent with demonstrations.
+
+* From max entropy to prob over trajectories
+
+  * We model a distribution over trajectories $\tau$:
+    $$p(\tau) \propto \exp(R(\tau))$$
+  * If reward is linear in features:
+    $$R(\tau) = w^\top \phi(\tau)$$
+  * Then:
+    $$p_w(\tau) = \frac{1}{Z(w)} \exp(w^\top \phi(\tau))$$
+  * Where $Z(w)$ is the partition function:
+    $$Z(w) = \sum_{\tau} \exp(w^\top \phi(\tau))$$
+  * This is analogous to an energy-based model.
+
+* Maximizing the entropy over the prob = maximizing the likelihood of observed data under max entropy
+
+  * Maximum entropy subject to feature matching constraints yields the exponential family form above.
+
+  * Learning reduces to maximum likelihood estimation:
+    $$\max_w \sum_{\tau \in \mathcal{D}} \log p_w(\tau)$$
+
+  * Expanding log-likelihood:
+    $$\mathcal{L}(w) = \sum_{\tau \in \mathcal{D}} w^\top \phi(\tau) - \log Z(w)$$
+
+  * Gradient:
+    $$\nabla_w \mathcal{L}(w) = \mathbb{E}*{\tau \sim \mathcal{D}}[\phi(\tau)] - \mathbb{E}*{\tau \sim p_w}[\phi(\tau)]$$
+
+  * So learning enforces:
+
+    * Expert feature expectations = model feature expectations
+
+  * We can estimate $R$ by maximizing probability of our observations
+
+    * Adjust $w$ so expert trajectories become high probability under $p_w(\tau)$.
+
+  * State densities
+
+    * The expected feature counts depend on state visitation distribution:
+      $$d^\pi(s) = \sum_{t=0}^\infty \gamma^t P(s_t = s \mid \pi)$$
+    * Matching feature expectations is equivalent to matching discounted state-action visitation frequencies.
+
+* RLHF
+
+  * Reinforcement Learning from Human Feedback replaces manually designed rewards with learned human preferences.
+
+  * Agent gets input from human and from environment
+
+    * Environment provides trajectories.
+    * Humans provide feedback (preferences or rankings).
+    * A reward model is trained from human data.
+    * RL optimizes the policy against the learned reward.
+
+  * DAGGER/constant teaching ← human effort → demonstrations only
+
+    * Pure demonstration methods (e.g., DAGGER) require constant expert labeling.
+    * RLHF instead scales feedback by learning a reward model from limited comparisons.
+
+* Bradley–Terry model
+
+  * A probabilistic model for pairwise comparisons.
+  * If two trajectories $\tau_i$ and $\tau_j$ have rewards $R_i, R_j$, then:
+    $$P(\tau_i \succ \tau_j) = \frac{\exp(R_i)}{\exp(R_i) + \exp(R_j)}$$
+  * In RLHF, $R$ is predicted by a learned reward model $R_\phi(\tau)$.
+  * Training objective:
+    $$\max_\phi \sum \log \frac{\exp(R_\phi(\tau_{\text{preferred}}))}{\exp(R_\phi(\tau_{\text{preferred}})) + \exp(R_\phi(\tau_{\text{other}}))}$$
+
+* Condorcet winner / Copeland winner / Borda winner
+
+  * These are aggregation methods for preferences.
+
+  * Condorcet winner:
+
+    * A candidate that beats every other candidate in pairwise comparisons.
+    * May not always exist.
+
+  * Copeland winner:
+
+    * Score = number of pairwise wins − losses.
+    * Candidate with highest score wins.
+
+  * Borda winner:
+
+    * Assign points based on ranking positions.
+    * Candidate with highest total points wins.
+
+  * In RLHF context, these relate to aggregating human preferences over trajectories or responses.
+
+* High level instantiation: RLHF pipeline
+
+  * First step: instruction tuning
+
+    * Supervised fine-tuning on demonstration data.
+    * Optimize:
+      $$\max_\theta \mathbb{E}*{(x,y)}[\log \pi*\theta(y|x)]$$
+
+  * Second + third steps max rewards
+
+    * Step 2: Train reward model using preference data (Bradley–Terry loss).
+    * Step 3: Optimize policy using RL (often PPO) to maximize learned reward:
+      $$\max_\theta \mathbb{E}*{\tau \sim \pi*\theta}[R_\phi(\tau)] - \beta D_{KL}(\pi_\theta | \pi_{\text{ref}})$$
+    * KL penalty ensures policy stays close to reference model, preventing reward hacking.
