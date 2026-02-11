@@ -9,7 +9,7 @@
 - [x] Lecture 4: Q learning and Function Approximation
 - [x] Lecture 5: Policy Search 1
 - [x] Lecture 6: Policy Search 2
-- [ ] Lecture 7: Policy Search 3
+- [x] Lecture 7: Policy Search 3
 - [ ] Lecture 8: Offline RL 1
 - [ ] Lecture 9: DPO
 - [ ] Lecture 10: Offline RL 3
