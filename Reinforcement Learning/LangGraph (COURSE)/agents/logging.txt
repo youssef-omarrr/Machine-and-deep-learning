@@ -1,0 +1,19 @@
+Your Conversation Log:
+You: hello
+AI: Hello! How can I help you today?
+
+You: my name is youssef
+AI: Nice to meet you, Youssef! How can I assist you today?
+
+You: what was my name again?
+AI: Your name is Youssef.
+
+You: so you can remember things?
+AI: I can keep track of details you share **within the same conversation**—like your name, preferences, or any other information you mention while we’re chatting. This helps me give more relevant and coherent responses.
+
+However, I don’t have long‑term memory. Once the session ends (or the conversation is reset), I won’t retain any of those details. If you start a new chat, I won’t remember that your name is Youssef unless you tell me again.
+
+You: that's great
+AI: I’m glad you like it! If there’s anything else you’d like to discuss or any way I can help, just let me know.
+
+End of Conversation
