@@ -92,7 +92,9 @@
 
 - [x] [**LangGraph Complete Course for Beginners – Complex AI Agents with Python**](https://www.youtube.com/watch?v=jGg_1h0qzaM&list=PLZzRSwjUKZxm1smpyUzfgj7aLN8nupQhp&index=4&t=3s).
     - Focuses on building stateful AI agents using the **LangGraph** framework.
-* [ ] **[Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer](https://www.youtube.com/watch?v=sVcwVQRHIc8)**.
+- [ ] **[LangChain Mastery in 2025 | Full 5 Hour Course [LangChain v0.3]](https://www.youtube.com/watch?v=Cyv-dgv80kE)**.
+    - Comprehensive guide to **LangChain v0.3** covering core fundamentals, tool calling, and building production ready AI agents.
+- [ ] **[Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer](https://www.youtube.com/watch?v=sVcwVQRHIc8)**.
 	- Teaches the fundamentals of **Retrieval Augmented Generation** (RAG) by combining private data with large language models.
 - [ ] [**Guide to Agentic AI – Build a Python Coding Agent with Gemini**](https://www.youtube.com/watch?v=YtHdaXuOAks&list=PLZzRSwjUKZxm1smpyUzfgj7aLN8nupQhp&index=5).
     - A project-based guide for creating a functional, tool-using coding agent.
