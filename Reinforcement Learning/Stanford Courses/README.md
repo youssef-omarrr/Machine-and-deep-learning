@@ -11,8 +11,8 @@
 - [x] Lecture 6: Policy Search 2
 - [x] Lecture 7: Policy Search 3
 - [x] Lecture 8: Offline RL 1
-- [ ] Lecture 9: DPO
-- [ ] Lecture 10: Offline RL 3
+- [x] Lecture 9: DPO
+- [x] Lecture 10: Offline RL 3
 - [ ] Lecture 11: Exploration 1
 - [ ] Lecture 12: Exploration 2
 - [ ] Lecture 13: Exploration 3
