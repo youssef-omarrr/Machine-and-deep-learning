@@ -62,20 +62,20 @@
 
 ##### **Agent Architectures**
 
-- [ ] ReAct (Reason + Act)
+- [x] ReAct (Reason + Act)
 - [ ] AutoGPT / BabyAGI-style loop
 - [ ] Planning + Reflection loops
-- [ ] Tool-using agent frameworks (LangChain / LlamaIndex)
+- [x] Tool-using agent frameworks (LangChain / LlamaIndex)
 
 ##### **Memory & Retrieval**
 
-- [ ] Retrieval-Augmented Generation (RAG)
-- [ ] Vector Databases (FAISS, Chroma, Milvus)
+- [x] Retrieval-Augmented Generation (RAG)
+- [x] Vector Databases (FAISS, Chroma, Milvus)
 - [ ] Long-term memory strategies (episodic, semantic)
 
 ##### **Integrating RL with Agents**
 
-- [ ] RL-driven tool selection
+- [x] RL-driven tool selection
 - [ ] Feedback loops for improving agent behavior
 - [ ] Multi-agent coordination & communication
 
