@@ -1,4 +1,4 @@
-* Lecture 11
+# Lecture 11
 
 * Data efficient RL / bandits
 
@@ -163,7 +163,7 @@
   * Lower bound ensures guaranteed performance.
   * However, selecting highest upper bound ensures faster learning of optimal arm.
 
-* Lecture 12
+# Lecture 12
 
 * K-armed multi-armed bandits = single state MDP with K actions
 

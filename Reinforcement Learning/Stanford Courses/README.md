@@ -15,8 +15,8 @@
 - [x] Lecture 10: Offline RL 3
 - [x] Lecture 11: Exploration 1
 - [x] Lecture 12: Exploration 2
-- [ ] Lecture 13: Exploration 3
-- [ ] Lecture 14: Multi-Agent Game Playing
+- [x] Lecture 13: Exploration 3
+- [x] Lecture 14: Multi-Agent Game Playing
 - [ ] Lecture 15: Emma Brunskill & Dan Webber
 - [ ] Lecture 16: Value Alignment
 
