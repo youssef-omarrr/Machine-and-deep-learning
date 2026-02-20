@@ -17,7 +17,7 @@
 - [x] Lecture 12: Exploration 2
 - [x] Lecture 13: Exploration 3
 - [x] Lecture 14: Multi-Agent Game Playing
-- [ ] Lecture 15: Emma Brunskill & Dan Webber
+- [x] Lecture 15: Emma Brunskill & Dan Webber
 - [ ] Lecture 16: Value Alignment
 
 ---
