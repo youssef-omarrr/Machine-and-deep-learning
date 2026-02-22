@@ -18,7 +18,7 @@
 - [x] Lecture 13: Exploration 3
 - [x] Lecture 14: Multi-Agent Game Playing
 - [x] Lecture 15: Emma Brunskill & Dan Webber
-- [ ] Lecture 16: Value Alignment
+- [x] Lecture 16: Value Alignment
 
 ---
 ## 2. Stanford CS224R: Deep Reinforcement Learning
