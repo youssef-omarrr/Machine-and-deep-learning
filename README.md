@@ -85,7 +85,7 @@ The list is always growing as I go deeper into the field and discover new concep
 - [x] Linear Algebra (vectors, matrices, eigenvalues, SVD)
 - [x] Calculus (gradients, Jacobians, chain rule)
 - [x] Probability & Statistics (distributions, expectation, Bayes)
-- [ ] Optimization (gradient descent, Adam, RMSprop, etc.) (next term)
+- [ ] Optimization (gradient descent, Adam, RMSprop, etc.)
 
 ---
 ### 2. Classical Machine Learning
@@ -237,22 +237,22 @@ The list is always growing as I go deeper into the field and discover new concep
 
 ##### **Agent Architectures**
 
-- [ ] ReAct (Reason + Act)
+- [x] ReAct (Reason + Act)
 - [ ] AutoGPT / BabyAGI-style loop
-- [ ] Planning + Reflection loops
-- [ ] Tool-using agent frameworks (LangChain / LlamaIndex)
+- [x] Planning + Reflection loops
+- [x] Tool-using agent frameworks (LangChain / LlamaIndex)
 
 ##### **Memory & Retrieval**
 
-- [ ] Retrieval-Augmented Generation (RAG)
-- [ ] Vector Databases (FAISS, Chroma, Milvus)
+- [x] Retrieval-Augmented Generation (RAG)
+- [x] Vector Databases (FAISS, Chroma, Milvus)
 - [ ] Long-term memory strategies (episodic, semantic)
 
 ##### **Integrating RL with Agents**
 
-- [ ] RL-driven tool selection
-- [ ] Feedback loops for improving agent behavior
-- [ ] Multi-agent coordination & communication
+- [x] RL-driven tool selection
+- [x] Feedback loops for improving agent behavior
+- [x] Multi-agent coordination & communication
 
 ---
 ### 11. Deployment & MLOps
@@ -278,6 +278,6 @@ The list is always growing as I go deeper into the field and discover new concep
 - [x] Use pretrained models (Hugging Face)
 - [x] Handle datasets and dataloaders efficiently
 - [x] Implement an RL environment and agent
-- [ ] Build a tool-using AI agent with memory
+- [x] Build a tool-using AI agent with memory
 
 

@@ -64,7 +64,7 @@
 
 - [x] ReAct (Reason + Act)
 - [ ] AutoGPT / BabyAGI-style loop
-- [ ] Planning + Reflection loops
+- [x] Planning + Reflection loops
 - [x] Tool-using agent frameworks (LangChain / LlamaIndex)
 
 ##### **Memory & Retrieval**
@@ -92,7 +92,7 @@
 
 - [x] [**LangGraph Complete Course for Beginners – Complex AI Agents with Python**](https://www.youtube.com/watch?v=jGg_1h0qzaM&list=PLZzRSwjUKZxm1smpyUzfgj7aLN8nupQhp&index=4&t=3s).
     - Focuses on building stateful AI agents using the **LangGraph** framework.
-- [ ] **[LangChain Mastery in 2025 | Full 5 Hour Course [LangChain v0.3]](https://www.youtube.com/watch?v=Cyv-dgv80kE)**.
+- [x] **[LangChain Mastery in 2025 | Full 5 Hour Course [LangChain v0.3]](https://www.youtube.com/watch?v=Cyv-dgv80kE)**.
     - Comprehensive guide to **LangChain v0.3** covering core fundamentals, tool calling, and building production ready AI agents.
 - [ ] **[Learn RAG From Scratch – Python AI Tutorial from a LangChain Engineer](https://www.youtube.com/watch?v=sVcwVQRHIc8)**.
 	- Teaches the fundamentals of **Retrieval Augmented Generation** (RAG) by combining private data with large language models.
@@ -103,7 +103,7 @@
 
 ### Foundational Theory
 
-- [ ] [**Stanford CS234 | Reinforcement Learning | Spring 2024 | Emma Brunskill**](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX). 
+- [x] [**Stanford CS234 | Reinforcement Learning | Spring 2024 | Emma Brunskill**](https://www.youtube.com/playlist?list=PLoROMvodv4rN4wG6Nk6sNpTEbuOSosZdX). 
     - A comprehensive, university-level course on the mathematical and algorithmic foundations of modern RL.
 - [ ] [**Stanford CS224R Deep Reinforcement Learning**](https://www.youtube.com/playlist?list=PLoROMvodv4rPwxE0ONYRa_itZFdaKCylL)
 	- This course is complementary to CS234, which is not a prerequisite for the other. In comparison to CS234, this course will have a more applied and deep learning focus and an emphasis on use cases in robotics and language modeling.
