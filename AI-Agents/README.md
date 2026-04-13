@@ -1,4 +1,4 @@
-## Video Lectures
+## Video Courses
 
 ### AI Agents & Protocols
 
