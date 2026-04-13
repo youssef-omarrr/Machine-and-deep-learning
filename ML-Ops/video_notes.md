@@ -1,0 +1,11 @@
+- ![alt text](imgs/image.png)
+- ![alt text](imgs/image-1.png)
+- MLOps is extension of DevOps
+- Post-deployment:
+    - woes: Accounting for latency (53% of visits are abanded if a mobile site takes longer than 3 seconds to load)
+    - Maintinag Fairness
+    - Lack of explainability and auditability
+    - very slow (most data scients' time is spent deploying ML models)
+- Model-centric vs Data-centric
+- Example using `zenml`:
+  - ![alt text](imgs/image-2.png)

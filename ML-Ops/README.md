@@ -1,6 +1,7 @@
 ## To Learn List
 - [x] TensorFlow
 - [ ] MLFlow
+- [ ] ZenML
 
 ## Video Courses
 
