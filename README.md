@@ -7,15 +7,14 @@ This repo includes roadmaps, resources, courses and their projects, and notes th
 ## Contents
 - **Prerequisites:** Quick revision on `NumPy`, `Pandas`, and `Matplotlib`.  
 - **MIT 6.S191:** Introduction to Deep Learning.  
-- **PyTorch Course:** Zero to Mastery Learn PyTorch for Deep Learning.
+- **PyTorch Course:** Zero to Mastery Learn `PyTorch` for Deep Learning.
 - **Projects:** Contains most course projects; larger projects have their own repos linked below.  
 - **LLM from Scratch Course**  
 - **ITI Summer Training:** Machine Learning (supervised and unsupervised).  
 - **Graduation Project Notes:** Research notes from my Bachelor’s degree project on Parkinson’s disease (not the actual project, but concepts explored and ML-related notes for future reference).  
 - **Individual Searches:** Contains study notes on individual topics studied/revised.
 - **Reinforcement Learning:** Contains all the reinforcement learning courses, resources, and notes.
-- **Stanford Courses:** Contains checklist and notes on each Stanford course I studied (minus reinforcement learning).
-
+- **AI-Agents:** Contains courses on `LangChain`, `LangGraph`, and other ai-agents related courses.
 ---
 ## Resources & Links
 
