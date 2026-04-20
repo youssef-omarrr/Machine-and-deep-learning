@@ -1,2 +1,2 @@
-model_name: "lightgbm"
+model_name: "randomforest"
 finetuning: False

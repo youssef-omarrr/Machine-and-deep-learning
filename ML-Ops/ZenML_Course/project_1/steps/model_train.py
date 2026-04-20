@@ -13,16 +13,15 @@ from sklearn.base import RegressorMixin
 
 from zenml import step
 
-with open("config.yaml", "r") as f:
+with open("steps/config.yaml", "r") as f:
     config = yaml.safe_load(f)
 
-@step(experiment_tracker=experiment_tracker.name)
+@step()
 def train_model(
     x_train: pd.DataFrame,
     x_test: pd.DataFrame,
     y_train: pd.Series,
     y_test: pd.Series,
-    config: dict,
 ) -> RegressorMixin:
     """
     Args:
@@ -37,16 +36,16 @@ def train_model(
         model = None
         tuner = None
 
-        if config.model_name == "lightgbm":
+        if config["model_name"] == "lightgbm":
             model = LightGBMModel()
             
-        elif config.model_name == "randomforest":
+        elif config["model_name"] == "randomforest":
             model = RandomForestModel()
             
-        elif config.model_name == "xgboost":
+        elif config["model_name"] == "xgboost":
             model = XGBoostModel()
             
-        elif config.model_name == "linear_regression":
+        elif config["model_name"] == "linear_regression":
             model = LinearRegressionModel()
             
         else:
@@ -54,7 +53,7 @@ def train_model(
 
         tuner = HyperparameterTuner(model, x_train, y_train, x_test, y_test)
 
-        if config.fine_tuning:
+        if config["finetuning"]:
             best_params = tuner.optimize()
             trained_model = model.train(x_train, y_train, **best_params)
         else:

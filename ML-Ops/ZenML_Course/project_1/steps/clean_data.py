@@ -10,8 +10,8 @@ def clean_df(data: pd.DataFrame
             ) -> Tuple[
                 Annotated[pd.DataFrame, "x_train"],
                 Annotated[pd.DataFrame, "x_test"],
-                Annotated[pd.DataFrame, "y_train"],
-                Annotated[pd.DataFrame, "y_test"],
+                Annotated[pd.Series, "y_train"],
+                Annotated[pd.Series, "y_test"],
             ]:
     """
     Cleans the data in the dataframe 

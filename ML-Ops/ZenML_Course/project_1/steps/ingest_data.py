@@ -13,7 +13,7 @@ class IngestData:
         
     def get_data(self):
         logging.info(f"Ingesting data from {self.data_path}")
-        return pd.read_csv(self.data_path)
+        return pd.read_csv(self.data_pathf, index_col=0, parse_dates=True)
 
 @step
 def ingest_df(data_path: str) -> pd.DataFrame:
