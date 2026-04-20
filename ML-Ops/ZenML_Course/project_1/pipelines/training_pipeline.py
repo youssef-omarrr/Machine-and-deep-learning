@@ -10,6 +10,6 @@ from steps.evaluation import eval_model
 @pipeline(enable_cache=False) # True by default
 def training_pipeline(data_path: str):
     df = ingest_df(data_path=data_path)
-    clean_df = clean_df(df)
-    train_model(clean_df)
-    eval_model(clean_df)
+    x_train, x_test, y_train, y_test = clean_data(df)
+    model = model_train(x_train, x_test, y_train, y_test)
+    mse, rmse = evaluation(model, x_test, y_test)
