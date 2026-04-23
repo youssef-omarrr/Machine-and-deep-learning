@@ -12,8 +12,12 @@ from typing import Tuple
 
 @step()
 def eval_model(
-    model: RegressorMixin, x_test: pd.DataFrame, y_test: pd.Series
-) -> Tuple[Annotated[float, "r2_score"], Annotated[float, "rmse"]]:
+    model: RegressorMixin, 
+    x_test: pd.DataFrame, 
+    y_test: pd.Series
+) -> Tuple[
+    Annotated[float, "r2_score"], 
+    Annotated[float, "rmse"]]:
 
     """
     Args:
